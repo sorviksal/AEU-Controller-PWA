@@ -1,0 +1,19 @@
+{
+  "name": "AEU IoT Control",
+  "short_name": "AEU IoT",
+  "description": "Smart IoT Control Center for AEU",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f8ef7",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%234f8ef7'/><path d='M96 32L48 112h48l-8 48 64-80h-48z' fill='white'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "lang": "en"
+}
