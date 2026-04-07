@@ -26,14 +26,9 @@
     }
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     body{font-family:'Outfit',sans-serif;background:var(--off-white);color:var(--text-dark);min-height:100vh;max-width:430px;margin:0 auto;overflow-x:hidden}
+    .screen{display:none;min-height:100vh}.screen.active{display:block}
 
-    /* ── SCREENS ── */
-    .screen{display:none;min-height:100vh}
-    .screen.active{display:block}
-
-    /* ━━━━━━━━━━━━━━━━━━━
-       AUTH
-    ━━━━━━━━━━━━━━━━━━━ */
+    /* AUTH */
     .auth-wrap{min-height:100vh;display:flex;flex-direction:column}
     .auth-hero{background:var(--grad-blue);padding:64px 30px 44px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center}
     .auth-hero::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.07);top:-80px;right:-60px}
@@ -42,11 +37,9 @@
     .auth-logo-icon svg{width:34px;height:34px;fill:white}
     .auth-app-name{font-size:28px;font-weight:800;color:white;letter-spacing:-.5px;position:relative;z-index:1}
     .auth-tagline{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;position:relative;z-index:1}
-
     .auth-body{background:var(--white);flex:1;border-radius:28px 28px 0 0;margin-top:-22px;padding:30px 24px 44px;position:relative;z-index:2}
     .auth-title{font-size:22px;font-weight:800;color:var(--text-dark);margin-bottom:4px}
     .auth-sub{font-size:13px;color:var(--text-soft);margin-bottom:24px}
-
     .input-group{margin-bottom:16px}
     .input-label{font-size:12px;font-weight:700;color:var(--text-mid);letter-spacing:.5px;margin-bottom:6px;display:block}
     .input-wrap{position:relative}
@@ -58,31 +51,24 @@
     .inp-eye svg{width:17px;height:17px;stroke:var(--text-soft);fill:none;stroke-width:2}
     .field-err{font-size:11px;color:#ff6b8a;margin-top:5px;font-weight:500;display:none}
     .field-err.show{display:block}
-
     .strength-bar{height:4px;border-radius:2px;background:var(--light);margin-top:8px;overflow:hidden}
     .strength-fill{height:100%;border-radius:2px;width:0%;transition:all .3s}
     .strength-label{font-size:11px;margin-top:4px;font-weight:600}
-
     .auth-btn{width:100%;padding:15px;border-radius:14px;background:var(--grad-blue);border:none;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:white;cursor:pointer;margin-top:8px;box-shadow:0 6px 20px rgba(79,142,247,.35);transition:transform .15s,box-shadow .15s}
     .auth-btn:active{transform:scale(.97);box-shadow:0 3px 10px rgba(79,142,247,.25)}
-
+    .auth-btn:disabled{opacity:.6;cursor:not-allowed}
     .divider{display:flex;align-items:center;gap:12px;margin:18px 0}
     .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
     .divider span{font-size:12px;color:var(--text-soft);font-weight:500}
-
     .google-btn{width:100%;padding:13px;border-radius:14px;border:1.5px solid var(--border);background:var(--white);font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;color:var(--text-dark);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s}
     .google-btn:active{background:var(--off-white)}
-
     .auth-switch{text-align:center;margin-top:20px;font-size:13px;color:var(--text-soft)}
     .auth-switch a{color:#4f8ef7;font-weight:700;cursor:pointer;text-decoration:none}
     .forgot-link{text-align:right;margin-top:-8px;margin-bottom:14px}
     .forgot-link a{font-size:12px;color:#4f8ef7;font-weight:600;cursor:pointer}
 
-    /* ━━━━━━━━━━━━━━━━━━━
-       MAIN APP
-    ━━━━━━━━━━━━━━━━━━━ */
+    /* MAIN APP */
     .app-wrap{padding-bottom:80px}
-
     .header{background:var(--white);padding:52px 20px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
     .header-row{display:flex;align-items:center;justify-content:space-between}
     .logo-badge{display:flex;align-items:center;gap:10px}
@@ -91,20 +77,22 @@
     .logo-text{font-weight:700;font-size:18px;letter-spacing:-.3px}
     .logo-sub{font-size:11px;color:var(--text-soft);font-weight:400;margin-top:-2px}
     .header-right{display:flex;align-items:center;gap:10px}
+    .conn-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;transition:all .3s}
+    .conn-pill.online{background:rgba(67,233,123,.15);color:#2db865}
+    .conn-pill.offline{background:rgba(255,107,138,.12);color:#ff6b8a}
+    .conn-pill.checking{background:rgba(79,142,247,.12);color:#4f8ef7}
     .status-dot{width:8px;height:8px;border-radius:50%;background:#43e97b;box-shadow:0 0 0 3px rgba(67,233,123,.2);animation:pdot 2s infinite}
+    .status-dot.offline{background:#ff6b8a;box-shadow:0 0 0 3px rgba(255,107,138,.2);animation:none}
     @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(67,233,123,.2)}50%{box-shadow:0 0 0 6px rgba(67,233,123,.08)}}
     .status-label{font-size:12px;color:var(--text-soft);font-weight:500}
     .avatar-btn{width:36px;height:36px;border-radius:50%;background:var(--grad-blue);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(79,142,247,.3)}
     .avatar-btn span{font-size:13px;font-weight:800;color:white}
-
     .content{padding:20px 16px 20px}
     .section-label{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--text-soft);text-transform:uppercase;margin-bottom:12px;margin-top:4px}
-
     .tabs{display:flex;gap:8px;margin-bottom:22px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
     .tabs::-webkit-scrollbar{display:none}
     .tab{flex-shrink:0;padding:8px 18px;border-radius:50px;font-size:13px;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s}
     .tab.active{background:var(--grad-blue);border-color:transparent;color:white;box-shadow:0 4px 14px rgba(79,142,247,.3)}
-
     .summary-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:22px}
     .sum-card{background:var(--white);border-radius:var(--radius-sm);padding:14px 12px;border:1px solid var(--border);text-align:center}
     .sum-num{font-size:22px;font-weight:800;line-height:1}
@@ -112,9 +100,7 @@
     .sum-num.orange{background:var(--grad-orange);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .sum-num.green{background:var(--grad-green);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .sum-lbl{font-size:10px;color:var(--text-soft);font-weight:500;margin-top:3px}
-
     .card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:14px;overflow:hidden;transition:box-shadow .25s,transform .15s;box-shadow:var(--shadow-sm)}
-
     .device-row{display:flex;align-items:center;padding:16px 18px;gap:14px}
     .device-row+.device-row{border-top:1px solid var(--border)}
     .dev-icon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
@@ -127,12 +113,13 @@
     .dev-info{flex:1;min-width:0}
     .dev-name{font-size:15px;font-weight:600;color:var(--text-dark)}
     .dev-sub{font-size:12px;color:var(--text-soft);margin-top:1px}
-
     .toggle{width:50px;height:28px;border-radius:14px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
     .toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:var(--white);top:2px;left:2px;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
     .toggle.on{background:var(--grad-blue);border-color:transparent}.toggle.on::after{left:24px}
+    .toggle.loading{opacity:.5;pointer-events:none}
     .toggle.on-orange{background:var(--grad-orange);border-color:transparent}.toggle.on-orange::after{left:24px}
     .toggle.on-green{background:var(--grad-green);border-color:transparent}.toggle.on-green::after{left:24px}
+
 
     /* AC */
     .ac-header{background:var(--grad-blue);padding:20px 20px 16px;position:relative;overflow:hidden}
@@ -147,6 +134,7 @@
     .tw{width:50px;height:28px;border-radius:14px;background:rgba(255,255,255,.25);border:none;position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
     .tw::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:white;top:4px;left:4px;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
     .tw.on{background:rgba(255,255,255,.9)}.tw.on::after{left:26px;background:#4f8ef7}
+    .tw.loading{opacity:.5;pointer-events:none}
     .ac-temp-row{display:flex;align-items:flex-end;gap:6px;margin-top:16px;position:relative;z-index:1}
     .ac-temp-big{font-size:56px;font-weight:800;color:white;line-height:1;letter-spacing:-2px;font-family:'Space Mono',monospace}
     .ac-temp-unit{font-size:22px;font-weight:600;color:rgba(255,255,255,.75);margin-bottom:10px}
@@ -161,6 +149,7 @@
     .temp-stepper{display:flex;align-items:center;gap:12px}
     .step-btn{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all .18s;font-family:'Outfit',sans-serif}
     .step-btn:active{background:var(--light);transform:scale(.9)}
+    .step-btn:disabled{opacity:.4;cursor:not-allowed}
     .step-val{font-size:20px;font-weight:800;color:var(--text-dark);min-width:36px;text-align:center;font-family:'Space Mono',monospace}
     .mode-pills{display:flex;gap:8px;flex-wrap:wrap}
     .mode-pill{padding:7px 16px;border-radius:50px;font-size:12px;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px}
@@ -180,34 +169,22 @@
     .breaker-card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s}
     .breaker-card.b-on::before{opacity:1}
     .b1::before{background:linear-gradient(135deg,rgba(79,142,247,.06),rgba(124,95,230,.06))}
-    .b2::before{background:linear-gradient(135deg,rgba(255,159,87,.06),rgba(255,107,138,.06))}
-    .b3::before{background:linear-gradient(135deg,rgba(67,233,123,.06),rgba(56,217,192,.06))}
-    .b4::before{background:linear-gradient(135deg,rgba(196,113,237,.06),rgba(124,95,230,.06))}
+    .b1-solo::before{background:linear-gradient(135deg,rgba(79,142,247,.06),rgba(124,95,230,.06))}
     .breaker-card:active{transform:scale(.96)}
+    .breaker-card.loading{opacity:.6;pointer-events:none}
     .breaker-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
     .breaker-ico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center}
     .breaker-ico svg{width:18px;height:18px;stroke-width:2;fill:none}
     .breaker-ico.off{background:var(--light)}.breaker-ico.off svg{stroke:var(--text-soft)}
     .b1-ico.on{background:var(--grad-blue);box-shadow:0 4px 10px rgba(79,142,247,.3)}
-    .b2-ico.on{background:var(--grad-orange);box-shadow:0 4px 10px rgba(255,107,138,.25)}
-    .b3-ico.on{background:var(--grad-green);box-shadow:0 4px 10px rgba(67,233,123,.25)}
-    .b4-ico.on{background:var(--grad-purple);box-shadow:0 4px 10px rgba(196,113,237,.25)}
-    .b1-ico.on svg,.b2-ico.on svg,.b3-ico.on svg,.b4-ico.on svg{stroke:white}
+    .b1-ico.on svg{stroke:white}
     .breaker-status{font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:20px}
     .breaker-status.off{background:var(--light);color:var(--text-soft)}
     .breaker-status.on-b1{background:rgba(79,142,247,.12);color:#4f8ef7}
-    .breaker-status.on-b2{background:rgba(255,107,138,.12);color:#ff6b8a}
-    .breaker-status.on-b3{background:rgba(67,233,123,.15);color:#2db865}
-    .breaker-status.on-b4{background:rgba(196,113,237,.12);color:#c471ed}
     .breaker-name{font-size:13px;font-weight:700;color:var(--text-dark)}
     .breaker-sub{font-size:11px;color:var(--text-soft);margin-top:2px}
     .breaker-amp{font-size:11px;font-weight:600;color:var(--text-soft);margin-top:6px;font-family:'Space Mono',monospace}
     .breaker-amp span{color:var(--text-mid)}
-
-    /* TUYA */
-    .card-header{padding:14px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
-    .tuya-badge{background:var(--grad-orange);color:white;font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:20px}
-    .card-head-title{font-size:14px;font-weight:700;flex:1}
 
     /* ENERGY */
     .energy-card{padding:18px}
@@ -219,6 +196,15 @@
     .bar.primary{background:var(--grad-blue)}.bar.secondary{background:var(--grad-teal)}
     .bar-day{font-size:9px;color:var(--text-soft);font-weight:600}
 
+    /* LOG */
+    .log-card{padding:14px 18px}
+    .log-title{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
+    .log-clear{font-size:11px;color:#4f8ef7;cursor:pointer;font-weight:600}
+    .log-list{font-size:11px;font-family:'Space Mono',monospace;max-height:110px;overflow-y:auto;display:flex;flex-direction:column;gap:4px}
+    .log-entry{padding:3px 0;border-bottom:1px solid var(--border);color:var(--text-soft)}
+    .log-entry:last-child{border:none}
+    .log-ok{color:#1d9e75}.log-err{color:#ff6b8a}
+
     /* BOTTOM NAV */
     .bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--white);border-top:1px solid var(--border);display:flex;padding:10px 8px;padding-bottom:calc(10px + env(safe-area-inset-bottom));z-index:200}
     .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:4px 0}
@@ -229,9 +215,7 @@
     .nav-item.active .nav-icon svg{stroke:#4f8ef7}
     .nav-item.active .nav-lbl{color:#4f8ef7}
 
-    /* ━━━━━━━━━━━━━━━━━━━
-       PROFILE
-    ━━━━━━━━━━━━━━━━━━━ */
+    /* PROFILE */
     .profile-hero{background:var(--grad-blue);padding:60px 24px 50px;position:relative;overflow:hidden;text-align:center}
     .profile-hero::before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.07);top:-60px;right:-50px}
     .profile-hero::after{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-30px;left:-20px}
@@ -240,7 +224,6 @@
     .profile-email-disp{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;position:relative;z-index:1}
     .profile-badges{display:flex;justify-content:center;gap:8px;margin-top:12px;position:relative;z-index:1}
     .p-badge{background:rgba(255,255,255,.2);color:white;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
-
     .profile-body{padding:20px 16px 20px}
     .profile-section{margin-bottom:20px}
     .profile-section-title{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--text-soft);text-transform:uppercase;margin-bottom:10px}
@@ -258,7 +241,6 @@
     .pr-name{font-size:14px;font-weight:600;color:var(--text-dark)}
     .pr-sub{font-size:12px;color:var(--text-soft);margin-top:1px}
     .pr-arrow svg{width:16px;height:16px;stroke:var(--text-soft);fill:none;stroke-width:2}
-
     .stat-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:20px}
     .stat-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 10px;text-align:center}
     .stat-box-val{font-size:20px;font-weight:800}
@@ -266,9 +248,7 @@
     .stat-box-val.orange{background:var(--grad-orange);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .stat-box-val.green{background:var(--grad-green);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
     .stat-box-lbl{font-size:10px;color:var(--text-soft);font-weight:500;margin-top:3px}
-
     .joined-tag{font-size:11px;color:var(--text-soft);text-align:center;margin-bottom:20px}
-
     .logout-btn{width:100%;padding:15px;border-radius:14px;border:1.5px solid #ffdddd;background:#fff5f5;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:#ff6b6b;cursor:pointer;transition:all .2s}
     .logout-btn:active{background:#ffe0e0}
 
@@ -287,7 +267,6 @@
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .fade-up{animation:fadeUp .35s ease both}
-
     .ripple{position:relative;overflow:hidden}
     .ripple-effect{position:absolute;border-radius:50%;background:rgba(79,142,247,.18);transform:scale(0);animation:rpl .5s linear;pointer-events:none}
     @keyframes rpl{to{transform:scale(4);opacity:0}}
@@ -306,7 +285,6 @@
     <div class="auth-body">
       <div class="auth-title">Welcome back</div>
       <div class="auth-sub">Sign in to control your devices</div>
-
       <div class="input-group">
         <label class="input-label">Gmail Address</label>
         <div class="input-wrap">
@@ -315,7 +293,6 @@
         </div>
         <div class="field-err" id="loginEmailErr">Please enter a valid @gmail.com address</div>
       </div>
-
       <div class="input-group">
         <label class="input-label">Password</label>
         <div class="input-wrap">
@@ -327,18 +304,13 @@
         </div>
         <div class="field-err" id="loginPwdErr">Password must be at least 8 characters</div>
       </div>
-
       <div class="forgot-link"><a onclick="showForgot()">Forgot password?</a></div>
-
       <button class="auth-btn" onclick="doLogin()">Sign In</button>
-
       <div class="divider"><span>or continue with</span></div>
-
       <button class="google-btn" onclick="doGoogleSignIn()">
         <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
         Sign in with Google
       </button>
-
       <div class="auth-switch">Don't have an account? <a onclick="showScreen('screenRegister')">Sign up</a></div>
     </div>
   </div>
@@ -355,7 +327,6 @@
     <div class="auth-body">
       <div class="auth-title">Get started</div>
       <div class="auth-sub">Register with your Gmail address</div>
-
       <div class="input-group">
         <label class="input-label">Full Name</label>
         <div class="input-wrap">
@@ -364,7 +335,6 @@
         </div>
         <div class="field-err" id="regNameErr">Please enter your full name</div>
       </div>
-
       <div class="input-group">
         <label class="input-label">Gmail Address</label>
         <div class="input-wrap">
@@ -373,7 +343,6 @@
         </div>
         <div class="field-err" id="regEmailErr">Must be a valid @gmail.com address</div>
       </div>
-
       <div class="input-group">
         <label class="input-label">Password</label>
         <div class="input-wrap">
@@ -387,7 +356,6 @@
         <div class="strength-label" id="strengthLabel"></div>
         <div class="field-err" id="regPwdErr">Password must be at least 8 characters</div>
       </div>
-
       <div class="input-group">
         <label class="input-label">Confirm Password</label>
         <div class="input-wrap">
@@ -399,15 +367,12 @@
         </div>
         <div class="field-err" id="regPwd2Err">Passwords do not match</div>
       </div>
-
       <button class="auth-btn" onclick="doRegister()">Create Account</button>
-
       <div class="divider"><span>or</span></div>
       <button class="google-btn" onclick="doGoogleSignIn()">
         <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
         Sign up with Google
       </button>
-
       <div class="auth-switch">Already have an account? <a onclick="showScreen('screenLogin')">Sign in</a></div>
     </div>
   </div>
@@ -416,7 +381,6 @@
 <!-- ══ MAIN APP ══ -->
 <div class="screen" id="screenApp">
   <div class="app-wrap">
-
     <div class="header">
       <div class="header-row">
         <div class="logo-badge">
@@ -427,11 +391,8 @@
           </div>
         </div>
         <div class="header-right">
-          <div class="status-dot"></div>
-          <span class="status-label">Online</span>
-          <button class="avatar-btn" onclick="showTab('profile')">
-            <span id="avatarInitial">U</span>
-          </button>
+          <div id="connPill" class="conn-pill checking">checking…</div>
+          <button class="avatar-btn" onclick="showTab('profile')"><span id="avatarInitial">U</span></button>
         </div>
       </div>
     </div>
@@ -443,33 +404,27 @@
         <div class="tab" onclick="selectRoomTab(this,'Living')">Living Room</div>
         <div class="tab" onclick="selectRoomTab(this,'Bedroom')">Bedroom</div>
         <div class="tab" onclick="selectRoomTab(this,'Kitchen')">Kitchen</div>
-        <div class="tab" onclick="selectRoomTab(this,'Office')">Office</div>
       </div>
 
       <div class="summary-strip">
-        <div class="sum-card"><div class="sum-num blue" id="devOnCount">5</div><div class="sum-lbl">Devices On</div></div>
-        <div class="sum-card"><div class="sum-num orange" id="tempReadout">26°</div><div class="sum-lbl">Avg Temp</div></div>
-        <div class="sum-card"><div class="sum-num green" id="kwReadout">2.4</div><div class="sum-lbl">kW Usage</div></div>
+        <div class="sum-card"><div class="sum-num blue" id="devOnCount">—</div><div class="sum-lbl">Devices On</div></div>
+        <div class="sum-card"><div class="sum-num orange" id="tempReadout">—</div><div class="sum-lbl">AC Temp</div></div>
+        <div class="sum-card"><div class="sum-num green" id="breakerStatus">—</div><div class="sum-lbl">Breaker</div></div>
       </div>
 
-      <!-- BREAKERS -->
-      <div class="section-label">Circuit Breakers</div>
-      <div class="breaker-grid">
-        <div class="breaker-card b-on b1 ripple" id="b1card" onclick="toggleBreaker(1)">
-          <div class="breaker-top"><div class="breaker-ico b1-ico on" id="b1ico"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg></div><span class="breaker-status on-b1" id="b1status">ON</span></div>
-          <div class="breaker-name">Main Panel</div><div class="breaker-sub">Living Room</div><div class="breaker-amp" id="b1amp"><span>18.4</span> A</div>
-        </div>
-        <div class="breaker-card b2 ripple" id="b2card" onclick="toggleBreaker(2)">
-          <div class="breaker-top"><div class="breaker-ico b2-ico off" id="b2ico"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg></div><span class="breaker-status off" id="b2status">OFF</span></div>
-          <div class="breaker-name">Kitchen Cct</div><div class="breaker-sub">Kitchen</div><div class="breaker-amp" id="b2amp"><span>0.0</span> A</div>
-        </div>
-        <div class="breaker-card b-on b3 ripple" id="b3card" onclick="toggleBreaker(3)">
-          <div class="breaker-top"><div class="breaker-ico b3-ico on" id="b3ico"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg></div><span class="breaker-status on-b3" id="b3status">ON</span></div>
-          <div class="breaker-name">Bedroom</div><div class="breaker-sub">Bedroom</div><div class="breaker-amp" id="b3amp"><span>9.2</span> A</div>
-        </div>
-        <div class="breaker-card b4 ripple" id="b4card" onclick="toggleBreaker(4)">
-          <div class="breaker-top"><div class="breaker-ico b4-ico off" id="b4ico"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg></div><span class="breaker-status off" id="b4status">OFF</span></div>
-          <div class="breaker-name">Office</div><div class="breaker-sub">Office</div><div class="breaker-amp" id="b4amp"><span>0.0</span> A</div>
+      <!-- BREAKER -->
+      <div class="section-label">Circuit Breaker</div>
+      <div class="breaker-grid" style="grid-template-columns:1fr">
+        <div class="breaker-card b-on b1-solo ripple" id="b1card" onclick="toggleBreaker()">
+          <div class="breaker-top">
+            <div class="breaker-ico b1-ico on" id="b1ico">
+              <svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66 4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66 4.24-4.24"/></svg>
+            </div>
+            <span class="breaker-status on-b1" id="b1status">ON</span>
+          </div>
+          <div class="breaker-name">Main Switch Breaker</div>
+          <div class="breaker-sub">172.16.105.119 · TinyTuya</div>
+          <div class="breaker-amp" id="b1amp"><span id="b1ampVal">—</span></div>
         </div>
       </div>
 
@@ -480,61 +435,75 @@
           <div class="ac-top">
             <div class="ac-name-row">
               <div class="ac-icon-wrap"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4M12 2v20M2 12h20"/></svg></div>
-              <div><div class="ac-title">AC Unit</div><div class="ac-location">Living Room · Daikin</div></div>
+              <div><div class="ac-title">AC Unit</div><div class="ac-location">IR Remote · 172.16.105.119</div></div>
             </div>
-            <div class="tw on" id="acPower" onclick="toggleAC()"></div>
+            <div class="tw on" id="acPowerToggle" onclick="toggleAC()"></div>
           </div>
           <div class="ac-temp-row">
-            <div class="ac-temp-big" id="acRoomTemp">26</div>
+            <div class="ac-temp-big" id="acSetTempDisplay">24</div>
             <div class="ac-temp-unit">°C</div>
-            <div class="ac-set-label" id="acSetLabel">Set: 24°C</div>
+            <div class="ac-set-label" id="acSetLabel">tap ± to change</div>
           </div>
         </div>
         <div class="ac-body">
           <div class="ac-stats">
-            <div class="ac-stat"><div class="ac-stat-val" id="acHumidity">68%</div><div class="ac-stat-lbl">Humidity</div></div>
-            <div class="ac-stat"><div class="ac-stat-val" id="acPowerVal">1.8kW</div><div class="ac-stat-lbl">Power</div></div>
-            <div class="ac-stat"><div class="ac-stat-val">2h 14m</div><div class="ac-stat-lbl">Runtime</div></div>
+            <div class="ac-stat"><div class="ac-stat-val" id="acModeDisplay">cold</div><div class="ac-stat-lbl">Mode</div></div>
+            <div class="ac-stat"><div class="ac-stat-val" id="acWindDisplay">auto</div><div class="ac-stat-lbl">Fan</div></div>
+            <div class="ac-stat"><div class="ac-stat-val" id="acStateDisplay">ON</div><div class="ac-stat-lbl">State</div></div>
           </div>
           <div class="ac-controls">
             <span class="ac-ctrl-label">Temperature</span>
             <div class="temp-stepper">
-              <button class="step-btn" onclick="changeTemp(-1)">−</button>
+              <button class="step-btn" id="tempDown" onclick="changeTemp(-1)">−</button>
               <div class="step-val" id="acSetTemp">24</div>
-              <button class="step-btn" onclick="changeTemp(1)">+</button>
+              <button class="step-btn" id="tempUp" onclick="changeTemp(1)">+</button>
             </div>
           </div>
           <div style="margin-top:12px">
             <div class="ac-ctrl-label" style="margin-bottom:8px">Mode</div>
             <div class="mode-pills">
-              <div class="mode-pill active-cool" id="mode-cool" onclick="setMode('cool')"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></svg>Cool</div>
-              <div class="mode-pill" id="mode-heat" onclick="setMode('heat')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>Heat</div>
-              <div class="mode-pill" id="mode-fan" onclick="setMode('fan')"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2.5-5 5-5 9m0-14a5 5 0 00-5 5c0 2.5 5 5 5 9"/></svg>Fan</div>
-              <div class="mode-pill" id="mode-dry" onclick="setMode('dry')"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>Dry</div>
+              <div class="mode-pill active-cool" id="mode-cold" onclick="setACMode('cold')"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></svg>Cold</div>
+              <div class="mode-pill" id="mode-hot" onclick="setACMode('hot')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>Hot</div>
+              <div class="mode-pill" id="mode-auto" onclick="setACMode('auto')"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2.5-5 5-5 9m0-14a5 5 0 00-5 5c0 2.5 5 5 5 9"/></svg>Auto</div>
+              <div class="mode-pill" id="mode-dehumy" onclick="setACMode('dehumy')"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>Dry</div>
             </div>
           </div>
           <div class="fan-row">
             <span class="ac-ctrl-label">Fan Speed</span>
             <div class="fan-dots" id="fanDots">
-              <div class="fan-dot lit" onclick="setFan(1)"></div>
-              <div class="fan-dot lit" onclick="setFan(2)"></div>
-              <div class="fan-dot" onclick="setFan(3)"></div>
-              <div class="fan-dot" onclick="setFan(4)"></div>
-              <div class="fan-dot" onclick="setFan(5)"></div>
+              <div class="fan-dot lit" onclick="setACWind('low')" title="Low"></div>
+              <div class="fan-dot lit" onclick="setACWind('middle')" title="Mid"></div>
+              <div class="fan-dot" onclick="setACWind('high')" title="High"></div>
+              <div class="fan-dot" onclick="setACWind('auto')" title="Auto"></div>
             </div>
+          </div>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+            <button onclick="sendFullControl()" style="width:100%;padding:12px;border-radius:12px;background:var(--grad-blue);border:none;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:white;cursor:pointer;box-shadow:0 4px 14px rgba(79,142,247,.3)">Apply All Settings</button>
           </div>
         </div>
       </div>
 
       <!-- TUYA -->
       <div class="section-label">Tuya Smart Switches</div>
-      <div class="card fade-up" style="animation-delay:.18s">
-        <div class="card-header"><span class="card-head-title">Smart Plugs & Lights</span><span class="tuya-badge">TUYA</span></div>
+      <div class="card fade-up">
+        <div class="card-header" style="padding:14px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px;font-weight:700;flex:1">Smart Plugs &amp; Lights</span>
+          <span style="background:var(--grad-orange);color:white;font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:20px">TUYA</span>
+        </div>
         <div class="device-row"><div class="dev-icon on-blue" id="t1ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Living Room Light</div><div class="dev-sub" id="t1sub">On · 60W</div></div><div class="toggle on" id="t1toggle" onclick="toggleTuya(1)"></div></div>
         <div class="device-row"><div class="dev-icon off" id="t2ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Bedroom Light</div><div class="dev-sub" id="t2sub">Off</div></div><div class="toggle" id="t2toggle" onclick="toggleTuya(2)"></div></div>
         <div class="device-row"><div class="dev-icon on-green" id="t3ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="dev-info"><div class="dev-name">Smart Plug 1</div><div class="dev-sub" id="t3sub">On · 150W</div></div><div class="toggle on-green" id="t3toggle" onclick="toggleTuya(3)"></div></div>
         <div class="device-row"><div class="dev-icon off" id="t4ico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="dev-info"><div class="dev-name">Smart Plug 2</div><div class="dev-sub" id="t4sub">Off</div></div><div class="toggle" id="t4toggle" onclick="toggleTuya(4)"></div></div>
         <div class="device-row"><div class="dev-icon on-orange" id="t5ico"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M15 22v-4a3 3 0 00-6 0v4M9 7h6M9 11h6"/></svg></div><div class="dev-info"><div class="dev-name">Kitchen Switch</div><div class="dev-sub" id="t5sub">On · 80W</div></div><div class="toggle on-orange" id="t5toggle" onclick="toggleTuya(5)"></div></div>
+      </div>
+
+      <!-- ACTIVITY LOG -->
+      <div class="section-label">Activity Log</div>
+      <div class="card">
+        <div class="log-card">
+          <div class="log-title">API Log <span class="log-clear" onclick="clearLog()">clear</span></div>
+          <div class="log-list" id="logList"></div>
+        </div>
       </div>
 
       <!-- ENERGY -->
@@ -552,27 +521,21 @@
         <div class="profile-avatar" id="profileAvatar">U</div>
         <div class="profile-name" id="profileName">User</div>
         <div class="profile-email-disp" id="profileEmailDisp">user@gmail.com</div>
-        <div class="profile-badges">
-          <span class="p-badge">Admin</span>
-          <span class="p-badge">AEU Member</span>
-        </div>
+        <div class="profile-badges"><span class="p-badge">Admin</span><span class="p-badge">AEU Member</span></div>
       </div>
-
       <div class="profile-body">
         <div class="stat-grid">
-          <div class="stat-box"><div class="stat-box-val blue" id="pDevicesOn">5</div><div class="stat-box-lbl">Active</div></div>
-          <div class="stat-box"><div class="stat-box-val orange">24°</div><div class="stat-box-lbl">Temp</div></div>
-          <div class="stat-box"><div class="stat-box-val green">2.4</div><div class="stat-box-lbl">kW</div></div>
+          <div class="stat-box"><div class="stat-box-val blue" id="pDevicesOn">—</div><div class="stat-box-lbl">Active</div></div>
+          <div class="stat-box"><div class="stat-box-val orange" id="pTemp">—</div><div class="stat-box-lbl">AC Temp</div></div>
+          <div class="stat-box"><div class="stat-box-val green" id="pBreaker">—</div><div class="stat-box-lbl">Breaker</div></div>
         </div>
-
         <div class="joined-tag" id="joinedTag">Member since —</div>
-
         <div class="profile-section">
           <div class="profile-section-title">Account</div>
           <div class="profile-card">
             <div class="profile-row" onclick="openEditProfile()">
               <div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Edit Profile</div><div class="pr-sub">Name, phone, preferences</div></div>
+              <div class="pr-info"><div class="pr-name">Edit Profile</div><div class="pr-sub">Name & preferences</div></div>
               <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>
             <div class="profile-row">
@@ -580,39 +543,30 @@
               <div class="pr-info"><div class="pr-name">Gmail</div><div class="pr-sub" id="profileEmailRow">—</div></div>
               <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>
-            <div class="profile-row" onclick="showToast('Change password coming soon')">
-              <div class="pr-ico ico-orange"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Change Password</div><div class="pr-sub">Update your security</div></div>
-              <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </div>
           </div>
         </div>
-
         <div class="profile-section">
-          <div class="profile-section-title">Devices & Home</div>
+          <div class="profile-section-title">API Settings</div>
           <div class="profile-card">
-            <div class="profile-row" onclick="showToast('4 devices registered')">
-              <div class="pr-ico ico-purple"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-              <div class="pr-info"><div class="pr-name">My Devices</div><div class="pr-sub">4 devices registered</div></div>
+            <div class="profile-row" onclick="openApiSettings()">
+              <div class="pr-ico ico-purple"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+              <div class="pr-info"><div class="pr-name">Flask API URL</div><div class="pr-sub" id="apiUrlDisplay">http://172.16.105.119:5000</div></div>
               <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>
-            <div class="profile-row" onclick="showToast('Notifications configured')">
-              <div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Notifications</div><div class="pr-sub">Alerts & reminders</div></div>
+            <div class="profile-row" onclick="refreshDevices()">
+              <div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div>
+              <div class="pr-info"><div class="pr-name">Refresh Devices</div><div class="pr-sub">Pull latest status from API</div></div>
               <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>
           </div>
         </div>
-
         <div class="profile-section">
           <button class="logout-btn" onclick="doLogout()">Sign Out</button>
         </div>
       </div>
     </div>
-
   </div>
 
-  <!-- BOTTOM NAV -->
   <div class="bottom-nav">
     <div class="nav-item active" id="nav-home" onclick="showTab('home')">
       <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
@@ -649,47 +603,278 @@
         <input class="inp" type="text" id="editName" placeholder="Your name"/>
       </div>
     </div>
-    <div class="input-group">
-      <label class="input-label">Phone (optional)</label>
-      <div class="input-wrap">
-        <svg class="icon-left" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.49 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012.4 1.28h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.92 16z"/></svg>
-        <input class="inp" type="tel" id="editPhone" placeholder="+855 xx xxx xxx"/>
-      </div>
-    </div>
     <button class="auth-btn" onclick="saveProfile()">Save Changes</button>
     <button class="cancel-btn" onclick="closeEditProfile()">Cancel</button>
+  </div>
+</div>
+
+<!-- API SETTINGS MODAL -->
+<div class="modal-overlay" id="apiModal">
+  <div class="modal-sheet">
+    <div class="modal-handle"></div>
+    <div class="modal-title">API Settings</div>
+    <div class="input-group">
+      <label class="input-label">Flask API Base URL</label>
+      <div class="input-wrap">
+        <svg class="icon-left" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+        <input class="inp" type="url" id="apiUrlInput" placeholder="http://192.168.x.x:5000" style="padding-left:42px"/>
+      </div>
+    </div>
+    <button class="auth-btn" onclick="saveApiUrl()">Save & Test</button>
+    <button class="cancel-btn" onclick="closeApiModal()">Cancel</button>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-// ─── USER STORE ───
-const DB='aeu_users', SES='aeu_session';
+// ─────────────────────────────────────────
+//  CONSTANTS & STATE
+// ─────────────────────────────────────────
+const DB='aeu_users', SES='aeu_session', API_KEY='aeu_api_url';
+const DEFAULT_API='http://209.25.142.20:25610';
+
+let API_URL=localStorage.getItem(API_KEY)||DEFAULT_API;
+let currentUser=null;
+let acState={on:true, setTemp:24, mode:'cold', wind:'auto'};
+let breakerOn=true;
+
+// ─────────────────────────────────────────
+//  USER STORE (localStorage)
+// ─────────────────────────────────────────
 const getUsers=()=>{try{return JSON.parse(localStorage.getItem(DB)||'{}')}catch{return{}}};
 const saveUsers=u=>localStorage.setItem(DB,JSON.stringify(u));
 const getSession=()=>{try{return JSON.parse(localStorage.getItem(SES)||'null')}catch{return null}};
 const saveSession=u=>localStorage.setItem(SES,JSON.stringify(u));
 const clearSession=()=>localStorage.removeItem(SES);
 
-let currentUser=null;
-const ds={
-  breakers:{1:true,2:false,3:true,4:false},
-  tuya:{1:true,2:false,3:true,4:false,5:true},
-  ac:{on:true,setTemp:24,roomTemp:26,mode:'cool',fan:2}
-};
+// ─────────────────────────────────────────
+//  FLASK API HELPERS
+// ─────────────────────────────────────────
+async function apiFetch(path, method='GET', body=null){
+  const opts={method, headers:{'Content-Type':'application/json'}};
+  if(body) opts.body=JSON.stringify(body);
+  const resp=await fetch(API_URL+path, opts);
+  if(!resp.ok) throw new Error('HTTP '+resp.status);
+  return resp.json();
+}
 
-// ─── INIT ───
+function apiLog(msg, ok){
+  const list=document.getElementById('logList');
+  const entry=document.createElement('div');
+  entry.className='log-entry '+(ok===true?'log-ok':ok===false?'log-err':'');
+  entry.textContent=new Date().toLocaleTimeString()+' '+msg;
+  list.prepend(entry);
+  while(list.children.length>30) list.removeChild(list.lastChild);
+}
+
+function clearLog(){document.getElementById('logList').innerHTML='';}
+
+// ─────────────────────────────────────────
+//  CONNECTION CHECK
+// ─────────────────────────────────────────
+async function checkConnection(){
+  const pill=document.getElementById('connPill');
+  pill.className='conn-pill checking'; pill.textContent='checking…';
+  try{
+    await apiFetch('/');
+    pill.className='conn-pill online'; pill.textContent='● online';
+    return true;
+  }catch(e){
+    pill.className='conn-pill offline'; pill.textContent='✕ offline';
+    apiLog('Connection failed: '+API_URL, false);
+    return false;
+  }
+}
+
+// ─────────────────────────────────────────
+//  DEVICE STATUS REFRESH
+// ─────────────────────────────────────────
+async function refreshDevices(){
+  showToast('Refreshing…');
+  apiLog('Fetching device status…');
+  await Promise.allSettled([refreshBreaker(), refreshAC()]);
+  updateSummary();
+}
+
+async function refreshBreaker(){
+  try{
+    const d=await apiFetch('/breaker/status');
+    const on=d.data?.dps?.['1']??true;
+    breakerOn=on;
+    setBreakerUI(on);
+    apiLog('Breaker status: '+(on?'ON':'OFF'), true);
+  }catch(e){
+    apiLog('Breaker status error: '+e.message, false);
+  }
+}
+
+async function refreshAC(){
+  try{
+    const d=await apiFetch('/ac/status');
+    const dps=d.ac?.dps||{};
+    if(dps.power!==undefined){acState.on=dps.power;}
+    if(dps.temp!==undefined){acState.setTemp=dps.temp;}
+    renderACUI();
+    apiLog('AC status OK', true);
+  }catch(e){
+    apiLog('AC status error: '+e.message, false);
+  }
+}
+
+// ─────────────────────────────────────────
+//  BREAKER
+// ─────────────────────────────────────────
+async function toggleBreaker(){
+  const cmd=breakerOn?'off':'on';
+  fetch(API_URL+'/breaker/'+cmd);
+  breakerOn=!breakerOn;
+  setBreakerUI(breakerOn);
+  updateSummary();
+  showToast('Breaker '+(breakerOn?'ON':'OFF'));
+  apiLog('Breaker → '+cmd.toUpperCase(), true);
+}
+
+function setBreakerUI(on){
+  const card=document.getElementById('b1card');
+  const ico=document.getElementById('b1ico');
+  const status=document.getElementById('b1status');
+  card.classList.toggle('b-on',on);
+  ico.className='breaker-ico b1-ico '+(on?'on':'off');
+  status.className='breaker-status '+(on?'on-b1':'off');
+  status.textContent=on?'ON':'OFF';
+  document.getElementById('b1ampVal').textContent=on?'Live':'Offline';
+}
+
+// ─────────────────────────────────────────
+//  AC CONTROLS
+// ─────────────────────────────────────────
+async function toggleAC(){
+  const tog=document.getElementById('acPowerToggle');
+  tog.classList.add('loading');
+  const cmd=acState.on?'off':'on';
+  try{
+    const d=await apiFetch('/ac/'+cmd, 'POST');
+    if(d.success){
+      acState.on=!acState.on;
+      renderACUI();
+      updateSummary();
+      showToast('AC '+(acState.on?'ON':'OFF'));
+      apiLog('AC power → '+(acState.on?'ON':'OFF'), true);
+    }else{ showToast('AC error'); apiLog('AC toggle failed',false); }
+  }catch(e){
+    showToast('Error: '+e.message); apiLog('AC error: '+e.message, false);
+  }finally{
+    tog.classList.remove('loading');
+  }
+}
+
+async function changeTemp(delta){
+  const newTemp=Math.max(16,Math.min(30,acState.setTemp+delta));
+  if(newTemp===acState.setTemp) return;
+  acState.setTemp=newTemp;
+  document.getElementById('acSetTemp').textContent=newTemp;
+  document.getElementById('acSetTempDisplay').textContent=newTemp;
+  document.getElementById('acSetLabel').textContent='Set: '+newTemp+'°C';
+  try{
+    const d=await apiFetch('/ac/temp/'+newTemp, 'POST');
+    apiLog('AC temp → '+newTemp+'°C', d.success);
+    if(!d.success) showToast('Temp set failed');
+    else showToast(newTemp+'°C set');
+  }catch(e){ apiLog('Temp error: '+e.message, false); showToast('Error: '+e.message); }
+}
+
+const modeClassMap={cold:'active-cool',hot:'active-heat',auto:'active-fan',speed:'active-fan',dehumy:'active-dry'};
+async function setACMode(mode){
+  acState.mode=mode;
+  ['cold','hot','auto','speed','dehumy'].forEach(m=>{
+    const el=document.getElementById('mode-'+m);
+    if(el) el.className='mode-pill'+(m===mode?' '+modeClassMap[m]:'');
+  });
+  document.getElementById('acModeDisplay').textContent=mode;
+  try{
+    const d=await apiFetch('/ac/mode/'+mode, 'POST');
+    apiLog('AC mode → '+mode, d.success);
+    if(d.success) showToast('Mode: '+mode);
+    else showToast('Mode failed');
+  }catch(e){ apiLog('Mode error: '+e.message, false); showToast('Error: '+e.message); }
+}
+
+const windLevels=['low','middle','high','auto'];
+async function setACWind(speed){
+  acState.wind=speed;
+  const idx=windLevels.indexOf(speed)+1;
+  document.querySelectorAll('.fan-dot').forEach((d,i)=>d.classList.toggle('lit',i<idx));
+  document.getElementById('acWindDisplay').textContent=speed;
+  try{
+    const d=await apiFetch('/ac/wind/'+speed, 'POST');
+    apiLog('AC fan → '+speed, d.success);
+    if(d.success) showToast('Fan: '+speed);
+    else showToast('Fan failed');
+  }catch(e){ apiLog('Fan error: '+e.message, false); showToast('Error: '+e.message); }
+}
+
+async function sendFullControl(){
+  const body={power:acState.on, temp:acState.setTemp, mode:acState.mode, wind:acState.wind};
+  showToast('Applying settings…');
+  try{
+    const d=await apiFetch('/ac/control','POST',body);
+    apiLog('AC full control sent', d.success);
+    showToast(d.success?'Settings applied ✓':'Apply failed');
+  }catch(e){ apiLog('Full control error: '+e.message, false); showToast('Error: '+e.message); }
+}
+
+function renderACUI(){
+  const on=acState.on;
+  document.getElementById('acPowerToggle').classList.toggle('on',on);
+  document.getElementById('acStateDisplay').textContent=on?'ON':'OFF';
+  document.getElementById('acSetTemp').textContent=acState.setTemp;
+  document.getElementById('acSetTempDisplay').textContent=acState.setTemp;
+  document.getElementById('acSetLabel').textContent='Set: '+acState.setTemp+'°C';
+  document.getElementById('acModeDisplay').textContent=acState.mode;
+  document.getElementById('acWindDisplay').textContent=acState.wind;
+}
+
+// ─────────────────────────────────────────
+//  TUYA SWITCHES (local state only)
+// ─────────────────────────────────────────
+const tState={1:true,2:false,3:true,4:false,5:true};
+const tN={1:'Living Room Light',2:'Bedroom Light',3:'Smart Plug 1',4:'Smart Plug 2',5:'Kitchen Switch'};
+const tW={1:60,2:45,3:150,4:100,5:80};
+const tC={1:'on-blue',2:'on-blue',3:'on-green',4:'on-green',5:'on-orange'};
+const tT={1:'on',2:'on',3:'on-green',4:'on-green',5:'on-orange'};
+function toggleTuya(n){
+  tState[n]=!tState[n];const on=tState[n];
+  document.getElementById('t'+n+'ico').className='dev-icon '+(on?tC[n]:'off');
+  document.getElementById('t'+n+'toggle').className='toggle '+(on?tT[n]:'');
+  document.getElementById('t'+n+'sub').textContent=on?'On · '+tW[n]+'W':'Off';
+  updateSummary();showToast(tN[n]+' '+(on?'ON':'OFF'));
+}
+
+// ─────────────────────────────────────────
+//  SUMMARY STRIP
+// ─────────────────────────────────────────
+function updateSummary(){
+  const devOn=(acState.on?1:0)+(breakerOn?1:0);
+  document.getElementById('devOnCount').textContent=devOn;
+  document.getElementById('tempReadout').textContent=acState.setTemp+'°';
+  document.getElementById('breakerStatus').textContent=breakerOn?'ON':'OFF';
+  document.getElementById('pDevicesOn').textContent=devOn;
+  document.getElementById('pTemp').textContent=acState.setTemp+'°';
+  document.getElementById('pBreaker').textContent=breakerOn?'ON':'OFF';
+}
+
+// ─────────────────────────────────────────
+//  INIT & AUTH
+// ─────────────────────────────────────────
 window.onload=()=>{
   const s=getSession();
   if(s){currentUser=s;launchApp();}
   buildEnergyBars();
-  setInterval(tickTemp,4000);
   attachRipples();
 };
 
-// ─── SCREEN ROUTING ───
-function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
+function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
 
 function showTab(tab){
   document.getElementById('tabHome').style.display=tab==='home'?'block':'none';
@@ -700,121 +885,97 @@ function showTab(tab){
   if(tab==='profile')refreshProfile();
 }
 
-function launchApp(){
+async function launchApp(){
   showScreen('screenApp');
   showTab('home');
   document.getElementById('avatarInitial').textContent=initials(currentUser.name||'U');
   document.getElementById('headerGreeting').textContent='Hello, '+(currentUser.name||'User').split(' ')[0];
-  updateSummary();
+  document.getElementById('apiUrlDisplay').textContent=API_URL;
+  await checkConnection();
+  await refreshDevices();
 }
 
 const initials=n=>n.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'U';
-
-// ─── VALIDATION ───
 const isGmail=e=>/^[a-zA-Z0-9._%+\-]+@gmail\.com$/.test(e.trim());
 const isPwd=p=>p.length>=8;
 
 function validateRegEmail(){
-  const v=document.getElementById('regEmail').value;
-  const ok=!v||isGmail(v);
+  const v=document.getElementById('regEmail').value;const ok=!v||isGmail(v);
   document.getElementById('regEmail').classList.toggle('error',!ok&&!!v);
   document.getElementById('regEmailErr').classList.toggle('show',!ok&&!!v);
 }
-
 function checkStrength(){
   const p=document.getElementById('regPwd').value;
-  let s=0;
-  if(p.length>=8)s++;if(/[A-Z]/.test(p))s++;if(/[0-9]/.test(p))s++;if(/[^a-zA-Z0-9]/.test(p))s++;
+  let s=0;if(p.length>=8)s++;if(/[A-Z]/.test(p))s++;if(/[0-9]/.test(p))s++;if(/[^a-zA-Z0-9]/.test(p))s++;
   const lv=[{w:'0%',c:'',t:''},{w:'25%',c:'#ff6b8a',t:'Weak'},{w:'50%',c:'#ff9f57',t:'Fair'},{w:'75%',c:'#4f8ef7',t:'Good'},{w:'100%',c:'#43e97b',t:'Strong ✓'}][s];
   const f=document.getElementById('strengthFill'),l=document.getElementById('strengthLabel');
   f.style.width=lv.w;f.style.background=lv.c;l.textContent=lv.t;l.style.color=lv.c;
 }
 
-// ─── REGISTER ───
 function doRegister(){
   let ok=true;
   const name=document.getElementById('regName').value.trim();
   const email=document.getElementById('regEmail').value.trim().toLowerCase();
   const pwd=document.getElementById('regPwd').value;
   const pwd2=document.getElementById('regPwd2').value;
-
   const setF=(id,errId,bad)=>{document.getElementById(id).classList.toggle('error',bad);document.getElementById(errId).classList.toggle('show',bad);if(bad)ok=false;};
-  setF('regName','regNameErr',!name);
-  setF('regEmail','regEmailErr',!isGmail(email));
-  setF('regPwd','regPwdErr',!isPwd(pwd));
-  setF('regPwd2','regPwd2Err',pwd!==pwd2);
+  setF('regName','regNameErr',!name);setF('regEmail','regEmailErr',!isGmail(email));
+  setF('regPwd','regPwdErr',!isPwd(pwd));setF('regPwd2','regPwd2Err',pwd!==pwd2);
   if(!ok)return;
-
   const users=getUsers();
-  if(users[email]){showToast('Account already exists — sign in instead');return;}
+  if(users[email]){showToast('Account exists — sign in');return;}
   users[email]={name,email,pwd,createdAt:new Date().toISOString()};
-  saveUsers(users);
-  currentUser={name,email,createdAt:users[email].createdAt};
-  saveSession(currentUser);
-  showToast('Account created! Welcome 🎉');
-  launchApp();
+  saveUsers(users);currentUser={name,email,createdAt:users[email].createdAt};
+  saveSession(currentUser);showToast('Account created! Welcome 🎉');launchApp();
 }
 
-// ─── LOGIN ───
 function doLogin(){
   let ok=true;
   const email=document.getElementById('loginEmail').value.trim().toLowerCase();
   const pwd=document.getElementById('loginPassword').value;
   const setF=(id,errId,bad)=>{document.getElementById(id).classList.toggle('error',bad);document.getElementById(errId).classList.toggle('show',bad);if(bad)ok=false;};
-  setF('loginEmail','loginEmailErr',!isGmail(email));
-  setF('loginPassword','loginPwdErr',!isPwd(pwd));
+  setF('loginEmail','loginEmailErr',!isGmail(email));setF('loginPassword','loginPwdErr',!isPwd(pwd));
   if(!ok)return;
-
-  const users=getUsers();
-  const user=users[email];
+  const users=getUsers();const user=users[email];
   if(!user||user.pwd!==pwd){
     document.getElementById('loginEmail').classList.add('error');
     document.getElementById('loginPassword').classList.add('error');
-    showToast('Invalid Gmail or password ✗');return;
+    showToast('Invalid Gmail or password');return;
   }
   currentUser={name:user.name,email:user.email,createdAt:user.createdAt};
-  saveSession(currentUser);
-  showToast('Welcome back, '+user.name.split(' ')[0]+' 👋');
-  launchApp();
+  saveSession(currentUser);showToast('Welcome back, '+user.name.split(' ')[0]+' 👋');launchApp();
 }
 
-// ─── GOOGLE ───
 function doGoogleSignIn(){
   const u={name:'Demo User',email:'demo@gmail.com',createdAt:new Date().toISOString()};
-  const users=getUsers();
-  if(!users[u.email]){users[u.email]={...u,pwd:'google-oauth'};saveUsers(users);}
+  const users=getUsers();if(!users[u.email]){users[u.email]={...u,pwd:'google-oauth'};saveUsers(users);}
   currentUser=u;saveSession(u);showToast('Signed in with Google ✓');launchApp();
 }
-function showForgot(){showToast('Reset link sent to your Gmail (demo)')}
+function showForgot(){showToast('Reset link sent (demo)');}
+function doLogout(){clearSession();currentUser=null;showToast('Signed out');setTimeout(()=>showScreen('screenLogin'),600);}
 
-// ─── LOGOUT ───
-function doLogout(){clearSession();currentUser=null;showToast('Signed out');setTimeout(()=>showScreen('screenLogin'),600)}
-
-// ─── PROFILE ───
+// ─────────────────────────────────────────
+//  PROFILE
+// ─────────────────────────────────────────
 function refreshProfile(){
   if(!currentUser)return;
   document.getElementById('profileAvatar').textContent=initials(currentUser.name||'U');
   document.getElementById('profileName').textContent=currentUser.name||'User';
   document.getElementById('profileEmailDisp').textContent=currentUser.email||'—';
   document.getElementById('profileEmailRow').textContent=currentUser.email||'—';
-  document.getElementById('pDevicesOn').textContent=document.getElementById('devOnCount').textContent;
+  document.getElementById('apiUrlDisplay').textContent=API_URL;
+  updateSummary();
   if(currentUser.createdAt){
     const d=new Date(currentUser.createdAt);
     document.getElementById('joinedTag').textContent='Member since '+d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
   }
 }
-function openEditProfile(){
-  document.getElementById('editName').value=currentUser.name||'';
-  document.getElementById('editPhone').value=currentUser.phone||'';
-  document.getElementById('editModal').classList.add('open');
-}
-function closeEditProfile(){document.getElementById('editModal').classList.remove('open')}
+function openEditProfile(){document.getElementById('editName').value=currentUser.name||'';document.getElementById('editModal').classList.add('open');}
+function closeEditProfile(){document.getElementById('editModal').classList.remove('open');}
 function saveProfile(){
   const n=document.getElementById('editName').value.trim();
-  const p=document.getElementById('editPhone').value.trim();
   if(!n){showToast('Name cannot be empty');return;}
-  currentUser.name=n;currentUser.phone=p;
-  saveSession(currentUser);
+  currentUser.name=n;saveSession(currentUser);
   const users=getUsers();if(users[currentUser.email]){users[currentUser.email].name=n;saveUsers(users);}
   document.getElementById('avatarInitial').textContent=initials(n);
   document.getElementById('headerGreeting').textContent='Hello, '+n.split(' ')[0];
@@ -822,63 +983,66 @@ function saveProfile(){
 }
 document.getElementById('editModal').addEventListener('click',function(e){if(e.target===this)closeEditProfile();});
 
-// ─── ROOM TABS ───
-function selectRoomTab(el,room){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');if(room!=='All')showToast('Viewing: '+room);}
-
-// ─── IoT ───
-const bNames={1:'Main Panel',2:'Kitchen Cct',3:'Bedroom',4:'Office'},bAmps={1:18.4,2:12.0,3:9.2,4:7.5};
-function toggleBreaker(n){
-  ds.breakers[n]=!ds.breakers[n];const on=ds.breakers[n];
-  document.getElementById('b'+n+'card').classList.toggle('b-on',on);
-  document.getElementById('b'+n+'ico').className='breaker-ico b'+n+'-ico '+(on?'on':'off');
-  document.getElementById('b'+n+'status').className='breaker-status '+(on?'on-b'+n:'off');
-  document.getElementById('b'+n+'status').textContent=on?'ON':'OFF';
-  document.getElementById('b'+n+'amp').innerHTML='<span>'+(on?bAmps[n]:'0.0')+'</span> A';
-  updateSummary();showToast(bNames[n]+' '+(on?'ON':'OFF'));
+function openApiSettings(){
+  document.getElementById('apiUrlInput').value=API_URL;
+  document.getElementById('apiModal').classList.add('open');
 }
-const tN={1:'Living Room Light',2:'Bedroom Light',3:'Smart Plug 1',4:'Smart Plug 2',5:'Kitchen Switch'};
-const tW={1:60,2:45,3:150,4:100,5:80};
-const tC={1:'on-blue',2:'on-blue',3:'on-green',4:'on-green',5:'on-orange'};
-const tT={1:'on',2:'on',3:'on-green',4:'on-green',5:'on-orange'};
-function toggleTuya(n){
-  ds.tuya[n]=!ds.tuya[n];const on=ds.tuya[n];
-  document.getElementById('t'+n+'ico').className='dev-icon '+(on?tC[n]:'off');
-  document.getElementById('t'+n+'toggle').className='toggle '+(on?tT[n]:'');
-  document.getElementById('t'+n+'sub').textContent=on?'On · '+tW[n]+'W':'Off';
-  updateSummary();showToast(tN[n]+' '+(on?'ON':'OFF'));
+function closeApiModal(){document.getElementById('apiModal').classList.remove('open');}
+async function saveApiUrl(){
+  const val=document.getElementById('apiUrlInput').value.trim().replace(/\/$/,'');
+  if(!val){showToast('Enter a valid URL');return;}
+  API_URL=val;localStorage.setItem(API_KEY,val);
+  document.getElementById('apiUrlDisplay').textContent=val;
+  closeApiModal();showToast('Saved, testing…');
+  const ok=await checkConnection();
+  if(ok) await refreshDevices();
 }
-function toggleAC(){ds.ac.on=!ds.ac.on;document.getElementById('acPower').classList.toggle('on',ds.ac.on);document.getElementById('acPowerVal').textContent=ds.ac.on?'1.8kW':'0W';showToast('AC '+(ds.ac.on?'ON':'OFF'));}
-function changeTemp(d){ds.ac.setTemp=Math.max(16,Math.min(30,ds.ac.setTemp+d));document.getElementById('acSetTemp').textContent=ds.ac.setTemp;document.getElementById('acSetLabel').textContent='Set: '+ds.ac.setTemp+'°C';showToast('Set: '+ds.ac.setTemp+'°C');}
-const mMap={cool:'active-cool',heat:'active-heat',fan:'active-fan',dry:'active-dry'};
-function setMode(m){ds.ac.mode=m;['cool','heat','fan','dry'].forEach(id=>{document.getElementById('mode-'+id).className='mode-pill'+(id===m?' '+mMap[id]:'');});showToast('Mode: '+m[0].toUpperCase()+m.slice(1));}
-function setFan(l){ds.ac.fan=l;document.querySelectorAll('.fan-dot').forEach((d,i)=>d.classList.toggle('lit',i<l));showToast(['Low','Low','Medium','High','Max'][l-1]+' fan');}
+document.getElementById('apiModal').addEventListener('click',function(e){if(e.target===this)closeApiModal();});
 
-function updateSummary(){
-  const on=Object.values(ds.tuya).filter(Boolean).length+Object.values(ds.breakers).filter(Boolean).length+(ds.ac.on?1:0);
-  document.getElementById('devOnCount').textContent=on;
-  document.getElementById('kwReadout').textContent=(on*0.32+(ds.ac.on?1.8:0)).toFixed(1);
+// ─────────────────────────────────────────
+//  ROOM TABS
+// ─────────────────────────────────────────
+function selectRoomTab(el,room){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  if(room!=='All') showToast('Viewing: '+room);
 }
 
-function tickTemp(){
-  ds.ac.roomTemp=Math.max(20,Math.min(32,ds.ac.roomTemp+(Math.random()-.48)*.3));
-  const t=Math.round(ds.ac.roomTemp);
-  document.getElementById('acRoomTemp').textContent=t;
-  document.getElementById('tempReadout').textContent=t+'°';
-  document.getElementById('acHumidity').textContent=Math.round(65+Math.random()*8)+'%';
-}
-
+// ─────────────────────────────────────────
+//  ENERGY CHART
+// ─────────────────────────────────────────
 function buildEnergyBars(){
   const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],vals=[14,22,18,26,20,31,24],mx=Math.max(...vals);
   const el=document.getElementById('energyBars');
-  days.forEach((d,i)=>{const h=Math.round(vals[i]/mx*52);el.innerHTML+=`<div class="bar-wrap"><div class="bar ${i===6?'secondary':'primary'}" style="height:${h}px"></div><div class="bar-day">${d}</div></div>`;});
+  days.forEach((d,i)=>{
+    const h=Math.round(vals[i]/mx*52);
+    el.innerHTML+=`<div class="bar-wrap"><div class="bar ${i===6?'secondary':'primary'}" style="height:${h}px"></div><div class="bar-day">${d}</div></div>`;
+  });
 }
 
-// ─── UTILS ───
-function togglePwd(id,btn){const i=document.getElementById(id);i.type=i.type==='password'?'text':'password';btn.querySelector('svg').style.opacity=i.type==='text'?'0.4':'1';}
-function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200);}
-function attachRipples(){document.querySelectorAll('.ripple').forEach(el=>{el.addEventListener('click',function(e){const r=document.createElement('span');const rect=this.getBoundingClientRect();const size=Math.max(rect.width,rect.height);r.className='ripple-effect';r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;this.appendChild(r);setTimeout(()=>r.remove(),600);});});}
+// ─────────────────────────────────────────
+//  UTILS
+// ─────────────────────────────────────────
+function togglePwd(id,btn){
+  const i=document.getElementById(id);i.type=i.type==='password'?'text':'password';
+  btn.querySelector('svg').style.opacity=i.type==='text'?'0.4':'1';
+}
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2400);
+}
+function attachRipples(){
+  document.querySelectorAll('.ripple').forEach(el=>{
+    el.addEventListener('click',function(e){
+      const r=document.createElement('span');const rect=this.getBoundingClientRect();
+      const size=Math.max(rect.width,rect.height);r.className='ripple-effect';
+      r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+      this.appendChild(r);setTimeout(()=>r.remove(),600);
+    });
+  });
+}
 
-if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+if('serviceWorker'in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
