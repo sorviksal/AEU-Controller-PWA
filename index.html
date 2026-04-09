@@ -27,14 +27,12 @@
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     body{font-family:'Outfit',sans-serif;background:var(--off-white);color:var(--text-dark);min-height:100vh;max-width:430px;margin:0 auto;overflow-x:hidden}
     .screen{display:none;min-height:100vh}.screen.active{display:block}
-
-    /* AUTH */
     .auth-wrap{min-height:100vh;display:flex;flex-direction:column}
     .auth-hero{background:var(--grad-blue);padding:64px 30px 44px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center}
     .auth-hero::before{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.07);top:-80px;right:-60px}
     .auth-hero::after{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-40px;left:-30px}
     .auth-logo-icon{width:78px;height:80px;border-radius:18px;background:#ff9f57;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1;box-shadow:0 8px 24px rgba(0,0,0,.15)}
-    .auth-logo-icon img{width: 68px; height: 68px;fill:white; margin-right: 0px;}
+    .auth-logo-icon img{width:68px;height:68px;fill:white}
     .auth-app-name{font-size:28px;font-weight:800;color:white;letter-spacing:-.5px;position:relative;z-index:1}
     .auth-tagline{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;position:relative;z-index:1}
     .auth-body{background:var(--white);flex:1;border-radius:28px 28px 0 0;margin-top:-22px;padding:30px 24px 44px;position:relative;z-index:2}
@@ -56,24 +54,19 @@
     .strength-label{font-size:11px;margin-top:4px;font-weight:600}
     .auth-btn{width:100%;padding:15px;border-radius:14px;background:var(--grad-blue);border:none;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;color:white;cursor:pointer;margin-top:8px;box-shadow:0 6px 20px rgba(79,142,247,.35);transition:transform .15s,box-shadow .15s}
     .auth-btn:active{transform:scale(.97);box-shadow:0 3px 10px rgba(79,142,247,.25)}
-    .auth-btn:disabled{opacity:.6;cursor:not-allowed}
     .divider{display:flex;align-items:center;gap:12px;margin:18px 0}
     .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
     .divider span{font-size:12px;color:var(--text-soft);font-weight:500}
-    .google-btn{width:100%;padding:13px;border-radius:14px;border:1.5px solid var(--border);background:var(--white);font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;color:var(--text-dark);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s}
-    .google-btn:active{background:var(--off-white)}
     .auth-switch{text-align:center;margin-top:20px;font-size:13px;color:var(--text-soft)}
     .auth-switch a{color:#4f8ef7;font-weight:700;cursor:pointer;text-decoration:none}
     .forgot-link{text-align:right;margin-top:-8px;margin-bottom:14px}
     .forgot-link a{font-size:12px;color:#4f8ef7;font-weight:600;cursor:pointer}
-
-    /* MAIN APP */
     .app-wrap{padding-bottom:80px}
     .header{background:var(--white);padding:52px 20px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
     .header-row{display:flex;align-items:center;justify-content:space-between}
     .logo-badge{display:flex;align-items:center;gap:10px}
-    .logo-icon{width:46px;height:48px;border-radius:10px;display:flex;background: #ff9f57; align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(79,142,247,.35)}
-    .logo-icon img{width:41px;height:41px;fill:white; margin-left: 0px;}
+    .logo-icon{width:46px;height:48px;border-radius:10px;display:flex;background:#ff9f57;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(79,142,247,.35)}
+    .logo-icon img{width:41px;height:41px}
     .logo-text{font-weight:700;font-size:18px;letter-spacing:-.3px}
     .logo-sub{font-size:11px;color:var(--text-soft);font-weight:400;margin-top:-2px}
     .header-right{display:flex;align-items:center;gap:10px}
@@ -81,12 +74,9 @@
     .conn-pill.online{background:rgba(67,233,123,.15);color:#2db865}
     .conn-pill.offline{background:rgba(255,107,138,.12);color:#ff6b8a}
     .conn-pill.checking{background:rgba(79,142,247,.12);color:#4f8ef7}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:#43e97b;box-shadow:0 0 0 3px rgba(67,233,123,.2);animation:pdot 2s infinite}
-    .status-dot.offline{background:#ff6b8a;box-shadow:0 0 0 3px rgba(255,107,138,.2);animation:none}
-    @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(67,233,123,.2)}50%{box-shadow:0 0 0 6px rgba(67,233,123,.08)}}
-    .status-label{font-size:12px;color:var(--text-soft);font-weight:500}
-    .avatar-btn{width:36px;height:36px;border-radius:50%;background:var(--grad-blue);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(79,142,247,.3)}
+    .avatar-btn{width:36px;height:36px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--grad-blue);border:none;cursor:pointer;box-shadow:0 2px 8px rgba(79,142,247,.3)}
     .avatar-btn span{font-size:13px;font-weight:800;color:white}
+    .avatar-btn img{width:100%;height:100%;object-fit:cover}
     .content{padding:20px 16px 20px}
     .section-label{font-size:11px;font-weight:700;letter-spacing:1.2px;color:var(--text-soft);text-transform:uppercase;margin-bottom:12px;margin-top:4px}
     .tabs{display:flex;gap:8px;margin-bottom:22px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
@@ -119,8 +109,6 @@
     .toggle.loading{opacity:.5;pointer-events:none}
     .toggle.on-orange{background:var(--grad-orange);border-color:transparent}.toggle.on-orange::after{left:24px}
     .toggle.on-green{background:var(--grad-green);border-color:transparent}.toggle.on-green::after{left:24px}
-
-
     /* AC */
     .ac-header{background:var(--grad-blue);padding:20px 20px 16px;position:relative;overflow:hidden}
     .ac-header::before{content:'';position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.07);top:-40px;right:-30px}
@@ -149,8 +137,6 @@
     .temp-stepper{display:flex;align-items:center;gap:12px}
     .step-btn{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all .18s;font-family:'Outfit',sans-serif}
     .step-btn:active{background:var(--light);transform:scale(.9)}
-    .step-btn:disabled{opacity:.4;cursor:not-allowed}
-    .step-val{font-size:20px;font-weight:800;color:var(--text-dark);min-width:36px;text-align:center;font-family:'Space Mono',monospace}
     .mode-pills{display:flex;gap:8px;flex-wrap:wrap}
     .mode-pill{padding:7px 16px;border-radius:50px;font-size:12px;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:5px}
     .mode-pill svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.2}
@@ -158,20 +144,14 @@
     .mode-pill.active-heat{background:var(--grad-orange);border-color:transparent;color:white}
     .mode-pill.active-fan{background:var(--grad-teal);border-color:transparent;color:white}
     .mode-pill.active-dry{background:var(--grad-purple);border-color:transparent;color:white}
-    .fan-row{display:flex;align-items:center;justify-content:space-between;margin-top:14px}
-    .fan-dots{display:flex;gap:6px}
-    .fan-dot{width:30px;height:8px;border-radius:4px;background:var(--light);cursor:pointer;transition:all .2s}
-    .fan-dot.lit{background:var(--grad-blue);box-shadow:0 2px 8px rgba(79,142,247,.3)}
-
-    /* BREAKERS */
+    .step-val{font-size:20px;font-weight:800;color:var(--text-dark);min-width:36px;text-align:center;font-family:'Space Mono',monospace}
+    /* BREAKER */
     .breaker-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
     .breaker-card{background:var(--white);border-radius:var(--radius-sm);border:1px solid var(--border);padding:16px;cursor:pointer;transition:all .25s;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
     .breaker-card::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .3s}
     .breaker-card.b-on::before{opacity:1}
-    .b1::before{background:linear-gradient(135deg,rgba(79,142,247,.06),rgba(124,95,230,.06))}
     .b1-solo::before{background:linear-gradient(135deg,rgba(79,142,247,.06),rgba(124,95,230,.06))}
     .breaker-card:active{transform:scale(.96)}
-    .breaker-card.loading{opacity:.6;pointer-events:none}
     .breaker-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
     .breaker-ico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center}
     .breaker-ico svg{width:18px;height:18px;stroke-width:2;fill:none}
@@ -184,8 +164,6 @@
     .breaker-name{font-size:13px;font-weight:700;color:var(--text-dark)}
     .breaker-sub{font-size:11px;color:var(--text-soft);margin-top:2px}
     .breaker-amp{font-size:11px;font-weight:600;color:var(--text-soft);margin-top:6px;font-family:'Space Mono',monospace}
-    .breaker-amp span{color:var(--text-mid)}
-
     /* ENERGY */
     .energy-card{padding:18px}
     .energy-title{font-size:14px;font-weight:700;margin-bottom:4px}
@@ -195,7 +173,6 @@
     .bar{width:100%;border-radius:6px 6px 0 0;transition:height .5s}
     .bar.primary{background:var(--grad-blue)}.bar.secondary{background:var(--grad-teal)}
     .bar-day{font-size:9px;color:var(--text-soft);font-weight:600}
-
     /* LOG */
     .log-card{padding:14px 18px}
     .log-title{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
@@ -204,7 +181,6 @@
     .log-entry{padding:3px 0;border-bottom:1px solid var(--border);color:var(--text-soft)}
     .log-entry:last-child{border:none}
     .log-ok{color:#1d9e75}.log-err{color:#ff6b8a}
-
     /* BOTTOM NAV */
     .bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--white);border-top:1px solid var(--border);display:flex;padding:10px 8px;padding-bottom:calc(10px + env(safe-area-inset-bottom));z-index:200}
     .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:4px 0}
@@ -214,12 +190,11 @@
     .nav-item.active .nav-icon{background:var(--light)}
     .nav-item.active .nav-icon svg{stroke:#4f8ef7}
     .nav-item.active .nav-lbl{color:#4f8ef7}
-
     /* PROFILE */
     .profile-hero{background:var(--grad-blue);padding:60px 24px 50px;position:relative;overflow:hidden;text-align:center}
     .profile-hero::before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.07);top:-60px;right:-50px}
     .profile-hero::after{content:'';position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-30px;left:-20px}
-    .profile-avatar{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.2);border:3px solid rgba(255,255,255,.5);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:white;position:relative;z-index:1}
+    .profile-avatar{width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.2);border:3px solid rgba(255,255,255,.5);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800;color:white;position:relative;z-index:1;overflow:hidden}
     .profile-name{font-size:20px;font-weight:800;color:white;position:relative;z-index:1}
     .profile-email-disp{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px;position:relative;z-index:1}
     .profile-badges{display:flex;justify-content:center;gap:8px;margin-top:12px;position:relative;z-index:1}
@@ -234,7 +209,6 @@
     .pr-ico{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .pr-ico svg{width:18px;height:18px;fill:none;stroke-width:2}
     .ico-blue{background:rgba(79,142,247,.1)}.ico-blue svg{stroke:#4f8ef7}
-    .ico-orange{background:rgba(255,107,138,.1)}.ico-orange svg{stroke:#ff6b8a}
     .ico-green{background:rgba(67,233,123,.15)}.ico-green svg{stroke:#2db865}
     .ico-purple{background:rgba(196,113,237,.1)}.ico-purple svg{stroke:#c471ed}
     .pr-info{flex:1}
@@ -250,269 +224,169 @@
     .stat-box-lbl{font-size:10px;color:var(--text-soft);font-weight:500;margin-top:3px}
     .joined-tag{font-size:11px;color:var(--text-soft);text-align:center;margin-bottom:20px}
     .logout-btn{width:100%;padding:15px;border-radius:14px;border:1.5px solid #ffdddd;background:#fff5f5;font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;color:#ff6b6b;cursor:pointer;transition:all .2s}
-    .logout-btn:active{background:#ffe0e0}
-    .profile-avatar-box{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      padding:10px 0 15px;
-      gap:10px;
-    }
-
-    .avatar-circle{
-      width:80px;
-      height:80px;
-      border-radius:50%;
-      background:var(--off-white);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:600;
-      font-size:20px;
-      overflow:hidden;
-    }
-
-    .avatar-circle img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .avatar-upload-btn{
-      font-size:13px;
-      color:var(--blue);
-      cursor:pointer;
-    }
-    #profileAvatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:50%;
-    }
-    .avatar-btn{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--off-white);
-  border:none;
-  cursor:pointer;
-}
-
-.avatar-btn img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-/* ENERGY TAB */
-.energy-hero{background:var(--grad-teal);padding:24px 20px 20px;position:relative;overflow:hidden}
-.energy-hero::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.07);top:-60px;right:-40px}
-.energy-hero::after{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-30px;left:10px}
-.energy-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
-.energy-hero-title{font-size:20px;font-weight:800;color:white}
-.energy-hero-sub{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
-.live-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:50px;font-size:12px;font-weight:700;color:white}
-.live-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pdot 1.5s infinite}
-.energy-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
-.e-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
-.e-stat-val{font-size:18px;font-weight:800;color:white;font-family:'Space Mono',monospace}
-.e-stat-lbl{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;font-weight:500}
-.energy-body{padding:16px}
-
-.live-power-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
-.live-power-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
-.live-power-label{font-size:13px;font-weight:700;color:var(--text-dark)}
-.live-power-status{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(56,217,192,.15);color:#0f6e56}
-.live-meter{display:flex;align-items:flex-end;gap:8px;margin-bottom:12px}
-.live-watts{font-size:48px;font-weight:800;color:var(--text-dark);font-family:'Space Mono',monospace;line-height:1;background:var(--grad-teal);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.live-watts-unit{font-size:16px;font-weight:600;color:var(--text-soft);margin-bottom:8px}
-.power-bar-track{height:8px;border-radius:4px;background:var(--light);overflow:hidden;margin-bottom:8px}
-.power-bar-fill{height:100%;border-radius:4px;background:var(--grad-teal);transition:width .4s ease}
-.power-bar-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--text-soft);font-weight:500}
-.power-sparkline{height:50px;display:flex;align-items:flex-end;gap:3px;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
-.spark-bar{flex:1;border-radius:3px 3px 0 0;background:var(--grad-teal);opacity:.5;transition:height .3s}
-.spark-bar.current{opacity:1}
-
-.chart-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
-.chart-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
-.chart-card-title{font-size:13px;font-weight:700;color:var(--text-dark)}
-.chart-period-btns{display:flex;gap:4px}
-.period-btn{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif}
-.period-btn.active{background:var(--grad-teal);border-color:transparent;color:white}
-.chart-sub{font-size:11px;color:var(--text-soft);margin-bottom:16px}
-.bar-chart-wrap{display:flex;align-items:flex-end;gap:5px;height:100px}
-.bc-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer}
-.bc-bar{width:100%;border-radius:5px 5px 0 0;transition:all .35s;position:relative;min-height:4px}
-.bc-bar.primary-e{background:var(--grad-teal)}
-.bc-bar.highlight-e{background:var(--grad-blue);box-shadow:0 4px 12px rgba(79,142,247,.3)}
-.bc-bar-val{font-size:9px;font-weight:700;color:var(--text-soft)}
-.bc-bar-lbl{font-size:9px;color:var(--text-soft);font-weight:600}
-.chart-legend{display:flex;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
-.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-soft);font-weight:500}
-.legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
-
-.energy-tips-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow-sm)}
-.tip-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border)}
-.tip-row:last-child{border:none}
-.tip-ico{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
-.tip-info{flex:1}
-.tip-name{font-size:13px;font-weight:600;color:var(--text-dark)}
-.tip-sub{font-size:11px;color:var(--text-soft);margin-top:1px}
-.tip-val{font-size:13px;font-weight:700;font-family:'Space Mono',monospace;color:var(--text-dark);flex-shrink:0}
-/* Security*/
-/* SECURITY TAB */
-.sec-hero{background:var(--grad-blue);padding:24px 20px 20px;position:relative;overflow:hidden}
-.sec-hero::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.07);top:-60px;right:-40px}
-.sec-hero::after{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-30px;left:10px}
-.sec-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
-.sec-hero-title{font-size:20px;font-weight:800;color:white}
-.sec-hero-sub{font-size:12px;color:rgba(255,255,255,.7);margin-top:2px}
-.arm-big-btn{padding:10px 20px;border-radius:50px;border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
-.arm-big-btn.armed{background:rgba(255,107,138,.9);color:white;box-shadow:0 4px 14px rgba(255,107,138,.35)}
-.arm-big-btn.disarmed{background:rgba(255,255,255,.2);color:white}
-.sec-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
-.sec-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
-.sec-stat-val{font-size:18px;font-weight:800;color:white}
-.sec-stat-lbl{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;font-weight:500}
-.sec-body{padding:16px}
-
-.cam-grid-sec{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.cam-card-sec{background:var(--white);border-radius:var(--radius-sm);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:all .2s;box-shadow:var(--shadow-sm)}
-.cam-card-sec:active{transform:scale(.97)}
-.cam-card-sec.selected-cam{border-color:#4f8ef7;border-width:1.5px}
-.cam-feed{width:100%;aspect-ratio:16/9;background:#0d0f1a;position:relative;overflow:hidden}
-.cam-feed canvas{position:absolute;inset:0;width:100%;height:100%}
-.cam-feed-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:6px;pointer-events:none}
-.cam-feed-top{display:flex;justify-content:space-between;align-items:flex-start}
-.cam-feed-bot{display:flex;justify-content:space-between;align-items:flex-end}
-.rec-tag{background:rgba(226,75,74,.9);color:white;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;letter-spacing:.5px}
-.night-tag-s{background:rgba(53,74,117,.85);color:#85b7eb;font-size:9px;padding:2px 5px;border-radius:3px}
-.motion-alert{background:rgba(255,159,87,.9);color:white;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;display:none}
-.motion-alert.show{display:inline}
-.cam-ts{color:rgba(255,255,255,.6);font-size:9px;font-family:'Space Mono',monospace}
-.cam-footer-s{padding:7px 10px;display:flex;align-items:center;justify-content:space-between}
-.cam-name-s{font-size:12px;font-weight:700;color:var(--text-dark)}
-.cam-loc-s{font-size:10px;color:var(--text-soft)}
-.cam-dot-on{width:7px;height:7px;border-radius:50%;background:#43e97b;flex-shrink:0}
-.cam-dot-off{width:7px;height:7px;border-radius:50%;background:#888;flex-shrink:0}
-
-.zone-list{display:flex;flex-direction:column;gap:0}
-.zone-row-s{display:flex;align-items:center;padding:13px 16px;gap:12px;border-bottom:1px solid var(--border)}
-.zone-row-s:last-child{border:none}
-.zone-ico{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.zone-ico svg{width:17px;height:17px;fill:none;stroke-width:2}
-.zone-info{flex:1}
-.zone-name-s{font-size:13px;font-weight:600;color:var(--text-dark)}
-.zone-sub-s{font-size:11px;color:var(--text-soft);margin-top:1px}
-.zone-toggle{width:44px;height:25px;border-radius:13px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
-.zone-toggle::after{content:'';position:absolute;width:17px;height:17px;border-radius:50%;background:white;top:2px;left:2px;transition:all .3s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
-.zone-toggle.zon{background:var(--grad-blue);border-color:transparent}.zone-toggle.zon::after{left:21px}
-
-.alert-list-s{display:flex;flex-direction:column;gap:0}
-.alert-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border)}
-.alert-row:last-child{border:none}
-.alert-ico-s{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
-.alert-ico-s.a-motion{background:rgba(255,159,87,.15)}
-.alert-ico-s.a-person{background:rgba(255,107,138,.12)}
-.alert-ico-s.a-ok{background:rgba(67,233,123,.15)}
-.alert-ico-s.a-door{background:rgba(79,142,247,.12)}
-.alert-title-s{font-size:12px;font-weight:600;color:var(--text-dark)}
-.alert-sub-s{font-size:10px;color:var(--text-soft);margin-top:1px}
-.alert-time-s{font-size:10px;color:var(--text-soft);font-family:'Space Mono',monospace;flex-shrink:0}
-/* DEVICES TAB */
-.dev-hero{background:var(--grad-purple);padding:24px 20px 20px;position:relative;overflow:hidden}
-.dev-hero::before{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.07);top:-60px;right:-40px}
-.dev-hero::after{content:'';position:absolute;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-30px;left:10px}
-.dev-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
-.dev-hero-title{font-size:20px;font-weight:800;color:white}
-.dev-hero-sub{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
-.dev-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
-.dh-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
-.dh-stat-val{font-size:18px;font-weight:800;color:white}
-.dh-stat-lbl{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;font-weight:500}
-.dev-body{padding:16px}
-
-/* FLOOR SELECTOR */
-.floor-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:16px}
-.floor-scroll::-webkit-scrollbar{display:none}
-.floor-chip{flex-shrink:0;padding:7px 16px;border-radius:50px;font-size:12px;font-weight:700;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s}
-.floor-chip.active{background:var(--grad-purple);border-color:transparent;color:white;box-shadow:0 4px 12px rgba(196,113,237,.3)}
-
-/* ROOM CARDS */
-.room-list{display:flex;flex-direction:column;gap:12px}
-.room-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm);transition:all .25s}
-.room-header{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;transition:background .15s;-webkit-tap-highlight-color:transparent}
-.room-header:active{background:var(--off-white)}
-.room-header-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
-.room-header-info{flex:1;min-width:0}
-.room-header-name{font-size:15px;font-weight:700;color:var(--text-dark)}
-.room-header-sub{font-size:11px;color:var(--text-soft);margin-top:2px}
-.room-header-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.room-on-count{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(124,95,230,.12);color:#7c5fe6}
-.room-arrow{width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;transition:transform .25s}
-.room-arrow svg{width:14px;height:14px;stroke:var(--text-soft);fill:none;stroke-width:2.5}
-.room-arrow.open{transform:rotate(90deg)}
-.room-devices{display:none;border-top:1px solid var(--border)}
-.room-devices.open{display:block}
-
-/* DEVICE ROWS inside room */
-.room-dev-row{display:flex;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--border);transition:background .15s}
-.room-dev-row:last-child{border:none}
-.room-dev-icon{width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;font-size:18px}
-.room-dev-icon.rdi-off{background:var(--light)}
-.room-dev-icon.rdi-blue{background:var(--grad-blue);box-shadow:0 4px 12px rgba(79,142,247,.3)}
-.room-dev-icon.rdi-purple{background:var(--grad-purple);box-shadow:0 4px 12px rgba(196,113,237,.25)}
-.room-dev-icon.rdi-orange{background:var(--grad-orange);box-shadow:0 4px 12px rgba(255,107,138,.2)}
-.room-dev-icon.rdi-green{background:var(--grad-green);box-shadow:0 4px 12px rgba(67,233,123,.25)}
-.room-dev-info{flex:1;min-width:0}
-.room-dev-name{font-size:14px;font-weight:600;color:var(--text-dark)}
-.room-dev-sub{font-size:11px;color:var(--text-soft);margin-top:2px}
-.room-dev-toggle{width:46px;height:26px;border-radius:13px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
-.room-dev-toggle::after{content:'';position:absolute;width:18px;height:18px;border-radius:50%;background:white;top:2px;left:2px;transition:all .3s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
-.room-dev-toggle.rdt-on{background:var(--grad-blue);border-color:transparent}
-.room-dev-toggle.rdt-on::after{left:22px}
-.room-dev-toggle.rdt-purple{background:var(--grad-purple);border-color:transparent}
-.room-dev-toggle.rdt-purple::after{left:22px}
-
-/* ROOM VIEW (full screen) */
-.room-view{position:fixed;inset:0;background:var(--off-white);z-index:300;transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1);max-width:430px;left:50%;margin-left:-215px;overflow-y:auto;padding-bottom:40px}
-@media(max-width:430px){.room-view{left:0;margin-left:0}}
-.room-view.open{transform:translateX(0)}
-.room-view-header{background:var(--white);padding:52px 20px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:10}
-.back-btn{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
-.back-btn:active{background:var(--light)}
-.back-btn svg{width:18px;height:18px;stroke:var(--text-dark);fill:none;stroke-width:2.5}
-.room-view-title{font-size:17px;font-weight:800;color:var(--text-dark);flex:1}
-.room-view-sub{font-size:11px;color:var(--text-soft);margin-top:1px}
-.room-all-toggle{display:flex;align-items:center;gap:8px;padding:4px 12px;border-radius:20px;background:var(--light);cursor:pointer;font-size:12px;font-weight:700;color:var(--text-mid)}
-.room-view-body{padding:16px}
-.rv-device-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
-.rv-device-top{padding:16px 18px;display:flex;align-items:center;gap:14px}
-.rv-dev-ico{width:50px;height:50px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;transition:all .3s}
-.rv-dev-ico.off{background:var(--light)}
-.rv-dev-ico.on-blue{background:var(--grad-blue);box-shadow:0 4px 14px rgba(79,142,247,.3)}
-.rv-dev-ico.on-purple{background:var(--grad-purple);box-shadow:0 4px 14px rgba(196,113,237,.25)}
-.rv-dev-info{flex:1}
-.rv-dev-name{font-size:15px;font-weight:700;color:var(--text-dark)}
-.rv-dev-sub{font-size:12px;color:var(--text-soft);margin-top:2px}
-.rv-toggle{width:50px;height:28px;border-radius:14px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
-.rv-toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:white;top:2px;left:2px;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
-.rv-toggle.on{background:var(--grad-blue);border-color:transparent}.rv-toggle.on::after{left:24px}
-.rv-toggle.on-p{background:var(--grad-purple);border-color:transparent}.rv-toggle.on-p::after{left:24px}
-.rv-device-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--border)}
-.rv-stat{padding:10px;text-align:center;border-right:1px solid var(--border)}
-.rv-stat:last-child{border:none}
-.rv-stat-val{font-size:14px;font-weight:800;color:var(--text-dark)}
-.rv-stat-lbl{font-size:9px;color:var(--text-soft);margin-top:2px;font-weight:500}
-.ac-mini-controls{padding:14px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.ac-mini-label{font-size:12px;font-weight:600;color:var(--text-mid)}
-.ac-mini-stepper{display:flex;align-items:center;gap:10px}
-.ac-mini-btn{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all .18s;font-family:'Outfit',sans-serif}
-.ac-mini-btn:active{background:var(--light);transform:scale(.9)}
-.ac-mini-val{font-size:16px;font-weight:800;color:var(--text-dark);min-width:30px;text-align:center;font-family:'Space Mono',monospace}
+    .profile-avatar-box{display:flex;flex-direction:column;align-items:center;padding:10px 0 15px;gap:10px}
+    .avatar-circle{width:80px;height:80px;border-radius:50%;background:var(--off-white);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:20px;overflow:hidden}
+    .avatar-circle img{width:100%;height:100%;object-fit:cover}
+    .avatar-upload-btn{font-size:13px;color:#4f8ef7;cursor:pointer}
+    /* ENERGY TAB */
+    .energy-hero{background:var(--grad-teal);padding:24px 20px 20px;position:relative;overflow:hidden}
+    .energy-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+    .energy-hero-title{font-size:20px;font-weight:800;color:white}
+    .energy-hero-sub{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
+    .live-badge{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:50px;font-size:12px;font-weight:700;color:white}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:#fff;animation:pdot 1.5s infinite}
+    .energy-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
+    .e-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
+    .e-stat-val{font-size:18px;font-weight:800;color:white;font-family:'Space Mono',monospace}
+    .e-stat-lbl{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;font-weight:500}
+    .energy-body{padding:16px}
+    .live-power-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+    .live-power-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    .live-power-label{font-size:13px;font-weight:700;color:var(--text-dark)}
+    .live-power-status{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:rgba(56,217,192,.15);color:#0f6e56}
+    .live-meter{display:flex;align-items:flex-end;gap:8px;margin-bottom:12px}
+    .live-watts{font-size:48px;font-weight:800;color:var(--text-dark);font-family:'Space Mono',monospace;line-height:1;background:var(--grad-teal);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .live-watts-unit{font-size:16px;font-weight:600;color:var(--text-soft);margin-bottom:8px}
+    .power-bar-track{height:8px;border-radius:4px;background:var(--light);overflow:hidden;margin-bottom:8px}
+    .power-bar-fill{height:100%;border-radius:4px;background:var(--grad-teal);transition:width .4s ease}
+    .power-bar-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--text-soft);font-weight:500}
+    .power-sparkline{height:50px;display:flex;align-items:flex-end;gap:3px;margin-top:12px;padding-top:10px;border-top:1px solid var(--border)}
+    .spark-bar{flex:1;border-radius:3px 3px 0 0;background:var(--grad-teal);opacity:.5;transition:height .3s}
+    .spark-bar.current{opacity:1}
+    .chart-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+    .chart-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+    .chart-card-title{font-size:13px;font-weight:700;color:var(--text-dark)}
+    .chart-period-btns{display:flex;gap:4px}
+    .period-btn{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:600;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif}
+    .period-btn.active{background:var(--grad-teal);border-color:transparent;color:white}
+    .chart-sub{font-size:11px;color:var(--text-soft);margin-bottom:16px}
+    .bar-chart-wrap{display:flex;align-items:flex-end;gap:5px;height:100px}
+    .bc-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px}
+    .bc-bar{width:100%;border-radius:5px 5px 0 0;transition:all .35s;min-height:4px}
+    .bc-bar.primary-e{background:var(--grad-teal)}
+    .bc-bar.highlight-e{background:var(--grad-blue);box-shadow:0 4px 12px rgba(79,142,247,.3)}
+    .bc-bar-val{font-size:9px;font-weight:700;color:var(--text-soft)}
+    .bc-bar-lbl{font-size:9px;color:var(--text-soft);font-weight:600}
+    .chart-legend{display:flex;gap:14px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border)}
+    .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-soft);font-weight:500}
+    .legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+    .energy-tips-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+    .tip-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border)}
+    .tip-row:last-child{border:none}
+    .tip-ico{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+    .tip-info{flex:1}
+    .tip-name{font-size:13px;font-weight:600;color:var(--text-dark)}
+    .tip-sub{font-size:11px;color:var(--text-soft);margin-top:1px}
+    .tip-val{font-size:13px;font-weight:700;font-family:'Space Mono',monospace;color:var(--text-dark);flex-shrink:0}
+    /* SECURITY */
+    .sec-hero{background:var(--grad-blue);padding:24px 20px 20px;position:relative;overflow:hidden}
+    .sec-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+    .sec-hero-title{font-size:20px;font-weight:800;color:white}
+    .sec-hero-sub{font-size:12px;color:rgba(255,255,255,.7);margin-top:2px}
+    .arm-big-btn{padding:10px 20px;border-radius:50px;border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s}
+    .arm-big-btn.armed{background:rgba(255,107,138,.9);color:white;box-shadow:0 4px 14px rgba(255,107,138,.35)}
+    .arm-big-btn.disarmed{background:rgba(255,255,255,.2);color:white}
+    .sec-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
+    .sec-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
+    .sec-stat-val{font-size:18px;font-weight:800;color:white}
+    .sec-stat-lbl{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px;font-weight:500}
+    .sec-body{padding:16px}
+    .cam-grid-sec{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+    .cam-card-sec{background:var(--white);border-radius:var(--radius-sm);border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:all .2s;box-shadow:var(--shadow-sm)}
+    .cam-card-sec.selected-cam{border-color:#4f8ef7;border-width:1.5px}
+    .cam-feed{width:100%;aspect-ratio:16/9;background:#0d0f1a;position:relative;overflow:hidden}
+    .cam-feed canvas{position:absolute;inset:0;width:100%;height:100%}
+    .cam-feed-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:6px;pointer-events:none}
+    .cam-feed-top{display:flex;justify-content:space-between;align-items:flex-start}
+    .cam-feed-bot{display:flex;justify-content:space-between;align-items:flex-end}
+    .rec-tag{background:rgba(226,75,74,.9);color:white;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;letter-spacing:.5px}
+    .night-tag-s{background:rgba(53,74,117,.85);color:#85b7eb;font-size:9px;padding:2px 5px;border-radius:3px}
+    .motion-alert{background:rgba(255,159,87,.9);color:white;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;display:none}
+    .motion-alert.show{display:inline}
+    .cam-ts{color:rgba(255,255,255,.6);font-size:9px;font-family:'Space Mono',monospace}
+    .cam-footer-s{padding:7px 10px;display:flex;align-items:center;justify-content:space-between}
+    .cam-name-s{font-size:12px;font-weight:700;color:var(--text-dark)}
+    .cam-loc-s{font-size:10px;color:var(--text-soft)}
+    .cam-dot-on{width:7px;height:7px;border-radius:50%;background:#43e97b;flex-shrink:0}
+    .cam-dot-off{width:7px;height:7px;border-radius:50%;background:#888;flex-shrink:0}
+    .zone-list{display:flex;flex-direction:column;gap:0}
+    .zone-row-s{display:flex;align-items:center;padding:13px 16px;gap:12px;border-bottom:1px solid var(--border)}
+    .zone-row-s:last-child{border:none}
+    .zone-ico{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .zone-ico svg{width:17px;height:17px;fill:none;stroke-width:2}
+    .zone-info{flex:1}
+    .zone-name-s{font-size:13px;font-weight:600;color:var(--text-dark)}
+    .zone-sub-s{font-size:11px;color:var(--text-soft);margin-top:1px}
+    .zone-toggle{width:44px;height:25px;border-radius:13px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
+    .zone-toggle::after{content:'';position:absolute;width:17px;height:17px;border-radius:50%;background:white;top:2px;left:2px;transition:all .3s;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+    .zone-toggle.zon{background:var(--grad-blue);border-color:transparent}.zone-toggle.zon::after{left:21px}
+    .alert-list-s{display:flex;flex-direction:column;gap:0}
+    .alert-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border)}
+    .alert-row:last-child{border:none}
+    .alert-ico-s{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+    .alert-ico-s.a-motion{background:rgba(255,159,87,.15)}
+    .alert-ico-s.a-person{background:rgba(255,107,138,.12)}
+    .alert-ico-s.a-ok{background:rgba(67,233,123,.15)}
+    .alert-ico-s.a-door{background:rgba(79,142,247,.12)}
+    .alert-title-s{font-size:12px;font-weight:600;color:var(--text-dark)}
+    .alert-sub-s{font-size:10px;color:var(--text-soft);margin-top:1px}
+    .alert-time-s{font-size:10px;color:var(--text-soft);font-family:'Space Mono',monospace;flex-shrink:0}
+    /* DEVICES TAB */
+    .dev-hero{background:var(--grad-purple);padding:24px 20px 20px;position:relative;overflow:hidden}
+    .dev-hero-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+    .dev-hero-title{font-size:20px;font-weight:800;color:white}
+    .dev-hero-sub{font-size:12px;color:rgba(255,255,255,.75);margin-top:2px}
+    .dev-hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;position:relative;z-index:1}
+    .dh-stat{background:rgba(255,255,255,.15);border-radius:12px;padding:10px 8px;text-align:center}
+    .dh-stat-val{font-size:18px;font-weight:800;color:white}
+    .dh-stat-lbl{font-size:10px;color:rgba(255,255,255,.75);margin-top:2px;font-weight:500}
+    .dev-body{padding:16px}
+    .floor-scroll{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:16px}
+    .floor-scroll::-webkit-scrollbar{display:none}
+    .floor-chip{flex-shrink:0;padding:7px 16px;border-radius:50px;font-size:12px;font-weight:700;border:1.5px solid var(--border);background:var(--white);color:var(--text-soft);cursor:pointer;transition:all .2s}
+    .floor-chip.active{background:var(--grad-purple);border-color:transparent;color:white;box-shadow:0 4px 12px rgba(196,113,237,.3)}
+    .room-list{display:flex;flex-direction:column;gap:12px}
+    .room-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
+    .room-header{display:flex;align-items:center;gap:14px;padding:16px 18px;cursor:pointer;transition:background .15s}
+    .room-header-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+    .room-header-info{flex:1;min-width:0}
+    .room-header-name{font-size:15px;font-weight:700;color:var(--text-dark)}
+    .room-header-sub{font-size:11px;color:var(--text-soft);margin-top:2px}
+    .room-header-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+    .room-on-count{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(124,95,230,.12);color:#7c5fe6}
+    .room-arrow{width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center}
+    .room-arrow svg{width:14px;height:14px;stroke:var(--text-soft);fill:none;stroke-width:2.5}
+    .room-view{position:fixed;inset:0;background:var(--off-white);z-index:300;transform:translateX(100%);transition:transform .32s cubic-bezier(.4,0,.2,1);max-width:430px;left:50%;margin-left:-215px;overflow-y:auto;padding-bottom:40px}
+    @media(max-width:430px){.room-view{left:0;margin-left:0}}
+    .room-view.open{transform:translateX(0)}
+    .room-view-header{background:var(--white);padding:52px 20px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:10}
+    .back-btn{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+    .back-btn svg{width:18px;height:18px;stroke:var(--text-dark);fill:none;stroke-width:2.5}
+    .room-view-title{font-size:17px;font-weight:800;color:var(--text-dark);flex:1}
+    .room-view-sub{font-size:11px;color:var(--text-soft);margin-top:1px}
+    .room-all-toggle{display:flex;align-items:center;gap:8px;padding:4px 12px;border-radius:20px;background:var(--light);cursor:pointer;font-size:12px;font-weight:700;color:var(--text-mid)}
+    .room-view-body{padding:16px}
+    .rv-device-card{background:var(--white);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+    .rv-device-top{padding:16px 18px;display:flex;align-items:center;gap:14px}
+    .rv-dev-ico{width:50px;height:50px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;transition:all .3s}
+    .rv-dev-ico.off{background:var(--light)}
+    .rv-dev-ico.on-blue{background:var(--grad-blue);box-shadow:0 4px 14px rgba(79,142,247,.3)}
+    .rv-dev-info{flex:1}
+    .rv-dev-name{font-size:15px;font-weight:700;color:var(--text-dark)}
+    .rv-dev-sub{font-size:12px;color:var(--text-soft);margin-top:2px}
+    .rv-toggle{width:50px;height:28px;border-radius:14px;background:var(--light);border:1.5px solid var(--border);position:relative;cursor:pointer;transition:all .3s;flex-shrink:0}
+    .rv-toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:white;top:2px;left:2px;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .rv-toggle.on{background:var(--grad-blue);border-color:transparent}.rv-toggle.on::after{left:24px}
+    .rv-device-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--border)}
+    .rv-stat{padding:10px;text-align:center;border-right:1px solid var(--border)}
+    .rv-stat:last-child{border:none}
+    .rv-stat-val{font-size:14px;font-weight:800;color:var(--text-dark)}
+    .rv-stat-lbl{font-size:9px;color:var(--text-soft);margin-top:2px;font-weight:500}
+    .ac-mini-controls{padding:14px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .ac-mini-label{font-size:12px;font-weight:600;color:var(--text-mid)}
+    .ac-mini-stepper{display:flex;align-items:center;gap:10px}
+    .ac-mini-btn{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--border);background:var(--white);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all .18s;font-family:'Outfit',sans-serif}
+    .ac-mini-val{font-size:16px;font-weight:800;color:var(--text-dark);min-width:30px;text-align:center;font-family:'Space Mono',monospace}
     /* MODAL */
     .modal-overlay{position:fixed;inset:0;background:rgba(13,15,26,.5);z-index:500;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}
     .modal-overlay.open{display:flex}
@@ -521,13 +395,12 @@
     .modal-handle{width:40px;height:4px;border-radius:2px;background:var(--border);margin:0 auto 20px}
     .modal-title{font-size:18px;font-weight:800;margin-bottom:20px}
     .cancel-btn{width:100%;padding:13px;border:none;background:none;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;color:var(--text-soft);cursor:pointer;margin-top:8px}
-
     /* TOAST */
     .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#0d0f1a;color:white;padding:10px 20px;border-radius:50px;font-size:13px;font-weight:600;z-index:999;opacity:0;transition:all .3s;white-space:nowrap;pointer-events:none;max-width:calc(100% - 40px)}
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
     @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
     .fade-up{animation:fadeUp .35s ease both}
+    @keyframes pdot{0%,100%{box-shadow:0 0 0 3px rgba(67,233,123,.2)}50%{box-shadow:0 0 0 6px rgba(67,233,123,.08)}}
     .ripple{position:relative;overflow:hidden}
     .ripple-effect{position:absolute;border-radius:50%;background:rgba(79,142,247,.18);transform:scale(0);animation:rpl .5s linear;pointer-events:none}
     @keyframes rpl{to{transform:scale(4);opacity:0}}
@@ -535,7 +408,7 @@
 </head>
 <body>
 
-<!-- ══ LOGIN ══ -->
+<!-- LOGIN -->
 <div class="screen active" id="screenLogin">
   <div class="auth-wrap">
     <div class="auth-hero">
@@ -568,16 +441,12 @@
       <div class="forgot-link"><a onclick="showForgot()">Forgot password?</a></div>
       <button class="auth-btn" onclick="doLogin()">Sign In</button>
       <div class="divider"><span>or continue with</span></div>
-      <!-- <button class="google-btn" onclick="doGoogleSignIn()">
-        <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        Sign in with Google
-      </button> -->
       <div class="auth-switch">Don't have an account? <a onclick="showScreen('screenRegister')">Sign up</a></div>
     </div>
   </div>
 </div>
 
-<!-- ══ REGISTER ══ -->
+<!-- REGISTER -->
 <div class="screen" id="screenRegister">
   <div class="auth-wrap">
     <div class="auth-hero">
@@ -630,16 +499,12 @@
       </div>
       <button class="auth-btn" onclick="doRegister()">Create Account</button>
       <div class="divider"><span>or</span></div>
-      <!-- <button class="google-btn" onclick="doGoogleSignIn()">
-        <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.35-8.16 2.35-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        Sign up with Google
-      </button> -->
       <div class="auth-switch">Already have an account? <a onclick="showScreen('screenLogin')">Sign in</a></div>
     </div>
   </div>
 </div>
 
-<!-- ══ MAIN APP ══ -->
+<!-- MAIN APP -->
 <div class="screen" id="screenApp">
   <div class="app-wrap">
     <div class="header">
@@ -666,9 +531,7 @@
         <div class="tab active" onclick="selectRoomTab(this,'All')">All Rooms</div>
         <div class="tab" onclick="selectRoomTab(this,'Living')">STEM Room</div>
         <div class="tab" onclick="selectRoomTab(this,'Bedroom')">Software Room</div>
-        <!-- <div class="tab" onclick="selectRoomTab(this,'Kitchen')">LAB-4</div> -->
       </div>
-
       <div class="summary-strip">
         <div class="sum-card"><div class="sum-num blue" id="devOnCount">—</div><div class="sum-lbl">Devices On</div></div>
         <div class="sum-card"><div class="sum-num orange" id="tempReadout">—</div><div class="sum-lbl">AC Temp</div></div>
@@ -686,21 +549,26 @@
             <span class="breaker-status on-b1" id="b1status">ON</span>
           </div>
           <div class="breaker-name">Main Switch Breaker</div>
-          <div class="breaker-sub">172.16.105.119 · TinyTuya</div>
-          <div class="breaker-amp" id="b1amp"><span id="b1ampVal">—</span></div>
+          <div class="breaker-sub">172.16.105.235 · TinyTuya v3.5</div>
+          <div class="breaker-amp"><span id="b1ampVal">—</span></div>
         </div>
       </div>
 
-      <!-- AC -->
+      <!-- AC — IDs match acir.py: cool/heat/dry/fan/auto & auto/low/medium/high -->
       <div class="section-label">Air Conditioner</div>
       <div class="card fade-up" style="animation-delay:.1s">
         <div class="ac-header">
           <div class="ac-top">
             <div class="ac-name-row">
-              <div class="ac-icon-wrap"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4M12 2v20M2 12h20"/></svg></div>
-              <div><div class="ac-title">AC Unit</div><div class="ac-location">IR Remote · 172.16.105.119</div></div>
+              <div class="ac-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4M12 2v20M2 12h20"/></svg>
+              </div>
+              <div>
+                <div class="ac-title">AC Unit</div>
+                <div class="ac-location">IR Remote · Tuya Cloud</div>
+              </div>
             </div>
-            <div class="tw on" id="acPowerToggle" onclick="toggleAC()"></div>
+            <div class="tw" id="acPowerToggle" onclick="toggleAC()"></div>
           </div>
           <div class="ac-temp-row">
             <div class="ac-temp-big" id="acSetTempDisplay">24</div>
@@ -710,34 +578,55 @@
         </div>
         <div class="ac-body">
           <div class="ac-stats">
-            <div class="ac-stat"><div class="ac-stat-val" id="acModeDisplay">cold</div><div class="ac-stat-lbl">Mode</div></div>
+            <div class="ac-stat"><div class="ac-stat-val" id="acModeDisplay">cool</div><div class="ac-stat-lbl">Mode</div></div>
             <div class="ac-stat"><div class="ac-stat-val" id="acWindDisplay">auto</div><div class="ac-stat-lbl">Fan</div></div>
-            <div class="ac-stat"><div class="ac-stat-val" id="acStateDisplay">ON</div><div class="ac-stat-lbl">State</div></div>
+            <div class="ac-stat"><div class="ac-stat-val" id="acStateDisplay">OFF</div><div class="ac-stat-lbl">State</div></div>
           </div>
           <div class="ac-controls">
             <span class="ac-ctrl-label">Temperature</span>
             <div class="temp-stepper">
-              <button class="step-btn" id="tempDown" onclick="changeTemp(-1)">−</button>
+              <button class="step-btn" onclick="changeTemp(-1)">−</button>
               <div class="step-val" id="acSetTemp">24</div>
-              <button class="step-btn" id="tempUp" onclick="changeTemp(1)">+</button>
+              <button class="step-btn" onclick="changeTemp(1)">+</button>
             </div>
           </div>
+          <!-- MODE PILLS — IDs: acmode-cool, acmode-heat, acmode-dry, acmode-fan, acmode-auto -->
           <div style="margin-top:12px">
             <div class="ac-ctrl-label" style="margin-bottom:8px">Mode</div>
             <div class="mode-pills">
-              <div class="mode-pill active-cool" id="mode-cold" onclick="setACMode('cold')"><svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></svg>Cold</div>
-              <div class="mode-pill" id="mode-hot" onclick="setACMode('hot')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>Hot</div>
-              <div class="mode-pill" id="mode-auto" onclick="setACMode('auto')"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2.5-5 5-5 9m0-14a5 5 0 00-5 5c0 2.5 5 5 5 9"/></svg>Auto</div>
-              <div class="mode-pill" id="mode-dehumy" onclick="setACMode('dehumy')"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>Dry</div>
+              <div class="mode-pill active-cool" id="acmode-cool" onclick="setACMode('cool')">
+                <svg viewBox="0 0 24 24"><path d="M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"/></svg>Cool
+              </div>
+              <div class="mode-pill" id="acmode-heat" onclick="setACMode('heat')">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>Heat
+              </div>
+              <div class="mode-pill" id="acmode-dry" onclick="setACMode('dry')">
+                <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>Dry
+              </div>
+              <div class="mode-pill" id="acmode-fan" onclick="setACMode('fan')">
+                <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 015 5c0 2.5-5 5-5 9m0-14a5 5 0 00-5 5c0 2.5 5 5 5 9"/></svg>Fan
+              </div>
+              <div class="mode-pill" id="acmode-auto" onclick="setACMode('auto')">
+                <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>Auto
+              </div>
             </div>
           </div>
-          <div class="fan-row">
-            <span class="ac-ctrl-label">Fan Speed</span>
-            <div class="fan-dots" id="fanDots">
-              <div class="fan-dot lit" onclick="setACWind('low')" title="Low"></div>
-              <div class="fan-dot lit" onclick="setACWind('middle')" title="Mid"></div>
-              <div class="fan-dot" onclick="setACWind('high')" title="High"></div>
-              <div class="fan-dot" onclick="setACWind('auto')" title="Auto"></div>
+          <!-- FAN PILLS — IDs: acfan-auto, acfan-low, acfan-medium, acfan-high -->
+          <div style="margin-top:14px">
+            <div class="ac-ctrl-label" style="margin-bottom:8px">Fan Speed</div>
+            <div class="mode-pills">
+              <div class="mode-pill" id="acfan-auto" onclick="setACFan('auto')">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>Auto
+              </div>
+              <div class="mode-pill" id="acfan-low" onclick="setACFan('low')">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M5 12l4-4M5 12l4 4"/></svg>Low
+              </div>
+              <div class="mode-pill" id="acfan-medium" onclick="setACFan('medium')">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M5 12l4-4M5 12l4 4M3 8h18M3 16h18"/></svg>Medium
+              </div>
+              <div class="mode-pill" id="acfan-high" onclick="setACFan('high')">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M5 12l4-4M5 12l4 4M1 8h22M1 16h22M3 4h18M3 20h18"/></svg>High
+              </div>
             </div>
           </div>
           <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
@@ -746,19 +635,23 @@
         </div>
       </div>
 
-      <!-- TUYA -->
+      <!-- TSWITCH -->
       <div class="section-label">IoTAEU Smart Switches</div>
       <div class="card fade-up">
-        <div class="card-header" style="padding:14px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
+        <div style="padding:14px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px">
           <span style="font-size:14px;font-weight:700;flex:1">Smart Plugs &amp; Lights</span>
           <span style="background:var(--grad-orange);color:white;font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:20px">AEU</span>
         </div>
-        <div class="device-row"><div class="dev-icon on-blue" id="t1ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 1</div><div class="dev-sub" id="t1sub">On · 60W</div></div><div class="toggle on" id="t1toggle" onclick="toggleTuya(1)"></div></div>
-        <div class="device-row"><div class="dev-icon off" id="t2ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 2</div><div class="dev-sub" id="t2sub">Off</div></div><div class="toggle" id="t2toggle" onclick="toggleTuya(2)"></div></div>
-        <div class="device-row"><div class="dev-icon on-green" id="t3ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 3</div><div class="dev-sub" id="t3sub">On · 150W</div></div><div class="toggle on-green" id="t3toggle" onclick="toggleTuya(3)"></div></div>
-        <div class="device-row"><div class="dev-icon off" id="t4ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 4</div><div class="dev-sub" id="t4sub">Off</div></div><div class="toggle" id="t4toggle" onclick="toggleTuya(4)"></div></div>
-      </div>
+        <div class="device-row"><div class="dev-icon on-blue" id="t1ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 1</div><div class="dev-sub" id="t1sub">—</div></div><div class="toggle" id="t1toggle" onclick="toggleTuya(1)"></div></div>
+        <div class="device-row"><div class="dev-icon off" id="t2ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 2</div><div class="dev-sub" id="t2sub">—</div></div><div class="toggle" id="t2toggle" onclick="toggleTuya(2)"></div></div>
+        <div class="device-row"><div class="dev-icon off" id="t3ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 3</div><div class="dev-sub" id="t3sub">—</div></div><div class="toggle" id="t3toggle" onclick="toggleTuya(3)"></div></div>
+        <div class="device-row"><div class="dev-icon off" id="t4ico"><svg viewBox="0 0 24 24"><path d="M9 18h6M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><div class="dev-info"><div class="dev-name">Switch 4</div><div class="dev-sub" id="t4sub">—</div></div><div class="toggle" id="t4toggle" onclick="toggleTuya(4)"></div></div>
+                    <div style="padding:10px 18px;border-top:1px solid var(--border);display:flex;gap:8px">
+          <button onclick="allSwitches(true)" style="flex:1;padding:9px;border-radius:10px;background:var(--grad-green);border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:white;cursor:pointer">All ON</button>
+          <button onclick="allSwitches(false)" style="flex:1;padding:9px;border-radius:10px;background:var(--light);border:none;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:var(--text-mid);cursor:pointer">All OFF</button>
+        </div>
 
+      </div>
       <!-- ACTIVITY LOG -->
       <div class="section-label">Activity Log</div>
       <div class="card">
@@ -776,240 +669,134 @@
         <div class="bars" id="energyBars"></div>
       </div>
     </div>
+
     <!-- DEVICES TAB -->
-<div id="tabDevices" style="display:none">
-  <div class="dev-hero">
-    <div class="dev-hero-top">
-      <div>
-        <div class="dev-hero-title">Devices</div>
-        <div class="dev-hero-sub">AEU Building · Floor 4</div>
+    <div id="tabDevices" style="display:none">
+      <div class="dev-hero">
+        <div class="dev-hero-top">
+          <div><div class="dev-hero-title">Devices</div><div class="dev-hero-sub">AEU Building · Floor 4</div></div>
+          <div style="background:rgba(255,255,255,.2);padding:6px 12px;border-radius:50px;font-size:12px;font-weight:700;color:white">🏢 Floor 4</div>
+        </div>
+        <div class="dev-hero-stats">
+          <div class="dh-stat"><div class="dh-stat-val" id="dTotalDevices">4</div><div class="dh-stat-lbl">Total</div></div>
+          <div class="dh-stat"><div class="dh-stat-val" id="dOnlineDevices">3</div><div class="dh-stat-lbl">Online</div></div>
+          <div class="dh-stat"><div class="dh-stat-val" id="dRooms">2</div><div class="dh-stat-lbl">Rooms</div></div>
+        </div>
       </div>
-      <div style="background:rgba(255,255,255,.2);padding:6px 12px;border-radius:50px;font-size:12px;font-weight:700;color:white">🏢 Floor 4</div>
-    </div>
-    <div class="dev-hero-stats">
-      <div class="dh-stat"><div class="dh-stat-val" id="dTotalDevices">4</div><div class="dh-stat-lbl">Total Devices</div></div>
-      <div class="dh-stat"><div class="dh-stat-val" id="dOnlineDevices">3</div><div class="dh-stat-lbl">Online</div></div>
-      <div class="dh-stat"><div class="dh-stat-val" id="dRooms">2</div><div class="dh-stat-lbl">Rooms</div></div>
-    </div>
-  </div>
-
-  <div class="dev-body">
-    <!-- Floor selector -->
-    <div class="section-label">Select Floor</div>
-    <div class="floor-scroll">
-      <div class="floor-chip" onclick="selectFloor(1,this)">Floor 1</div>
-      <div class="floor-chip" onclick="selectFloor(2,this)">Floor 2</div>
-      <div class="floor-chip" onclick="selectFloor(3,this)">Floor 3</div>
-      <div class="floor-chip active" onclick="selectFloor(4,this)">Floor 4</div>
-      <div class="floor-chip" onclick="selectFloor(5,this)">Floor 5</div>
-      <div class="floor-chip" onclick="selectFloor(6,this)">Floor 6</div>
-      <div class="floor-chip" onclick="selectFloor(7,this)">Floor 7</div>
-      <div class="floor-chip" onclick="selectFloor(8,this)">Floor 8</div>
-      <div class="floor-chip" onclick="selectFloor(9,this)">Floor 9</div>
-      <div class="floor-chip" onclick="selectFloor(10,this)">Floor 10</div>
-      <div class="floor-chip" onclick="selectFloor(11,this)">Floor 11</div>
-      <div class="floor-chip" onclick="selectFloor(12,this)">Floor 12</div>
+      <div class="dev-body">
+        <div class="section-label">Select Floor</div>
+        <div class="floor-scroll">
+          <div class="floor-chip" onclick="selectFloor(1,this)">Floor 1</div>
+          <div class="floor-chip" onclick="selectFloor(2,this)">Floor 2</div>
+          <div class="floor-chip" onclick="selectFloor(3,this)">Floor 3</div>
+          <div class="floor-chip active" onclick="selectFloor(4,this)">Floor 4</div>
+          <div class="floor-chip" onclick="selectFloor(5,this)">Floor 5</div>
+          <div class="floor-chip" onclick="selectFloor(6,this)">Floor 6</div>
+          <div class="floor-chip" onclick="selectFloor(7,this)">Floor 7</div>
+          <div class="floor-chip" onclick="selectFloor(8,this)">Floor 8</div>
+          <div class="floor-chip" onclick="selectFloor(9,this)">Floor 9</div>
+          <div class="floor-chip" onclick="selectFloor(10,this)">Floor 10</div>
+          <div class="floor-chip" onclick="selectFloor(11,this)">Floor 11</div>
+          <div class="floor-chip" onclick="selectFloor(12,this)">Floor 12</div>
+        </div>
+        <div class="section-label" id="devRoomLabel">Rooms · Floor 4</div>
+        <div class="room-list" id="roomList"></div>
+      </div>
     </div>
 
-    <!-- Room list -->
-    <div class="section-label" id="devRoomLabel">Rooms · Floor 4</div>
-    <div class="room-list" id="roomList"></div>
-  </div>
-</div>
+    <!-- ROOM VIEW -->
+    <div class="room-view" id="roomView">
+      <div class="room-view-header">
+        <div class="back-btn" onclick="closeRoomView()"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
+        <div style="flex:1"><div class="room-view-title" id="rvTitle">Room</div><div class="room-view-sub" id="rvSub">Floor 4</div></div>
+        <div class="room-all-toggle" onclick="toggleAllRoomDevices()" id="rvAllBtn">All ON</div>
+      </div>
+      <div class="room-view-body" id="rvBody"></div>
+    </div>
 
-<!-- ROOM VIEW (slide-in) -->
-<div class="room-view" id="roomView">
-  <div class="room-view-header">
-    <div class="back-btn" onclick="closeRoomView()">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    </div>
-    <div style="flex:1">
-      <div class="room-view-title" id="rvTitle">Room</div>
-      <div class="room-view-sub" id="rvSub">Floor 4</div>
-    </div>
-    <div class="room-all-toggle" onclick="toggleAllRoomDevices()" id="rvAllBtn">All ON</div>
-  </div>
-  <div class="room-view-body" id="rvBody"></div>
-</div>
     <!-- SECURITY TAB -->
-<div id="tabSecurity" style="display:none">
-  <!-- Hero -->
-  <div class="sec-hero">
-    <div class="sec-hero-top">
-      <div>
-        <div class="sec-hero-title">Security</div>
-        <div class="sec-hero-sub" id="secStatusText">System Armed · 6 cameras online</div>
+    <div id="tabSecurity" style="display:none">
+      <div class="sec-hero">
+        <div class="sec-hero-top">
+          <div><div class="sec-hero-title">Security</div><div class="sec-hero-sub" id="secStatusText">System Armed · 6 cameras online</div></div>
+          <button class="arm-big-btn armed" id="secArmBtn" onclick="toggleSecArm()">🔒 Armed</button>
+        </div>
+        <div class="sec-stats-row">
+          <div class="sec-stat"><div class="sec-stat-val" id="secCamCount">6</div><div class="sec-stat-lbl">Cameras</div></div>
+          <div class="sec-stat"><div class="sec-stat-val" id="secAlertCount">3</div><div class="sec-stat-lbl">Alerts</div></div>
+          <div class="sec-stat"><div class="sec-stat-val" id="secZoneCount">4</div><div class="sec-stat-lbl">Zones On</div></div>
+        </div>
       </div>
-      <button class="arm-big-btn armed" id="secArmBtn" onclick="toggleSecArm()">🔒 Armed</button>
-    </div>
-    <div class="sec-stats-row">
-      <div class="sec-stat"><div class="sec-stat-val" id="secCamCount">6</div><div class="sec-stat-lbl">Cameras</div></div>
-      <div class="sec-stat"><div class="sec-stat-val" id="secAlertCount">3</div><div class="sec-stat-lbl">Alerts</div></div>
-      <div class="sec-stat"><div class="sec-stat-val" id="secZoneCount">4</div><div class="sec-stat-lbl">Zones On</div></div>
-    </div>
-  </div>
-
-  <div class="sec-body">
-    <!-- Camera Grid -->
-    <div class="section-label">Live Cameras</div>
-    <div class="cam-grid-sec" id="secCamGrid"></div>
-
-    <!-- Zones -->
-    <div class="section-label">Security Zones</div>
-    <div class="card" style="margin-bottom:14px">
-      <div class="zone-list">
-        <div class="zone-row-s">
-          <div class="zone-ico" style="background:rgba(79,142,247,.1)"><svg viewBox="0 0 24 24" style="stroke:#4f8ef7"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div class="zone-info"><div class="zone-name-s">Front Entrance</div><div class="zone-sub-s">Door sensor · Motion detector</div></div>
-          <div class="zone-toggle zon" onclick="toggleZone(this)"></div>
+      <div class="sec-body">
+        <div class="section-label">Live Cameras</div>
+        <div class="cam-grid-sec" id="secCamGrid"></div>
+        <div class="section-label">Security Zones</div>
+        <div class="card" style="margin-bottom:14px">
+          <div class="zone-list">
+            <div class="zone-row-s"><div class="zone-ico" style="background:rgba(79,142,247,.1)"><svg viewBox="0 0 24 24" style="stroke:#4f8ef7"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="zone-info"><div class="zone-name-s">Front Entrance</div><div class="zone-sub-s">Door sensor · Motion detector</div></div><div class="zone-toggle zon" onclick="toggleZone(this)"></div></div>
+            <div class="zone-row-s"><div class="zone-ico" style="background:rgba(67,233,123,.15)"><svg viewBox="0 0 24 24" style="stroke:#2db865"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><div class="zone-info"><div class="zone-name-s">Backyard</div><div class="zone-sub-s">Perimeter · 2 cameras</div></div><div class="zone-toggle zon" onclick="toggleZone(this)"></div></div>
+            <div class="zone-row-s"><div class="zone-ico" style="background:rgba(255,107,138,.1)"><svg viewBox="0 0 24 24" style="stroke:#ff6b8a"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l5-2v10l-5-2"/></svg></div><div class="zone-info"><div class="zone-name-s">Garage</div><div class="zone-sub-s">Camera · Door sensor</div></div><div class="zone-toggle" onclick="toggleZone(this)"></div></div>
+            <div class="zone-row-s"><div class="zone-ico" style="background:rgba(196,113,237,.1)"><svg viewBox="0 0 24 24" style="stroke:#c471ed"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="zone-info"><div class="zone-name-s">Side Gate</div><div class="zone-sub-s">Motion only</div></div><div class="zone-toggle zon" onclick="toggleZone(this)"></div></div>
+          </div>
         </div>
-        <div class="zone-row-s">
-          <div class="zone-ico" style="background:rgba(67,233,123,.15)"><svg viewBox="0 0 24 24" style="stroke:#2db865"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-          <div class="zone-info"><div class="zone-name-s">Backyard</div><div class="zone-sub-s">Perimeter · 2 cameras</div></div>
-          <div class="zone-toggle zon" onclick="toggleZone(this)"></div>
+        <div class="section-label">Recent Alerts</div>
+        <div class="card" style="margin-bottom:14px">
+          <div class="alert-list-s">
+            <div class="alert-row"><div class="alert-ico-s a-person">👤</div><div style="flex:1"><div class="alert-title-s">Person detected</div><div class="alert-sub-s">Front Entrance · Cam 1</div></div><div class="alert-time-s">2m ago</div></div>
+            <div class="alert-row"><div class="alert-ico-s a-motion">⚡</div><div style="flex:1"><div class="alert-title-s">Motion detected</div><div class="alert-sub-s">Backyard · Cam 2</div></div><div class="alert-time-s">18m ago</div></div>
+            <div class="alert-row"><div class="alert-ico-s a-door">🚪</div><div style="flex:1"><div class="alert-title-s">Door opened</div><div class="alert-sub-s">Front Entrance sensor</div></div><div class="alert-time-s">1h ago</div></div>
+            <div class="alert-row"><div class="alert-ico-s a-ok">✅</div><div style="flex:1"><div class="alert-title-s">All clear</div><div class="alert-sub-s">Garage zone</div></div><div class="alert-time-s">2h ago</div></div>
+          </div>
         </div>
-        <div class="zone-row-s">
-          <div class="zone-ico" style="background:rgba(255,107,138,.1)"><svg viewBox="0 0 24 24" style="stroke:#ff6b8a"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8l5-2v10l-5-2"/></svg></div>
-          <div class="zone-info"><div class="zone-name-s">Garage</div><div class="zone-sub-s">Camera · Door sensor</div></div>
-          <div class="zone-toggle" onclick="toggleZone(this)"></div>
-        </div>
-        <div class="zone-row-s">
-          <div class="zone-ico" style="background:rgba(196,113,237,.1)"><svg viewBox="0 0 24 24" style="stroke:#c471ed"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="zone-info"><div class="zone-name-s">Side Gate</div><div class="zone-sub-s">Motion only</div></div>
-          <div class="zone-toggle zon" onclick="toggleZone(this)"></div>
+        <div class="section-label">Recording Storage</div>
+        <div class="card" style="padding:16px 18px;margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:13px;font-weight:700;color:var(--text-dark)">Cloud Storage</span><span style="font-size:12px;color:var(--text-soft);font-family:'Space Mono',monospace">1.86 TB / 3 TB</span></div>
+          <div style="height:6px;border-radius:3px;background:var(--light);overflow:hidden"><div style="height:100%;width:62%;border-radius:3px;background:var(--grad-blue)"></div></div>
+          <div style="font-size:11px;color:var(--text-soft);margin-top:6px">62% used · 30-day retention</div>
         </div>
       </div>
     </div>
 
-    <!-- Alerts -->
-    <div class="section-label">Recent Alerts</div>
-    <div class="card" style="margin-bottom:14px">
-      <div class="alert-list-s">
-        <div class="alert-row">
-          <div class="alert-ico-s a-person">👤</div>
-          <div style="flex:1"><div class="alert-title-s">Person detected</div><div class="alert-sub-s">Front Entrance · Cam 1</div></div>
-          <div class="alert-time-s">2m ago</div>
+    <!-- ENERGY TAB -->
+    <div id="tabEnergy" style="display:none">
+      <div class="energy-hero">
+        <div class="energy-hero-top">
+          <div><div class="energy-hero-title">Energy</div><div class="energy-hero-sub">AEU IoT Power Monitor</div></div>
+          <div class="live-badge"><div class="live-dot"></div> Live</div>
         </div>
-        <div class="alert-row">
-          <div class="alert-ico-s a-motion">⚡</div>
-          <div style="flex:1"><div class="alert-title-s">Motion detected</div><div class="alert-sub-s">Backyard · Cam 2</div></div>
-          <div class="alert-time-s">18m ago</div>
+        <div class="energy-hero-stats">
+          <div class="e-stat"><div class="e-stat-val" id="eTodayKwh">4.2</div><div class="e-stat-lbl">kWh Today</div></div>
+          <div class="e-stat"><div class="e-stat-val" id="eWeekKwh">28.6</div><div class="e-stat-lbl">kWh Week</div></div>
+          <div class="e-stat"><div class="e-stat-val" id="ePeak">2.4</div><div class="e-stat-lbl">Peak kW</div></div>
         </div>
-        <div class="alert-row">
-          <div class="alert-ico-s a-door">🚪</div>
-          <div style="flex:1"><div class="alert-title-s">Door opened</div><div class="alert-sub-s">Front Entrance sensor</div></div>
-          <div class="alert-time-s">1h ago</div>
+      </div>
+      <div class="energy-body">
+        <div class="section-label">Live Power Usage</div>
+        <div class="live-power-card">
+          <div class="live-power-top"><div class="live-power-label">Current Draw</div><div class="live-power-status" id="livePowerStatus">● Normal</div></div>
+          <div class="live-meter"><div class="live-watts" id="liveWatts">1840</div><div class="live-watts-unit">W</div></div>
+          <div class="power-bar-track"><div class="power-bar-fill" id="powerBarFill" style="width:46%"></div></div>
+          <div class="power-bar-labels"><span>0 W</span><span>Max: 4000 W</span></div>
+          <div class="power-sparkline" id="sparkline"></div>
         </div>
-        <div class="alert-row">
-          <div class="alert-ico-s a-ok">✅</div>
-          <div style="flex:1"><div class="alert-title-s">All clear</div><div class="alert-sub-s">Garage zone</div></div>
-          <div class="alert-time-s">2h ago</div>
+        <div class="section-label">Usage History</div>
+        <div class="chart-card">
+          <div class="chart-card-top"><div class="chart-card-title">Power Consumption</div><div class="chart-period-btns"><button class="period-btn active" onclick="setEnergyPeriod('daily',this)">Day</button><button class="period-btn" onclick="setEnergyPeriod('weekly',this)">Week</button></div></div>
+          <div class="chart-sub" id="chartSub">Last 24 hours · kWh per hour</div>
+          <div class="bar-chart-wrap" id="energyBarChart"></div>
+          <div class="chart-legend"><div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#38d9c0,#4f8ef7)"></div>kWh used</div><div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#4f8ef7,#7c5fe6)"></div>Current hour</div></div>
+        </div>
+        <div class="section-label">Device Usage</div>
+        <div class="energy-tips-card">
+          <div class="tip-row"><div class="tip-ico" style="background:rgba(79,142,247,.1)">❄️</div><div class="tip-info"><div class="tip-name">Air Conditioner</div><div class="tip-sub" id="acEnergyTip">Running · Cool mode 24°C</div></div><div class="tip-val" id="acWatts">980W</div></div>
+          <div class="tip-row"><div class="tip-ico" style="background:rgba(255,159,87,.15)">💡</div><div class="tip-info"><div class="tip-name">Switch 1 · Lights</div><div class="tip-sub">On · STEM Room</div></div><div class="tip-val">60W</div></div>
+          <div class="tip-row"><div class="tip-ico" style="background:rgba(67,233,123,.15)">🔌</div><div class="tip-info"><div class="tip-name">Switch 3 · Smart Plug</div><div class="tip-sub">On · Software Room</div></div><div class="tip-val">150W</div></div>
+          <div class="tip-row"><div class="tip-ico" style="background:rgba(196,113,237,.1)">⚡</div><div class="tip-info"><div class="tip-name">Main Breaker</div><div class="tip-sub">Active · All circuits</div></div><div class="tip-val" id="breakerWatts">650W</div></div>
+          <div class="tip-row"><div class="tip-ico" style="background:rgba(255,107,138,.1)">📡</div><div class="tip-info"><div class="tip-name">Other Devices</div><div class="tip-sub">IoT sensors · Networking</div></div><div class="tip-val">~120W</div></div>
         </div>
       </div>
     </div>
 
-    <!-- Storage bar (matches your existing style) -->
-    <div class="section-label">Recording Storage</div>
-    <div class="card" style="padding:16px 18px;margin-bottom:14px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <span style="font-size:13px;font-weight:700;color:var(--text-dark)">Cloud Storage</span>
-        <span style="font-size:12px;color:var(--text-soft);font-family:'Space Mono',monospace">1.86 TB / 3 TB</span>
-      </div>
-      <div style="height:6px;border-radius:3px;background:var(--light);overflow:hidden">
-        <div style="height:100%;width:62%;border-radius:3px;background:var(--grad-blue);transition:width .5s"></div>
-      </div>
-      <div style="font-size:11px;color:var(--text-soft);margin-top:6px">62% used · 30-day retention</div>
-    </div>
-  </div>
-</div>
-<!-- ENERGY TAB -->
-<div id="tabEnergy" style="display:none">
-  <div class="energy-hero">
-    <div class="energy-hero-top">
-      <div>
-        <div class="energy-hero-title">Energy</div>
-        <div class="energy-hero-sub">AEU IoT Power Monitor</div>
-      </div>
-      <div class="live-badge"><div class="live-dot"></div> Live</div>
-    </div>
-    <div class="energy-hero-stats">
-      <div class="e-stat"><div class="e-stat-val" id="eTodayKwh">4.2</div><div class="e-stat-lbl">kWh Today</div></div>
-      <div class="e-stat"><div class="e-stat-val" id="eWeekKwh">28.6</div><div class="e-stat-lbl">kWh Week</div></div>
-      <div class="e-stat"><div class="e-stat-val" id="ePeak">2.4</div><div class="e-stat-lbl">Peak kW</div></div>
-    </div>
-  </div>
-
-  <div class="energy-body">
-    <!-- Live Power -->
-    <div class="section-label">Live Power Usage</div>
-    <div class="live-power-card">
-      <div class="live-power-top">
-        <div class="live-power-label">Current Draw</div>
-        <div class="live-power-status">● Normal</div>
-      </div>
-      <div class="live-meter">
-        <div class="live-watts" id="liveWatts">1840</div>
-        <div class="live-watts-unit">W</div>
-      </div>
-      <div class="power-bar-track">
-        <div class="power-bar-fill" id="powerBarFill" style="width:46%"></div>
-      </div>
-      <div class="power-bar-labels">
-        <span>0 W</span>
-        <span>Max: 4000 W</span>
-      </div>
-      <div class="power-sparkline" id="sparkline"></div>
-    </div>
-
-    <!-- kWh Chart -->
-    <div class="section-label">Usage History</div>
-    <div class="chart-card">
-      <div class="chart-card-top">
-        <div class="chart-card-title">Power Consumption</div>
-        <div class="chart-period-btns">
-          <button class="period-btn active" onclick="setEnergyPeriod('daily',this)">Day</button>
-          <button class="period-btn" onclick="setEnergyPeriod('weekly',this)">Week</button>
-        </div>
-      </div>
-      <div class="chart-sub" id="chartSub">Last 24 hours · kWh per hour</div>
-      <div class="bar-chart-wrap" id="energyBarChart"></div>
-      <div class="chart-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#38d9c0,#4f8ef7)"></div>kWh used</div>
-        <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#4f8ef7,#7c5fe6)"></div>Current hour</div>
-      </div>
-    </div>
-
-    <!-- Device Breakdown -->
-    <div class="section-label">Device Usage</div>
-    <div class="energy-tips-card">
-      <div class="tip-row">
-        <div class="tip-ico" style="background:rgba(79,142,247,.1)">❄️</div>
-        <div class="tip-info"><div class="tip-name">Air Conditioner</div><div class="tip-sub">Running · Cool mode 24°C</div></div>
-        <div class="tip-val" id="acWatts">980W</div>
-      </div>
-      <div class="tip-row">
-        <div class="tip-ico" style="background:rgba(255,159,87,.15)">💡</div>
-        <div class="tip-info"><div class="tip-name">Switch 1 · Lights</div><div class="tip-sub">On · STEM Room</div></div>
-        <div class="tip-val">60W</div>
-      </div>
-      <div class="tip-row">
-        <div class="tip-ico" style="background:rgba(67,233,123,.15)">🔌</div>
-        <div class="tip-info"><div class="tip-name">Switch 3 · Smart Plug</div><div class="tip-sub">On · Software Room</div></div>
-        <div class="tip-val">150W</div>
-      </div>
-      <div class="tip-row">
-        <div class="tip-ico" style="background:rgba(196,113,237,.1)">⚡</div>
-        <div class="tip-info"><div class="tip-name">Main Breaker</div><div class="tip-sub">Active · All circuits</div></div>
-        <div class="tip-val" id="breakerWatts">650W</div>
-      </div>
-      <div class="tip-row">
-        <div class="tip-ico" style="background:rgba(255,107,138,.1)">📡</div>
-        <div class="tip-info"><div class="tip-name">Other Devices</div><div class="tip-sub">IoT sensors · Networking</div></div>
-        <div class="tip-val">~120W</div>
-      </div>
-    </div>
-  </div>
-</div>
     <!-- PROFILE TAB -->
     <div id="tabProfile" style="display:none">
       <div class="profile-hero">
@@ -1028,69 +815,39 @@
         <div class="profile-section">
           <div class="profile-section-title">Account</div>
           <div class="profile-card">
-            <div class="profile-row" onclick="openEditProfile()">
-              <div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Edit Profile</div><div class="pr-sub">Name & preferences</div></div>
-              <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </div>
-            <div class="profile-row">
-              <div class="pr-ico ico-green"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Gmail</div><div class="pr-sub" id="profileEmailRow">—</div></div>
-              <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </div>
+            <div class="profile-row" onclick="openEditProfile()"><div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="pr-info"><div class="pr-name">Edit Profile</div><div class="pr-sub">Name & preferences</div></div><div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
+            <div class="profile-row"><div class="pr-ico ico-green"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="pr-info"><div class="pr-name">Gmail</div><div class="pr-sub" id="profileEmailRow">—</div></div><div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
           </div>
         </div>
         <div class="profile-section">
           <div class="profile-section-title">API Settings</div>
           <div class="profile-card">
-            <!-- <div class="profile-row" onclick="openApiSettings()">
-              <div class="pr-ico ico-purple"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Flask API URL</div><div class="pr-sub" id="apiUrlDisplay">http://172.16.105.119:5000</div></div>
-              <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </div> -->
-            <div class="profile-row" onclick="refreshDevices()">
-              <div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div>
-              <div class="pr-info"><div class="pr-name">Refresh Devices</div><div class="pr-sub">Pull latest status from API</div></div>
-              <div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-            </div>
+            <div class="profile-row" onclick="refreshDevices()"><div class="pr-ico ico-blue"><svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg></div><div class="pr-info"><div class="pr-name">Refresh Devices</div><div class="pr-sub" id="apiUrlDisplay">http://localhost:5000</div></div><div class="pr-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div>
           </div>
         </div>
-        <div class="profile-section">
-          <button class="logout-btn" onclick="doLogout()">Sign Out</button>
-        </div>
+        <div class="profile-section"><button class="logout-btn" onclick="doLogout()">Sign Out</button></div>
       </div>
     </div>
   </div>
 
   <div class="bottom-nav">
-    <div class="nav-item active" id="nav-home" onclick="showTab('home')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-      <span class="nav-lbl">Home</span>
-    </div>
-   <div class="nav-item" id="nav-devices" onclick="showTab('devices')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-      <span class="nav-lbl">Devices</span>
-    </div>
-   <div class="nav-item" id="nav-energy" onclick="showTab('energy')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-      <span class="nav-lbl">Energy</span>
-    </div>
-    <div class="nav-item" id="nav-security" onclick="showTab('security')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <span class="nav-lbl">Security</span>
-    </div>
-    <div class="nav-item" id="nav-profile" onclick="showTab('profile')">
-      <div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
-      <span class="nav-lbl">Profile</span>
-    </div>
+    <div class="nav-item active" id="nav-home" onclick="showTab('home')"><div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span class="nav-lbl">Home</span></div>
+    <div class="nav-item" id="nav-devices" onclick="showTab('devices')"><div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><span class="nav-lbl">Devices</span></div>
+    <div class="nav-item" id="nav-energy" onclick="showTab('energy')"><div class="nav-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><span class="nav-lbl">Energy</span></div>
+    <div class="nav-item" id="nav-security" onclick="showTab('security')"><div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="nav-lbl">Security</span></div>
+    <div class="nav-item" id="nav-profile" onclick="showTab('profile')"><div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><span class="nav-lbl">Profile</span></div>
   </div>
 </div>
 
-<!-- EDIT PROFILE MODAL
+<!-- EDIT PROFILE MODAL -->
 <div class="modal-overlay" id="editModal">
   <div class="modal-sheet">
     <div class="modal-handle"></div>
     <div class="modal-title">Edit Profile</div>
+    <div class="profile-avatar-box">
+      <div class="avatar-circle" id="avatarCircle"></div>
+      <label class="avatar-upload-btn">Change Photo<input type="file" id="avatarUpload" accept="image/*" hidden></label>
+    </div>
     <div class="input-group">
       <label class="input-label">Full Name</label>
       <div class="input-wrap">
@@ -1101,422 +858,517 @@
     <button class="auth-btn" onclick="saveProfile()">Save Changes</button>
     <button class="cancel-btn" onclick="closeEditProfile()">Cancel</button>
   </div>
-</div> -->
-<!-- EDIT PROFILE MODAL -->
-<div class="modal-overlay" id="editModal">
-  <div class="modal-sheet">
-    <div class="modal-handle"></div>
-    <div class="modal-title">Edit Profile</div>
-
-    <div class="profile-avatar-box">
-      <div class="avatar-circle" id="avatarCircle"></div>
-
-      <label class="avatar-upload-btn">
-        Change Photo
-        <input type="file" id="avatarUpload" accept="image/*" hidden>
-      </label>
-    </div>
-
-    <div class="input-group">
-      <label class="input-label">Full Name</label>
-      <div class="input-wrap">
-        <svg class="icon-left" viewBox="0 0 24 24">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-          <circle cx="12" cy="7" r="4"/>
-        </svg>
-        <input class="inp" type="text" id="editName" placeholder="Your name"/>
-      </div>
-    </div>
-
-    <button class="auth-btn" onclick="saveProfile()">Save Changes</button>
-    <button class="cancel-btn" onclick="closeEditProfile()">Cancel</button>
-  </div>
-</div>
-<!-- API SETTINGS MODAL -->
-<div class="modal-overlay" id="apiModal">
-  <div class="modal-sheet">
-    <div class="modal-handle"></div>
-    <div class="modal-title">API Settings</div>
-    <div class="input-group">
-      <label class="input-label">Flask API Base URL</label>
-      <div class="input-wrap">
-        <svg class="icon-left" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
-        <input class="inp" type="url" id="apiUrlInput" placeholder="http://192.168.x.x:5000" style="padding-left:42px"/>
-      </div>
-    </div>
-    <button class="auth-btn" onclick="saveApiUrl()">Save & Test</button>
-    <button class="cancel-btn" onclick="closeApiModal()">Cancel</button>
-  </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-// ─────────────────────────────────────────
-//  CONSTANTS & STATE
-// ─────────────────────────────────────────
-const DB='aeu_users', SES='aeu_session', API_KEY='aeu_api_url';
-const DEFAULT_API='http://209.25.142.20:25610';
+// ═══════════════════════════════════════
+//  CONFIG
+// ═══════════════════════════════════════
+const DB = 'aeu_users', SES = 'aeu_session', API_KEY = 'aeu_api_url';
+const DEFAULT_API = 'http://localhost:5000';
 
-let API_URL=localStorage.getItem(API_KEY)||DEFAULT_API;
-let currentUser=null;
-let acState={on:true, setTemp:24, mode:'cold', wind:'auto'};
-let breakerOn=true;
+let API_URL = localStorage.getItem(API_KEY) || DEFAULT_API;
+let currentUser = null;
 
-// ─────────────────────────────────────────
-//  USER STORE (localStorage)
-// ─────────────────────────────────────────
-const getUsers=()=>{try{return JSON.parse(localStorage.getItem(DB)||'{}')}catch{return{}}};
-const saveUsers=u=>localStorage.setItem(DB,JSON.stringify(u));
-const getSession=()=>{try{return JSON.parse(localStorage.getItem(SES)||'null')}catch{return null}};
-const saveSession=u=>localStorage.setItem(SES,JSON.stringify(u));
-const clearSession=()=>localStorage.removeItem(SES);
+// ─── Device state ────────────────────
+// acState uses acir.py native values:
+//   mode: cool | heat | dry | fan | auto
+//   wind: auto | low | medium | high
+//   on:   boolean
+//   setTemp: 16-30
+let acState = { on: false, setTemp: 24, mode: 'cool', wind: 'auto' };
+let breakerOn = false;
+let tuyaState = { switch_1: false, switch_2: false, switch_3: false, switch_4: false };
 
-// ─────────────────────────────────────────
-//  FLASK API HELPERS
-// ─────────────────────────────────────────
-async function apiFetch(path, method='GET', body=null){
-  const opts={method, headers:{'Content-Type':'application/json'}};
-  if(body) opts.body=JSON.stringify(body);
-  const resp=await fetch(API_URL+path, opts);
-  if(!resp.ok) throw new Error('HTTP '+resp.status);
+const AC_MODES = ['cool','heat','dry','fan','auto'];
+const AC_FANS  = ['auto','low','medium','high'];
+const MODE_ACTIVE = { cool:'active-cool', heat:'active-heat', dry:'active-dry', fan:'active-fan', auto:'active-fan' };
+
+// ═══════════════════════════════════════
+//  API HELPERS
+// ═══════════════════════════════════════
+async function apiFetch(path, method='GET', body=null) {
+  const opts = { method, headers: {'Content-Type':'application/json'} };
+  if (body) opts.body = JSON.stringify(body);
+  const resp = await fetch(API_URL + path, opts);
+  if (!resp.ok) throw new Error('HTTP ' + resp.status);
   return resp.json();
 }
 
-function apiLog(msg, ok){
-  const list=document.getElementById('logList');
-  const entry=document.createElement('div');
-  entry.className='log-entry '+(ok===true?'log-ok':ok===false?'log-err':'');
-  entry.textContent=new Date().toLocaleTimeString()+' '+msg;
-  list.prepend(entry);
-  while(list.children.length>30) list.removeChild(list.lastChild);
+function apiLog(msg, ok) {
+  const list = document.getElementById('logList');
+  if (!list) return;
+  const el = document.createElement('div');
+  el.className = 'log-entry ' + (ok === true ? 'log-ok' : ok === false ? 'log-err' : '');
+  el.textContent = new Date().toLocaleTimeString() + ' ' + msg;
+  list.prepend(el);
+  while (list.children.length > 30) list.removeChild(list.lastChild);
 }
 
-function clearLog(){document.getElementById('logList').innerHTML='';}
+function clearLog() { document.getElementById('logList').innerHTML = ''; }
 
-// ─────────────────────────────────────────
-//  CONNECTION CHECK
-// ─────────────────────────────────────────
-async function checkConnection(){
-  const pill=document.getElementById('connPill');
-  pill.className='conn-pill checking'; pill.textContent='checking…';
-  try{
+// ═══════════════════════════════════════
+//  CONNECTION
+// ═══════════════════════════════════════
+async function checkConnection() {
+  const pill = document.getElementById('connPill');
+  pill.className = 'conn-pill checking'; pill.textContent = 'checking…';
+  try {
     await apiFetch('/');
-    pill.className='conn-pill online'; pill.textContent='● online';
+    pill.className = 'conn-pill online'; pill.textContent = '● online';
     return true;
-  }catch(e){
-    pill.className='conn-pill offline'; pill.textContent='✕ offline';
-    apiLog('Connection failed: '+API_URL, false);
+  } catch(e) {
+    pill.className = 'conn-pill offline'; pill.textContent = '✕ offline';
+    apiLog('Offline: ' + API_URL, false);
     return false;
   }
 }
 
-// ─────────────────────────────────────────
-//  DEVICE STATUS REFRESH
-// ─────────────────────────────────────────
-async function refreshDevices(){
+// ═══════════════════════════════════════
+//  REFRESH ALL (parallel)
+// ═══════════════════════════════════════
+async function refreshDevices() {
   showToast('Refreshing…');
-  apiLog('Fetching device status…');
-  await Promise.allSettled([refreshBreaker(), refreshAC()]);
+  const [b, a, t] = await Promise.allSettled([refreshBreaker(), refreshAC(), refreshTswitch()]);
+  if (b.status === 'rejected') apiLog('Breaker: ' + b.reason?.message, false);
+  if (a.status === 'rejected') apiLog('AC: ' + a.reason?.message, false);
+  if (t.status === 'rejected') apiLog('Tswitch: ' + t.reason?.message, false);
   updateSummary();
 }
 
-async function refreshBreaker(){
-  try{
-    const d=await apiFetch('/breaker/status');
-    const on=d.data?.dps?.['1']??true;
-    breakerOn=on;
-    setBreakerUI(on);
-    apiLog('Breaker status: '+(on?'ON':'OFF'), true);
-  }catch(e){
-    apiLog('Breaker status error: '+e.message, false);
-  }
+function startPolling() {
+  setInterval(async () => {
+    await Promise.allSettled([refreshBreaker(), refreshAC(), refreshTswitch()]);
+    updateSummary();
+  }, 15000);
 }
 
-async function refreshAC(){
-  try{
-    const d=await apiFetch('/ac/status');
-    const dps=d.ac?.dps||{};
-    if(dps.power!==undefined){acState.on=dps.power;}
-    if(dps.temp!==undefined){acState.setTemp=dps.temp;}
-    renderACUI();
-    apiLog('AC status OK', true);
-  }catch(e){
-    apiLog('AC status error: '+e.message, false);
-  }
+// ═══════════════════════════════════════
+//  BREAKER  →  GET /breaker/status
+//              GET /breaker/on | /breaker/off
+// ═══════════════════════════════════════
+async function refreshBreaker() {
+  const d = await apiFetch('/breaker/status');
+  const on = d?.dps?.['1'] ?? d?.data?.dps?.['1'] ?? breakerOn;
+  breakerOn = on;
+  setBreakerUI(on);
+  apiLog('Breaker: ' + (on ? 'ON' : 'OFF'), true);
 }
 
-// ─────────────────────────────────────────
-//  BREAKER
-// ─────────────────────────────────────────
-async function toggleBreaker(){
-  const cmd=breakerOn?'off':'on';
-  fetch(API_URL+'/breaker/'+cmd);
-  breakerOn=!breakerOn;
+async function toggleBreaker() {
+  const cmd = breakerOn ? 'off' : 'on';
+  breakerOn = !breakerOn;
   setBreakerUI(breakerOn);
   updateSummary();
-  showToast('Breaker '+(breakerOn?'ON':'OFF'));
-  apiLog('Breaker → '+cmd.toUpperCase(), true);
-}
-
-function setBreakerUI(on){
-  const card=document.getElementById('b1card');
-  const ico=document.getElementById('b1ico');
-  const status=document.getElementById('b1status');
-  card.classList.toggle('b-on',on);
-  ico.className='breaker-ico b1-ico '+(on?'on':'off');
-  status.className='breaker-status '+(on?'on-b1':'off');
-  status.textContent=on?'ON':'OFF';
-  document.getElementById('b1ampVal').textContent=on?'Live':'Offline';
-}
-
-// ─────────────────────────────────────────
-//  AC CONTROLS
-// ─────────────────────────────────────────
-async function toggleAC(){
-  const tog=document.getElementById('acPowerToggle');
-  tog.classList.add('loading');
-  const cmd=acState.on?'off':'on';
-  try{
-    const d=await apiFetch('/ac/'+cmd, 'POST');
-    if(d.success){
-      acState.on=!acState.on;
-      renderACUI();
-      updateSummary();
-      showToast('AC '+(acState.on?'ON':'OFF'));
-      apiLog('AC power → '+(acState.on?'ON':'OFF'), true);
-    }else{ showToast('AC error'); apiLog('AC toggle failed',false); }
-  }catch(e){
-    showToast('Error: '+e.message); apiLog('AC error: '+e.message, false);
-  }finally{
-    tog.classList.remove('loading');
+  showToast('Breaker ' + (breakerOn ? 'ON' : 'OFF'));
+  try {
+    await apiFetch('/breaker/' + cmd);
+    apiLog('Breaker → ' + cmd.toUpperCase(), true);
+    await refreshBreaker();
+  } catch(e) {
+    apiLog('Breaker error: ' + e.message, false);
+    breakerOn = !breakerOn;
+    setBreakerUI(breakerOn);
+    showToast('Breaker error');
   }
 }
 
-async function changeTemp(delta){
-  const newTemp=Math.max(16,Math.min(30,acState.setTemp+delta));
-  if(newTemp===acState.setTemp) return;
-  acState.setTemp=newTemp;
-  document.getElementById('acSetTemp').textContent=newTemp;
-  document.getElementById('acSetTempDisplay').textContent=newTemp;
-  document.getElementById('acSetLabel').textContent='Set: '+newTemp+'°C';
-  try{
-    const d=await apiFetch('/ac/temp/'+newTemp, 'POST');
-    apiLog('AC temp → '+newTemp+'°C', d.success);
-    if(!d.success) showToast('Temp set failed');
-    else showToast(newTemp+'°C set');
-  }catch(e){ apiLog('Temp error: '+e.message, false); showToast('Error: '+e.message); }
+function setBreakerUI(on) {
+  const card = document.getElementById('b1card');
+  const ico  = document.getElementById('b1ico');
+  const st   = document.getElementById('b1status');
+  const amp  = document.getElementById('b1ampVal');
+  if (card) card.classList.toggle('b-on', on);
+  if (ico)  ico.className = 'breaker-ico b1-ico ' + (on ? 'on' : 'off');
+  if (st)   { st.className = 'breaker-status ' + (on ? 'on-b1' : 'off'); st.textContent = on ? 'ON' : 'OFF'; }
+  if (amp)  amp.textContent = on ? 'Live' : 'Offline';
 }
 
-const modeClassMap={cold:'active-cool',hot:'active-heat',auto:'active-fan',speed:'active-fan',dehumy:'active-dry'};
-async function setACMode(mode){
-  acState.mode=mode;
-  ['cold','hot','auto','speed','dehumy'].forEach(m=>{
-    const el=document.getElementById('mode-'+m);
-    if(el) el.className='mode-pill'+(m===mode?' '+modeClassMap[m]:'');
+// ═══════════════════════════════════════
+//  ACIR  →  GET  /acir/status
+//           POST /acir/power       { state: "on"|"off" }
+//           POST /acir/temperature { temp: 16-30 }
+//           POST /acir/mode        { mode: "cool"|"heat"|"dry"|"fan"|"auto" }
+//           POST /acir/fan         { speed: "auto"|"low"|"medium"|"high" }
+//           POST /acir/control     { power:0/1, mode:0-4, temp:16-30, wind:0-3 }
+// ═══════════════════════════════════════
+async function refreshAC() {
+  const d = await apiFetch('/acir/status');
+  if (d?.success && d?.state) {
+    const s = d.state;
+    acState.on      = s.power === 'on';
+    acState.setTemp = typeof s.temp === 'number' ? s.temp : acState.setTemp;
+    acState.mode    = AC_MODES.includes(s.mode) ? s.mode : acState.mode;
+    acState.wind    = AC_FANS.includes(s.wind)  ? s.wind : acState.wind;
+    renderACUI();
+    apiLog('AC: ' + s.power + ' ' + s.temp + '°C mode=' + s.mode + ' fan=' + s.wind, true);
+  }
+}
+
+async function toggleAC() {
+  const tog = document.getElementById('acPowerToggle');
+  if (tog) tog.classList.add('loading');
+  const newOn = !acState.on;
+  try {
+    const d = await apiFetch('/acir/power', 'POST', { state: newOn ? 'on' : 'off' });
+    if (d.success) {
+      acState.on = newOn;
+      renderACUI(); updateSummary();
+      showToast('AC ' + (newOn ? 'ON' : 'OFF'));
+      apiLog('AC power → ' + (newOn ? 'on' : 'off'), true);
+    } else { showToast('AC error'); apiLog('AC toggle failed', false); }
+  } catch(e) {
+    showToast('Error: ' + e.message); apiLog('AC error: ' + e.message, false);
+  } finally { if (tog) tog.classList.remove('loading'); }
+}
+
+async function changeTemp(delta) {
+  const t = Math.max(16, Math.min(30, acState.setTemp + delta));
+  if (t === acState.setTemp) return;
+  acState.setTemp = t;
+  const s1 = document.getElementById('acSetTemp');
+  const s2 = document.getElementById('acSetTempDisplay');
+  const sl = document.getElementById('acSetLabel');
+  if (s1) s1.textContent = t;
+  if (s2) s2.textContent = t;
+  if (sl) sl.textContent = 'Set: ' + t + '°C';
+  try {
+    const d = await apiFetch('/acir/temperature', 'POST', { temp: t });
+    apiLog('AC temp → ' + t + '°C', d.success);
+    showToast(d.success ? t + '°C ✓' : 'Temp failed');
+  } catch(e) { apiLog('Temp error: ' + e.message, false); showToast('Error'); }
+}
+
+async function setACMode(mode) {
+  if (!AC_MODES.includes(mode)) return;
+  acState.mode = mode;
+  renderACModePills();
+  const el = document.getElementById('acModeDisplay');
+  if (el) el.textContent = mode;
+  try {
+    const d = await apiFetch('/acir/mode', 'POST', { mode });
+    apiLog('AC mode → ' + mode, d.success);
+    showToast(d.success ? 'Mode: ' + mode + ' ✓' : 'Mode failed');
+  } catch(e) { apiLog('Mode error: ' + e.message, false); showToast('Error'); }
+}
+
+async function setACFan(speed) {
+  if (!AC_FANS.includes(speed)) return;
+  acState.wind = speed;
+  renderACFanPills();
+  const el = document.getElementById('acWindDisplay');
+  if (el) el.textContent = speed;
+  try {
+    const d = await apiFetch('/acir/fan', 'POST', { speed });
+    apiLog('AC fan → ' + speed, d.success);
+    showToast(d.success ? 'Fan: ' + speed + ' ✓' : 'Fan failed');
+  } catch(e) { apiLog('Fan error: ' + e.message, false); showToast('Error'); }
+}
+
+async function sendFullControl() {
+  const body = {
+    power: acState.on ? 1 : 0,
+    mode:  AC_MODES.indexOf(acState.mode),
+    temp:  acState.setTemp,
+    wind:  AC_FANS.indexOf(acState.wind)
+  };
+  showToast('Applying…');
+  try {
+    const d = await apiFetch('/acir/control', 'POST', body);
+    apiLog('AC full: pwr=' + body.power + ' mode=' + acState.mode + '(' + body.mode + ') ' + body.temp + '°C fan=' + acState.wind + '(' + body.wind + ')', d.success);
+    showToast(d.success ? 'Applied ✓' : 'Failed');
+  } catch(e) { apiLog('Full ctrl error: ' + e.message, false); showToast('Error'); }
+}
+
+function renderACUI() {
+  const on = acState.on;
+  const tog = document.getElementById('acPowerToggle');
+  if (tog) tog.classList.toggle('on', on);
+  const st = document.getElementById('acStateDisplay');
+  if (st) st.textContent = on ? 'ON' : 'OFF';
+  const t1 = document.getElementById('acSetTemp');
+  const t2 = document.getElementById('acSetTempDisplay');
+  const tl = document.getElementById('acSetLabel');
+  if (t1) t1.textContent = acState.setTemp;
+  if (t2) t2.textContent = acState.setTemp;
+  if (tl) tl.textContent = 'Set: ' + acState.setTemp + '°C';
+  const md = document.getElementById('acModeDisplay');
+  const wd = document.getElementById('acWindDisplay');
+  if (md) md.textContent = acState.mode;
+  if (wd) wd.textContent = acState.wind;
+  renderACModePills();
+  renderACFanPills();
+  // update energy tip
+  const tip = document.getElementById('acEnergyTip');
+  if (tip) tip.textContent = (on ? 'Running' : 'Off') + ' · ' + acState.mode + ' mode ' + acState.setTemp + '°C';
+}
+
+function renderACModePills() {
+  AC_MODES.forEach(m => {
+    const el = document.getElementById('acmode-' + m);
+    if (el) el.className = 'mode-pill' + (m === acState.mode ? ' ' + (MODE_ACTIVE[m] || 'active-cool') : '');
   });
-  document.getElementById('acModeDisplay').textContent=mode;
-  try{
-    const d=await apiFetch('/ac/mode/'+mode, 'POST');
-    apiLog('AC mode → '+mode, d.success);
-    if(d.success) showToast('Mode: '+mode);
-    else showToast('Mode failed');
-  }catch(e){ apiLog('Mode error: '+e.message, false); showToast('Error: '+e.message); }
 }
 
-const windLevels=['low','middle','high','auto'];
-async function setACWind(speed){
-  acState.wind=speed;
-  const idx=windLevels.indexOf(speed)+1;
-  document.querySelectorAll('.fan-dot').forEach((d,i)=>d.classList.toggle('lit',i<idx));
-  document.getElementById('acWindDisplay').textContent=speed;
-  try{
-    const d=await apiFetch('/ac/wind/'+speed, 'POST');
-    apiLog('AC fan → '+speed, d.success);
-    if(d.success) showToast('Fan: '+speed);
-    else showToast('Fan failed');
-  }catch(e){ apiLog('Fan error: '+e.message, false); showToast('Error: '+e.message); }
+function renderACFanPills() {
+  AC_FANS.forEach(f => {
+    const el = document.getElementById('acfan-' + f);
+    if (el) el.className = 'mode-pill' + (f === acState.wind ? ' active-fan' : '');
+  });
 }
 
-async function sendFullControl(){
-  const body={power:acState.on, temp:acState.setTemp, mode:acState.mode, wind:acState.wind};
-  showToast('Applying settings…');
-  try{
-    const d=await apiFetch('/ac/control','POST',body);
-    apiLog('AC full control sent', d.success);
-    showToast(d.success?'Settings applied ✓':'Apply failed');
-  }catch(e){ apiLog('Full control error: '+e.message, false); showToast('Error: '+e.message); }
+// ═══════════════════════════════════════
+//  TSWITCH  →  GET  /tswitch/status
+//              POST /tswitch/switch/<name>  { state: true|false }
+// ═══════════════════════════════════════
+const SWITCH_NAMES = ['switch_1','switch_2','switch_3','switch_4'];
+const SW_WATTS = [60, 45, 150, 100];
+const SW_COLORS = ['on-blue','on-blue','on-green','on-green'];
+const SW_TOG    = ['on','on','on-green','on-green'];
+
+async function refreshTswitch() {
+  const d = await apiFetch('/tswitch/status');
+  if (d?.success && d?.switches) {
+    tuyaState = { ...d.switches };
+    SWITCH_NAMES.forEach((name, i) => setTuyaUI(i + 1, d.switches[name]));
+    apiLog('Switches: ' + SWITCH_NAMES.map((n,i)=>(i+1)+':'+(d.switches[n]?'ON':'OFF')).join(' '), true);
+  }
 }
 
-function renderACUI(){
-  const on=acState.on;
-  document.getElementById('acPowerToggle').classList.toggle('on',on);
-  document.getElementById('acStateDisplay').textContent=on?'ON':'OFF';
-  document.getElementById('acSetTemp').textContent=acState.setTemp;
-  document.getElementById('acSetTempDisplay').textContent=acState.setTemp;
-  document.getElementById('acSetLabel').textContent='Set: '+acState.setTemp+'°C';
-  document.getElementById('acModeDisplay').textContent=acState.mode;
-  document.getElementById('acWindDisplay').textContent=acState.wind;
+async function toggleTuya(n) {
+  const name = 'switch_' + n;
+  const newState = !tuyaState[name];
+  tuyaState[name] = newState;
+  setTuyaUI(n, newState);
+  updateSummary();
+  showToast('Switch ' + n + ' ' + (newState ? 'ON' : 'OFF'));
+  try {
+    const d = await apiFetch('/tswitch/switch/' + name, 'POST', { state: newState });
+    apiLog('Switch ' + n + ' → ' + (newState ? 'ON' : 'OFF'), d.success);
+    if (!d.success) throw new Error('failed');
+  } catch(e) {
+    apiLog('Switch ' + n + ' error: ' + e.message, false);
+    tuyaState[name] = !newState;
+    setTuyaUI(n, !newState);
+    showToast('Switch ' + n + ' error');
+  }
+}
+async function allSwitches(state) {
+  showToast('Turning all '+(state?'ON':'OFF')+'…');
+  try {
+    const d = await apiFetch('/tswitch/switch/all','POST',{state});
+    apiLog('All switches → '+(state?'ON':'OFF'), d.success!==false);
+    for(let i=1;i<=4;i++){tuyaState['switch_'+i]=state;setTuyaUI(i,state);}
+    updateSummary();
+    showToast('All switches '+(state?'ON':'OFF')+' ✓');
+  } catch(e) { apiLog('All switches error: '+e.message,false); showToast('Error: '+e.message); }
 }
 
-// ─────────────────────────────────────────
-//  TUYA SWITCHES (local state only)
-// ─────────────────────────────────────────
-const tState={1:true,2:false,3:true,4:false,5:true};
-const tN={1:'Living Room Light',2:'Bedroom Light',3:'Smart Plug 1',4:'Smart Plug 2',5:'Kitchen Switch'};
-const tW={1:60,2:45,3:150,4:100,5:80};
-const tC={1:'on-blue',2:'on-blue',3:'on-green',4:'on-green',5:'on-orange'};
-const tT={1:'on',2:'on',3:'on-green',4:'on-green',5:'on-orange'};
-function toggleTuya(n){
-  tState[n]=!tState[n];const on=tState[n];
-  document.getElementById('t'+n+'ico').className='dev-icon '+(on?tC[n]:'off');
-  document.getElementById('t'+n+'toggle').className='toggle '+(on?tT[n]:'');
-  document.getElementById('t'+n+'sub').textContent=on?'On · '+tW[n]+'W':'Off';
-  updateSummary();showToast(tN[n]+' '+(on?'ON':'OFF'));
+function setTuyaUI(n, on) {
+  const ico = document.getElementById('t' + n + 'ico');
+  const tog = document.getElementById('t' + n + 'toggle');
+  const sub = document.getElementById('t' + n + 'sub');
+  if (ico) ico.className = 'dev-icon ' + (on ? SW_COLORS[n-1] : 'off');
+  if (tog) tog.className = 'toggle ' + (on ? SW_TOG[n-1] : '');
+  if (sub) sub.textContent = on ? 'On · ' + SW_WATTS[n-1] + 'W' : 'Off';
 }
 
-// ─────────────────────────────────────────
-//  SUMMARY STRIP
-// ─────────────────────────────────────────
-function updateSummary(){
-  const devOn=(acState.on?1:0)+(breakerOn?1:0);
-  document.getElementById('devOnCount').textContent=devOn;
-  document.getElementById('tempReadout').textContent=acState.setTemp+'°';
-  document.getElementById('breakerStatus').textContent=breakerOn?'ON':'OFF';
-  document.getElementById('pDevicesOn').textContent=devOn;
-  document.getElementById('pTemp').textContent=acState.setTemp+'°';
-  document.getElementById('pBreaker').textContent=breakerOn?'ON':'OFF';
+// ═══════════════════════════════════════
+//  SUMMARY
+// ═══════════════════════════════════════
+function updateSummary() {
+  const sw = SWITCH_NAMES.filter(n => tuyaState[n]).length;
+  const devOn = (acState.on ? 1 : 0) + (breakerOn ? 1 : 0) + sw;
+  const sv = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  sv('devOnCount',    devOn);
+  sv('tempReadout',   acState.setTemp + '°');
+  sv('breakerStatus', breakerOn ? 'ON' : 'OFF');
+  sv('pDevicesOn',    devOn);
+  sv('pTemp',         acState.setTemp + '°');
+  sv('pBreaker',      breakerOn ? 'ON' : 'OFF');
 }
 
-// ─────────────────────────────────────────
-//  INIT & AUTH
-// ─────────────────────────────────────────
-window.onload=()=>{
-  const s=getSession();
-  if(s){currentUser=s;launchApp();}
+// ═══════════════════════════════════════
+//  AUTH
+// ═══════════════════════════════════════
+const getUsers   = () => { try { return JSON.parse(localStorage.getItem(DB)||'{}') } catch { return {} } };
+const saveUsers  = u => localStorage.setItem(DB, JSON.stringify(u));
+const getSession = () => { try { return JSON.parse(localStorage.getItem(SES)||'null') } catch { return null } };
+const saveSession= u => localStorage.setItem(SES, JSON.stringify(u));
+const clearSession = () => localStorage.removeItem(SES);
+const initials   = n => (n||'U').split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'U';
+const isGmail    = e => /^[a-zA-Z0-9._%+\-]+@gmail\.com$/.test((e||'').trim());
+const isPwd      = p => (p||'').length >= 8;
+
+window.onload = () => {
+  const s = getSession();
+  if (s) { currentUser = s; launchApp(); }
   buildEnergyBars();
-  attachRipples();
 };
 
-function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
-
-function showTab(tab){
-  document.getElementById('tabHome').style.display=tab==='home'?'block':'none';
-  document.getElementById('tabProfile').style.display=tab==='profile'?'block':'none';
-  document.getElementById('tabSecurity').style.display=tab==='security'?'block':'none';
-  document.getElementById('tabEnergy').style.display=tab==='energy'?'block':'none';
-  document.getElementById('tabDevices').style.display=tab==='devices'?'block':'none';
-  ['home','devices','energy','security','profile'].forEach(n=>{
-    const el=document.getElementById('nav-'+n);if(el)el.classList.remove('active');
-  });
-  const navEl=document.getElementById('nav-'+tab);
-  if(navEl)navEl.classList.add('active');
-  if(tab==='profile') refreshProfile();
-  if(tab==='security') buildSecTab();
-  if(tab==='energy') buildEnergyTab();
-  if(tab==='devices') buildDevicesTab();
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
-async function launchApp(){
+
+async function launchApp() {
   showScreen('screenApp');
   showTab('home');
-  document.getElementById('avatarInitial').textContent=initials(currentUser.name||'U');
-  document.getElementById('headerGreeting').textContent='Hello, '+(currentUser.name||'User').split(' ')[0];
-  document.getElementById('apiUrlDisplay').textContent=API_URL;
+  document.getElementById('avatarInitial').textContent = initials(currentUser.name);
+  document.getElementById('headerGreeting').textContent = 'Hello, ' + (currentUser.name||'User').split(' ')[0];
+  document.getElementById('apiUrlDisplay').textContent = API_URL;
   await checkConnection();
   await refreshDevices();
+  startPolling();
 }
 
-const initials=n=>n.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2)||'U';
-const isGmail=e=>/^[a-zA-Z0-9._%+\-]+@gmail\.com$/.test(e.trim());
-const isPwd=p=>p.length>=8;
-
-function validateRegEmail(){
-  const v=document.getElementById('regEmail').value;const ok=!v||isGmail(v);
-  document.getElementById('regEmail').classList.toggle('error',!ok&&!!v);
-  document.getElementById('regEmailErr').classList.toggle('show',!ok&&!!v);
-}
-function checkStrength(){
-  const p=document.getElementById('regPwd').value;
-  let s=0;if(p.length>=8)s++;if(/[A-Z]/.test(p))s++;if(/[0-9]/.test(p))s++;if(/[^a-zA-Z0-9]/.test(p))s++;
-  const lv=[{w:'0%',c:'',t:''},{w:'25%',c:'#ff6b8a',t:'Weak'},{w:'50%',c:'#ff9f57',t:'Fair'},{w:'75%',c:'#4f8ef7',t:'Good'},{w:'100%',c:'#43e97b',t:'Strong ✓'}][s];
-  const f=document.getElementById('strengthFill'),l=document.getElementById('strengthLabel');
-  f.style.width=lv.w;f.style.background=lv.c;l.textContent=lv.t;l.style.color=lv.c;
+function showTab(tab) {
+  ['home','devices','energy','security','profile'].forEach(t => {
+    const el = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+    if (el) el.style.display = t === tab ? 'block' : 'none';
+    const nav = document.getElementById('nav-' + t);
+    if (nav) nav.classList.toggle('active', t === tab);
+  });
+  if (tab === 'profile') refreshProfile();
+  if (tab === 'security') buildSecTab();
+  if (tab === 'energy') buildEnergyTab();
+  if (tab === 'devices') buildDevicesTab();
 }
 
-function doRegister(){
-  let ok=true;
-  const name=document.getElementById('regName').value.trim();
-  const email=document.getElementById('regEmail').value.trim().toLowerCase();
-  const pwd=document.getElementById('regPwd').value;
-  const pwd2=document.getElementById('regPwd2').value;
-  const setF=(id,errId,bad)=>{
-    document.getElementById(id).classList.toggle('error',bad);
-    document.getElementById(errId).classList.toggle('show',bad);
-    if(bad) ok=false;
-  };
-  setF('regName','regNameErr',!name);
-  setF('regEmail','regEmailErr',!isGmail(email));
-  setF('regPwd','regPwdErr',!isPwd(pwd));
-  setF('regPwd2','regPwd2Err',pwd!==pwd2);
-  if(!ok) return;
-  const users=getUsers();
-  if(users[email]){
-    showToast('Account exists — sign in');
-    return;
-  }
-  users[email]={
-    name,
-    email,
-    pwd,
-    createdAt:new Date().toISOString(),
-    avatar:null
-  };
-  saveUsers(users);
-  currentUser={
-    name,
-    email,
-    createdAt:users[email].createdAt,
-    avatar:null // ✅ IMPORTANT
-  };
+function doLogin() {
+  let ok = true;
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const pwd   = document.getElementById('loginPassword').value;
+  const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
+  setF('loginEmail','loginEmailErr', !isGmail(email));
+  setF('loginPassword','loginPwdErr', !isPwd(pwd));
+  if (!ok) return;
+  const users = getUsers(); const user = users[email];
+  if (!user || user.pwd !== pwd) { showToast('Invalid email or password'); return; }
+  currentUser = { name: user.name, email: user.email, createdAt: user.createdAt, avatar: user.avatar || null };
   saveSession(currentUser);
-  showToast('Account created! Welcome 🎉');
+  showToast('Welcome back, ' + user.name.split(' ')[0] + ' 👋');
   launchApp();
 }
-function doLogin(){
-  let ok=true;
-  const email=document.getElementById('loginEmail').value.trim().toLowerCase();
-  const pwd=document.getElementById('loginPassword').value;
-  const setF=(id,errId,bad)=>{document.getElementById(id).classList.toggle('error',bad);document.getElementById(errId).classList.toggle('show',bad);if(bad)ok=false;};
-  setF('loginEmail','loginEmailErr',!isGmail(email));setF('loginPassword','loginPwdErr',!isPwd(pwd));
-  if(!ok)return;
-  const users=getUsers();const user=users[email];
-  if(!user||user.pwd!==pwd){
-    document.getElementById('loginEmail').classList.add('error');
-    document.getElementById('loginPassword').classList.add('error');
-    showToast('Invalid Gmail or password');return;
-  }
-  currentUser={
-    name:user.name,
-    email:user.email,
-    createdAt:user.createdAt,
-    avatar: user.avatar || null
-    
-  };
-  saveSession(currentUser);showToast('Welcome back, '+user.name.split(' ')[0]+' 👋');launchApp();
-}
-/*
-function doGoogleSignIn(){
-  const u={name:'AeuIoT User',email:'aeuiot@gmail.com',createdAt:new Date().toISOString(),avatar:null};
-  const users=getUsers();if(!users[u.email]){users[u.email]={...u,pwd:'google-oauth'};saveUsers(users);}
-  currentUser=u;saveSession(u);showToast('Signed in with Google ✓');launchApp();
-}*/
-function showForgot(){showToast('Reset link sent (demo)');}
-function doLogout(){clearSession();currentUser=null;showToast('Signed out');setTimeout(()=>showScreen('screenLogin'),600);}
 
-// ─────────────────────────────────────────
+function doRegister() {
+  let ok = true;
+  const name  = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim().toLowerCase();
+  const pwd   = document.getElementById('regPwd').value;
+  const pwd2  = document.getElementById('regPwd2').value;
+  const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
+  setF('regName','regNameErr', !name);
+  setF('regEmail','regEmailErr', !isGmail(email));
+  setF('regPwd','regPwdErr', !isPwd(pwd));
+  setF('regPwd2','regPwd2Err', pwd !== pwd2);
+  if (!ok) return;
+  const users = getUsers();
+  if (users[email]) { showToast('Account exists — sign in'); return; }
+  users[email] = { name, email, pwd, createdAt: new Date().toISOString(), avatar: null };
+  saveUsers(users);
+  currentUser = { name, email, createdAt: users[email].createdAt, avatar: null };
+  saveSession(currentUser);
+  showToast('Welcome! 🎉');
+  launchApp();
+}
+
+function validateRegEmail() {
+  const v = document.getElementById('regEmail').value;
+  const bad = !!v && !isGmail(v);
+  document.getElementById('regEmail').classList.toggle('error', bad);
+  document.getElementById('regEmailErr').classList.toggle('show', bad);
+}
+
+function checkStrength() {
+  const p = document.getElementById('regPwd').value;
+  let s = 0;
+  if (p.length >= 8) s++; if (/[A-Z]/.test(p)) s++; if (/[0-9]/.test(p)) s++; if (/[^a-zA-Z0-9]/.test(p)) s++;
+  const lv = [{w:'0%',c:'',t:''},{w:'25%',c:'#ff6b8a',t:'Weak'},{w:'50%',c:'#ff9f57',t:'Fair'},{w:'75%',c:'#4f8ef7',t:'Good'},{w:'100%',c:'#43e97b',t:'Strong ✓'}][s];
+  const f = document.getElementById('strengthFill'), l = document.getElementById('strengthLabel');
+  f.style.width = lv.w; f.style.background = lv.c; l.textContent = lv.t; l.style.color = lv.c;
+}
+
+function showForgot() { showToast('Reset link sent (demo)'); }
+
+function doLogout() {
+  clearSession(); currentUser = null;
+  showToast('Signed out');
+  setTimeout(() => showScreen('screenLogin'), 600);
+}
+
+// ═══════════════════════════════════════
+//  PROFILE
+// ═══════════════════════════════════════
+function refreshProfile() {
+  if (!currentUser) return;
+  const avatarEl  = document.getElementById('profileAvatar');
+  const avatarBtn = document.getElementById('avatarBtn');
+  if (currentUser.avatar) {
+    avatarEl.innerHTML = `<img src="${currentUser.avatar}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`;
+    avatarBtn.innerHTML = `<img src="${currentUser.avatar}">`;
+  } else {
+    avatarEl.textContent = initials(currentUser.name);
+    avatarBtn.innerHTML = `<span id="avatarInitial">${initials(currentUser.name)}</span>`;
+  }
+  const sv = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  sv('profileName', currentUser.name || 'User');
+  sv('profileEmailDisp', currentUser.email || '—');
+  sv('profileEmailRow', currentUser.email || '—');
+  sv('apiUrlDisplay', API_URL);
+  updateSummary();
+  if (currentUser.createdAt) {
+    const d = new Date(currentUser.createdAt);
+    sv('joinedTag', 'Member since ' + d.toLocaleDateString('en-US',{month:'long',year:'numeric'}));
+  }
+}
+
+function openEditProfile() {
+  document.getElementById('editName').value = currentUser.name || '';
+  renderAvatarCircle();
+  document.getElementById('editModal').classList.add('open');
+}
+function closeEditProfile() { document.getElementById('editModal').classList.remove('open'); }
+
+function renderAvatarCircle() {
+  const el = document.getElementById('avatarCircle');
+  el.innerHTML = currentUser.avatar ? `<img src="${currentUser.avatar}">` : initials(currentUser.name);
+}
+
+document.getElementById('avatarUpload').addEventListener('change', function(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const r = new FileReader();
+  r.onload = () => { currentUser.avatar = r.result; renderAvatarCircle(); showToast('Photo selected ✓'); };
+  r.readAsDataURL(file);
+});
+
+function saveProfile() {
+  const newName = document.getElementById('editName').value.trim();
+  if (!newName) { showToast('Name cannot be empty'); return; }
+  currentUser.name = newName;
+  saveSession(currentUser);
+  const users = getUsers();
+  if (users[currentUser.email]) { users[currentUser.email].name = newName; users[currentUser.email].avatar = currentUser.avatar || null; saveUsers(users); }
+  closeEditProfile();
+  refreshProfile();
+  document.getElementById('headerGreeting').textContent = 'Hello, ' + newName.split(' ')[0];
+  showToast('Profile updated ✓');
+}
+
+document.getElementById('editModal').addEventListener('click', function(e) { if (e.target === this) closeEditProfile(); });
+
+function togglePwd(id, btn) {
+  const i = document.getElementById(id);
+  i.type = i.type === 'password' ? 'text' : 'password';
+  btn.querySelector('svg').style.opacity = i.type === 'text' ? '0.4' : '1';
+}
+
+// ═══════════════════════════════════════
 //  SECURITY TAB
-// ─────────────────────────────────────────
-const secCameras=[
+// ═══════════════════════════════════════
+const secCameras = [
   {id:0,name:'Front Door',loc:'Entrance',online:true,rec:true,night:false,motion:true,bg:'#0a1a0a'},
   {id:1,name:'Backyard',loc:'Rear',online:true,rec:true,night:true,motion:false,bg:'#0a0f1a'},
   {id:2,name:'Garage',loc:'Side',online:true,rec:true,night:false,motion:false,bg:'#1a0f0a'},
@@ -1524,660 +1376,227 @@ const secCameras=[
   {id:4,name:'Side Gate',loc:'Left',online:true,rec:false,night:false,motion:false,bg:'#0f0f1a'},
   {id:5,name:'Basement',loc:'Interior',online:false,rec:false,night:false,motion:false,bg:'#111'},
 ];
-let secArmed=true;
-let secTabBuilt=false;
+let secArmed = true, secTabBuilt = false;
 
-function buildSecTab(){
-  if(secTabBuilt) return;
-  secTabBuilt=true;
-  const grid=document.getElementById('secCamGrid');
-  grid.innerHTML='';
-  secCameras.forEach(cam=>{
-    const card=document.createElement('div');
-    card.className='cam-card-sec'+(cam.id===0?' selected-cam':'');
-    card.onclick=()=>{
-      document.querySelectorAll('.cam-card-sec').forEach(c=>c.classList.remove('selected-cam'));
-      card.classList.add('selected-cam');
-    };
-    const feed=document.createElement('div');
-    feed.className='cam-feed';
-    const canvas=document.createElement('canvas');
-    canvas.id='seccam'+cam.id;
-    const overlay=document.createElement('div');
-    overlay.className='cam-feed-overlay';
-    overlay.innerHTML=`
-      <div class="cam-feed-top">
-        ${cam.online&&cam.rec?'<span class="rec-tag">REC</span>':'<span></span>'}
-        ${cam.night?'<span class="night-tag-s">IR</span>':'<span></span>'}
-      </div>
-      <div class="cam-feed-bot">
-        <span class="motion-alert${cam.motion?' show':''}" id="sma${cam.id}">MOTION</span>
-        <span class="cam-ts" id="sts${cam.id}">--:--:--</span>
-      </div>`;
-    feed.appendChild(canvas);
-    feed.appendChild(overlay);
-    const footer=document.createElement('div');
-    footer.className='cam-footer-s';
-    footer.innerHTML=`<div><div class="cam-name-s">${cam.name}</div><div class="cam-loc-s">${cam.loc}</div></div>
-      <div class="${cam.online?'cam-dot-on':'cam-dot-off'}"></div>`;
-    card.appendChild(feed);
-    card.appendChild(footer);
-    grid.appendChild(card);
-    // draw loop
-    (function drawLoop(){
-      const c=document.getElementById('seccam'+cam.id);
-      if(!c){return;}
-      const rect=c.getBoundingClientRect();
-      const w=rect.width||160,h=rect.height||90;
-      c.width=w;c.height=h;
-      const ctx=c.getContext('2d');
-      if(!cam.online){
-        ctx.fillStyle='#111';ctx.fillRect(0,0,w,h);
-        ctx.fillStyle='#444';ctx.font=`${Math.floor(w/10)}px monospace`;ctx.textAlign='center';
-        ctx.fillText('OFFLINE',w/2,h/2+4);
-      } else {
-        ctx.fillStyle=cam.night?'#060d18':cam.bg;ctx.fillRect(0,0,w,h);
-        // scanlines
-        ctx.fillStyle='rgba(255,255,255,0.025)';
-        for(let i=0;i<h;i+=4) ctx.fillRect(0,i,w,1);
-        // scene shapes
-        if(cam.id===0){
-          ctx.fillStyle='rgba(255,255,255,0.06)';ctx.fillRect(w*.2,h*.2,w*.6,h*.7);
-          ctx.strokeStyle='rgba(255,255,255,0.1)';ctx.lineWidth=1;
-          ctx.strokeRect(w*.2,h*.2,w*.6,h*.7);
-          if(cam.motion){
-            ctx.strokeStyle='rgba(255,165,0,0.7)';ctx.lineWidth=1.5;
-            ctx.strokeRect(w*.55,h*.25,w*.2,h*.45);
-            ctx.fillStyle='rgba(255,165,0,0.8)';ctx.font=`${Math.max(7,w/14)}px monospace`;
-            ctx.textAlign='left';ctx.fillText('PERSON',w*.55,h*.23);
-          }
-        }
-        if(cam.night){
-          ctx.fillStyle='rgba(50,100,200,0.08)';ctx.fillRect(0,0,w,h);
-          ctx.fillStyle='rgba(100,160,255,0.06)';
-          for(let i=0;i<4;i++) ctx.fillRect(w*(0.1+i*0.2),h*.25,10,h*.6);
-        }
-        // noise
-        const d=ctx.getImageData(0,0,w,h);const px=d.data;
-        for(let i=0;i<px.length;i+=16){const n=(Math.random()-.5)*25;px[i]+=n;px[i+1]+=n;px[i+2]+=n;}
-        ctx.putImageData(d,0,0);
+function buildSecTab() {
+  if (secTabBuilt) return; secTabBuilt = true;
+  const grid = document.getElementById('secCamGrid'); grid.innerHTML = '';
+  secCameras.forEach(cam => {
+    const card = document.createElement('div');
+    card.className = 'cam-card-sec' + (cam.id === 0 ? ' selected-cam' : '');
+    card.onclick = () => { document.querySelectorAll('.cam-card-sec').forEach(c=>c.classList.remove('selected-cam')); card.classList.add('selected-cam'); };
+    const feed = document.createElement('div'); feed.className = 'cam-feed';
+    const canvas = document.createElement('canvas'); canvas.id = 'seccam' + cam.id;
+    const overlay = document.createElement('div'); overlay.className = 'cam-feed-overlay';
+    overlay.innerHTML = `<div class="cam-feed-top">${cam.online&&cam.rec?'<span class="rec-tag">REC</span>':'<span></span>'}${cam.night?'<span class="night-tag-s">IR</span>':'<span></span>'}</div><div class="cam-feed-bot"><span class="motion-alert${cam.motion?' show':''}" id="sma${cam.id}">MOTION</span><span class="cam-ts" id="sts${cam.id}">--:--:--</span></div>`;
+    feed.appendChild(canvas); feed.appendChild(overlay);
+    const footer = document.createElement('div'); footer.className = 'cam-footer-s';
+    footer.innerHTML = `<div><div class="cam-name-s">${cam.name}</div><div class="cam-loc-s">${cam.loc}</div></div><div class="${cam.online?'cam-dot-on':'cam-dot-off'}"></div>`;
+    card.appendChild(feed); card.appendChild(footer); grid.appendChild(card);
+    (function drawLoop() {
+      const c = document.getElementById('seccam'+cam.id); if (!c) return;
+      const rect = c.getBoundingClientRect(); const w = rect.width||160, h = rect.height||90;
+      c.width = w; c.height = h; const ctx = c.getContext('2d');
+      if (!cam.online) { ctx.fillStyle='#111'; ctx.fillRect(0,0,w,h); ctx.fillStyle='#444'; ctx.font=`${Math.floor(w/10)}px monospace`; ctx.textAlign='center'; ctx.fillText('OFFLINE',w/2,h/2+4); }
+      else {
+        ctx.fillStyle = cam.night?'#060d18':cam.bg; ctx.fillRect(0,0,w,h);
+        ctx.fillStyle='rgba(255,255,255,0.025)'; for(let i=0;i<h;i+=4) ctx.fillRect(0,i,w,1);
+        if(cam.id===0&&cam.motion){ctx.strokeStyle='rgba(255,165,0,0.7)';ctx.lineWidth=1.5;ctx.strokeRect(w*.55,h*.25,w*.2,h*.45);}
+        const d=ctx.getImageData(0,0,w,h);const px=d.data;for(let i=0;i<px.length;i+=16){const n=(Math.random()-.5)*25;px[i]+=n;px[i+1]+=n;px[i+2]+=n;}ctx.putImageData(d,0,0);
       }
-      // timestamp
-      const ts=document.getElementById('sts'+cam.id);
-      if(ts) ts.textContent=new Date().toLocaleTimeString('en-US',{hour12:false});
+      const ts=document.getElementById('sts'+cam.id);if(ts)ts.textContent=new Date().toLocaleTimeString('en-US',{hour12:false});
       setTimeout(drawLoop,1000/8);
     })();
   });
-  // random motion events
-  setInterval(()=>{
-    secCameras.forEach(cam=>{
-      if(cam.online && Math.random()<0.05){
-        cam.motion=!cam.motion;
-        const el=document.getElementById('sma'+cam.id);
-        if(el) el.classList.toggle('show',cam.motion);
-        if(cam.motion){
-          const cnt=document.getElementById('secAlertCount');
-          if(cnt) cnt.textContent=parseInt(cnt.textContent||0)+1;
-        }
-      }
-    });
-  },4000);
+  setInterval(()=>{ secCameras.forEach(cam=>{ if(cam.online&&Math.random()<0.05){ cam.motion=!cam.motion; const el=document.getElementById('sma'+cam.id); if(el)el.classList.toggle('show',cam.motion); }}); },4000);
 }
 
-function toggleSecArm(){
-  secArmed=!secArmed;
-  const btn=document.getElementById('secArmBtn');
-  const txt=document.getElementById('secStatusText');
-  if(secArmed){
-    btn.className='arm-big-btn armed';btn.textContent='🔒 Armed';
-    txt.textContent='System Armed · 6 cameras online';
-    showToast('System Armed 🔒');
-  } else {
-    btn.className='arm-big-btn disarmed';btn.textContent='🔓 Disarmed';
-    txt.textContent='System Disarmed · monitoring paused';
-    showToast('System Disarmed');
-  }
+function toggleSecArm() {
+  secArmed = !secArmed;
+  const btn=document.getElementById('secArmBtn');const txt=document.getElementById('secStatusText');
+  btn.className='arm-big-btn '+(secArmed?'armed':'disarmed');
+  btn.textContent=secArmed?'🔒 Armed':'🔓 Disarmed';
+  txt.textContent=secArmed?'System Armed · 6 cameras online':'System Disarmed · monitoring paused';
+  showToast(secArmed?'System Armed 🔒':'System Disarmed');
 }
 
-function toggleZone(el){ el.classList.toggle('zon'); updateZoneCount(); }
-function updateZoneCount(){
-  const on=document.querySelectorAll('#tabSecurity .zone-toggle.zon').length;
-  const el=document.getElementById('secZoneCount');
-  if(el) el.textContent=on;
-}
-// ─────────────────────────────────────────
+function toggleZone(el) { el.classList.toggle('zon'); }
+
+// ═══════════════════════════════════════
 //  ENERGY TAB
-// ─────────────────────────────────────────
-let energyTabBuilt=false;
-let liveWattsVal=1840;
-let sparkHistory=[];
-let energyPeriod='daily';
-let liveInterval=null;
+// ═══════════════════════════════════════
+let energyTabBuilt=false, liveWattsVal=1840, sparkHistory=[], liveInterval=null, energyPeriod='daily';
 
-const dailyData=[
-  {l:'12a',v:.3},{l:'1a',v:.2},{l:'2a',v:.1},{l:'3a',v:.1},{l:'4a',v:.2},
-  {l:'5a',v:.4},{l:'6a',v:.8},{l:'7a',v:1.4},{l:'8a',v:1.8},{l:'9a',v:2.1},
-  {l:'10a',v:2.3},{l:'11a',v:2.0},{l:'12p',v:2.4},{l:'1p',v:2.2},{l:'2p',v:1.9},
-  {l:'3p',v:1.8},{l:'4p',v:1.7},{l:'5p',v:2.0},{l:'6p',v:2.3},{l:'7p',v:2.1},
-  {l:'8p',v:1.8},{l:'9p',v:1.5},{l:'10p',v:1.0},{l:'now',v:.7}
-];
-const weeklyData=[
-  {l:'Mon',v:14},{l:'Tue',v:22},{l:'Wed',v:18},{l:'Thu',v:26},
-  {l:'Fri',v:20},{l:'Sat',v:31},{l:'Sun',v:24}
-];
+const dailyData=[{l:'12a',v:.3},{l:'1a',v:.2},{l:'2a',v:.1},{l:'3a',v:.1},{l:'4a',v:.2},{l:'5a',v:.4},{l:'6a',v:.8},{l:'7a',v:1.4},{l:'8a',v:1.8},{l:'9a',v:2.1},{l:'10a',v:2.3},{l:'11a',v:2.0},{l:'12p',v:2.4},{l:'1p',v:2.2},{l:'2p',v:1.9},{l:'3p',v:1.8},{l:'4p',v:1.7},{l:'5p',v:2.0},{l:'6p',v:2.3},{l:'7p',v:2.1},{l:'8p',v:1.8},{l:'9p',v:1.5},{l:'10p',v:1.0},{l:'now',v:.7}];
+const weeklyData=[{l:'Mon',v:14},{l:'Tue',v:22},{l:'Wed',v:18},{l:'Thu',v:26},{l:'Fri',v:20},{l:'Sat',v:31},{l:'Sun',v:24}];
 
-function buildEnergyTab(){
-  if(energyTabBuilt) return;
-  energyTabBuilt=true;
-  buildSparkline();
-  renderEnergyChart('daily');
-  startLiveWatts();
-}
-
-function buildSparkline(){
-  const el=document.getElementById('sparkline');
-  sparkHistory=Array.from({length:20},()=>Math.floor(800+Math.random()*1600));
+function buildEnergyTab() {
+  if (energyTabBuilt) return; energyTabBuilt = true;
+  sparkHistory = Array.from({length:20}, () => Math.floor(800+Math.random()*1600));
   sparkHistory.push(liveWattsVal);
-  renderSparkline();
+  renderSparkline(); renderEnergyChart('daily'); startLiveWatts();
 }
 
-function renderSparkline(){
-  const el=document.getElementById('sparkline');
-  if(!el) return;
-  const max=Math.max(...sparkHistory,100);
-  el.innerHTML=sparkHistory.map((v,i)=>{
-    const h=Math.max(4,Math.round(v/max*46));
-    const isCur=i===sparkHistory.length-1;
-    return `<div class="spark-bar${isCur?' current':''}" style="height:${h}px"></div>`;
+function renderSparkline() {
+  const el = document.getElementById('sparkline'); if (!el) return;
+  const max = Math.max(...sparkHistory, 100);
+  el.innerHTML = sparkHistory.map((v,i) => `<div class="spark-bar${i===sparkHistory.length-1?' current':''}" style="height:${Math.max(4,Math.round(v/max*46))}px"></div>`).join('');
+}
+
+function renderEnergyChart(period) {
+  const el = document.getElementById('energyBarChart');
+  const sub = document.getElementById('chartSub'); if (!el) return;
+  const data = period==='daily' ? dailyData.slice(-12) : weeklyData;
+  const max = Math.max(...data.map(d=>d.v));
+  sub.textContent = period==='daily' ? 'Last 12 hours · kWh per hour' : 'Last 7 days · kWh per day';
+  el.innerHTML = data.map((d,i) => {
+    const h = Math.max(4, Math.round(d.v/max*90));
+    const cls = i===data.length-1 ? 'bc-bar highlight-e' : 'bc-bar primary-e';
+    return `<div class="bc-bar-wrap"><div style="font-size:9px;font-weight:700;color:var(--text-soft)">${d.v}</div><div class="${cls}" style="height:${h}px"></div><div style="font-size:9px;color:var(--text-soft);font-weight:600">${d.l}</div></div>`;
   }).join('');
 }
 
-function renderEnergyChart(period){
-  const el=document.getElementById('energyBarChart');
-  const sub=document.getElementById('chartSub');
-  if(!el) return;
-  const data=period==='daily'?dailyData:weeklyData;
-  const show=period==='daily'?data.slice(-12):data;
-  const max=Math.max(...show.map(d=>d.v));
-  const isLast=i=>i===show.length-1;
-  sub.textContent=period==='daily'?'Last 12 hours · kWh per hour':'Last 7 days · kWh per day';
-  el.innerHTML=show.map((d,i)=>{
-    const h=Math.max(4,Math.round(d.v/max*90));
-    const cls=isLast(i)?'bc-bar highlight-e':'bc-bar primary-e';
-    return `<div class="bc-bar-wrap">
-      <div class="bc-bar-val">${d.v}</div>
-      <div class="${cls}" style="height:${h}px"></div>
-      <div class="bc-bar-lbl">${d.l}</div>
-    </div>`;
-  }).join('');
-}
-
-function setEnergyPeriod(period,btn){
-  energyPeriod=period;
+function setEnergyPeriod(period, btn) {
+  energyPeriod = period;
   document.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderEnergyChart(period);
 }
 
-function startLiveWatts(){
-  if(liveInterval) return;
-  liveInterval=setInterval(()=>{
-    const delta=(Math.random()-.45)*80;
-    liveWattsVal=Math.max(400,Math.min(3800,liveWattsVal+delta));
-    const w=Math.round(liveWattsVal);
-    const pct=Math.round(w/4000*100);
-    const el=document.getElementById('liveWatts');
-    const bar=document.getElementById('powerBarFill');
-    const status=document.querySelector('.live-power-status');
-    if(el) el.textContent=w.toLocaleString();
-    if(bar) bar.style.width=pct+'%';
-    if(status){
-      if(w>3000){status.textContent='⚠ High';status.style.background='rgba(255,107,138,.15)';status.style.color='#ff6b8a';}
-      else if(w>2000){status.textContent='● Moderate';status.style.background='rgba(255,159,87,.15)';status.style.color='#d97706';}
-      else{status.textContent='● Normal';status.style.background='rgba(56,217,192,.15)';status.style.color='#0f6e56';}
-    }
-    // update sparkline
-    sparkHistory.push(w);
-    if(sparkHistory.length>20) sparkHistory.shift();
-    renderSparkline();
-    // update AC watts (simulated)
-    const acEl=document.getElementById('acWatts');
-    if(acEl) acEl.textContent=Math.round(850+Math.random()*200)+'W';
-  },1200);
+function startLiveWatts() {
+  if (liveInterval) return;
+  liveInterval = setInterval(() => {
+    liveWattsVal = Math.max(400, Math.min(3800, liveWattsVal + (Math.random()-.45)*80));
+    const w = Math.round(liveWattsVal); const pct = Math.round(w/4000*100);
+    const el=document.getElementById('liveWatts'); const bar=document.getElementById('powerBarFill'); const st=document.getElementById('livePowerStatus');
+    if(el) el.textContent=w.toLocaleString(); if(bar) bar.style.width=pct+'%';
+    if(st){ if(w>3000){st.textContent='⚠ High';st.style.background='rgba(255,107,138,.15)';st.style.color='#ff6b8a';}else if(w>2000){st.textContent='● Moderate';st.style.background='rgba(255,159,87,.15)';st.style.color='#d97706';}else{st.textContent='● Normal';st.style.background='rgba(56,217,192,.15)';st.style.color='#0f6e56';} }
+    sparkHistory.push(w); if(sparkHistory.length>20) sparkHistory.shift(); renderSparkline();
+    const acEl=document.getElementById('acWatts'); if(acEl) acEl.textContent=Math.round(850+Math.random()*200)+'W';
+  }, 1200);
 }
-function refreshProfile(){
-  if(!currentUser) return;
 
-  const avatarEl = document.getElementById('profileAvatar');
-  const avatarBtn = document.getElementById('avatarBtn');
-
-  // ✅ PROFILE AVATAR
-  if(currentUser.avatar){
-    avatarEl.innerHTML = `<img src="${currentUser.avatar}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">`;
-  } else {
-    avatarEl.textContent = initials(currentUser.name || 'U');
-  }
-
-  // ✅ HEADER BUTTON AVATAR (NEW 🔥)
-  if(currentUser.avatar){
-    avatarBtn.innerHTML = `<img src="${currentUser.avatar}">`;
-  } else {
-    avatarBtn.innerHTML = `<span id="avatarInitial">${initials(currentUser.name || 'U')}</span>`;
-  }
-
-  // ✅ existing stuff
-  document.getElementById('profileName').textContent = currentUser.name || 'User';
-  document.getElementById('profileEmailDisp').textContent = currentUser.email || '—';
-  document.getElementById('profileEmailRow').textContent = currentUser.email || '—';
-  document.getElementById('apiUrlDisplay').textContent = API_URL;
-
-  updateSummary();
-
-  if(currentUser.createdAt){
-    const d = new Date(currentUser.createdAt);
-    document.getElementById('joinedTag').textContent =
-      'Member since ' + d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
-  }
-}
-function openEditProfile(){
-  document.getElementById('editName').value = currentUser.name || '';
-  renderAvatar();
-  document.getElementById('editModal').classList.add('open');
-}
-function closeEditProfile(){document.getElementById('editModal').classList.remove('open');}
-function renderAvatar(){
-  const el = document.getElementById('avatarCircle');
-
-  if(currentUser.avatar){
-    el.innerHTML = `<img src="${currentUser.avatar}">`;
-  } else {
-    el.textContent = initials(currentUser.name || 'U');
-  }
-}
-document.getElementById('avatarUpload').addEventListener('change', function(e){
-  const file = e.target.files[0];
-  if(!file) return;
-
-  const reader = new FileReader();
-  reader.onload = function(){
-    currentUser.avatar = reader.result;
-    renderAvatar();
-
-    // 🔥 instant feedback
-    showToast('Photo selected ✓');
-  };
-  reader.readAsDataURL(file);
-});
-function saveProfile(){
-  const newName = document.getElementById('editName').value.trim();
-  if(!newName){
-    showToast('Name cannot be empty');
-    return;
-  }
-
-  const oldName = currentUser.name;
-  const oldAvatar = currentUser.avatar;
-
-  let changes = [];
-
-  if(newName !== oldName){
-    currentUser.name = newName;
-    changes.push('name');
-  }
-
-  if(currentUser.avatar && currentUser.avatar !== oldAvatar){
-    changes.push('photo');
-  }
-
-  // ✅ Save to storage
-  saveSession(currentUser);
-
-  const users = getUsers();
-  if(users[currentUser.email]){
-    users[currentUser.email].name = currentUser.name;
-    users[currentUser.email].avatar = currentUser.avatar || null;
-    saveUsers(users);
-  }
-
-  // ✅ Update header greeting
-  const greeting = document.getElementById('headerGreeting');
-  if(greeting) greeting.textContent = 'Hello, ' + currentUser.name.split(' ')[0];
-
-  // ✅ Close modal FIRST (before anything can crash)
-  closeEditProfile();
-
-  // ✅ Safe profile refresh with null checks
-  const avatarEl = document.getElementById('profileAvatar');
-  const avatarBtn = document.getElementById('avatarBtn');
-  const profileName = document.getElementById('profileName');
-  const profileEmailDisp = document.getElementById('profileEmailDisp');
-  const profileEmailRow = document.getElementById('profileEmailRow');
-  const apiDisp = document.getElementById('apiUrlDisplay');
-  const joinedTag = document.getElementById('joinedTag');
-
-  if(avatarEl){
-    if(currentUser.avatar){
-      avatarEl.innerHTML = `<img src="${currentUser.avatar}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">`;
-    } else {
-      avatarEl.textContent = initials(currentUser.name || 'U');
-    }
-  }
-
-  if(avatarBtn){
-    if(currentUser.avatar){
-      avatarBtn.innerHTML = `<img src="${currentUser.avatar}">`;
-    } else {
-      avatarBtn.innerHTML = `<span id="avatarInitial">${initials(currentUser.name || 'U')}</span>`;
-    }
-  }
-
-  if(profileName) profileName.textContent = currentUser.name || 'User';
-  if(profileEmailDisp) profileEmailDisp.textContent = currentUser.email || '—';
-  if(profileEmailRow) profileEmailRow.textContent = currentUser.email || '—';
-  if(apiDisp) apiDisp.textContent = API_URL;
-  if(joinedTag && currentUser.createdAt){
-    const d = new Date(currentUser.createdAt);
-    joinedTag.textContent = 'Member since ' + d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
-  }
-
-  updateSummary();
-
-  // ✅ Toast last
-  if(changes.length === 0){
-    showToast('No changes made');
-  } else if(changes.length === 2){
-    showToast('Profile updated (name + photo) ✓');
-  } else if(changes[0] === 'name'){
-    showToast('Name updated ✓');
-  } else if(changes[0] === 'photo'){
-    showToast('Profile photo updated ✓');
-  }
-}
-document.getElementById('editModal').addEventListener('click',function(e){if(e.target===this)closeEditProfile();});
-/*
-function openApiSettings(){
-  document.getElementById('apiUrlInput').value=API_URL;
-  document.getElementById('apiModal').classList.add('open');
-}*/
-function closeApiModal(){document.getElementById('apiModal').classList.remove('open');}
-async function saveApiUrl(){
-  const val=document.getElementById('apiUrlInput').value.trim().replace(/\/$/,'');
-  if(!val){showToast('Enter a valid URL');return;}
-  API_URL=val;localStorage.setItem(API_KEY,val);
-  document.getElementById('apiUrlDisplay').textContent=val;
-  closeApiModal();showToast('Saved, testing…');
-  const ok=await checkConnection();
-  if(ok) await refreshDevices();
-}
-document.getElementById('apiModal').addEventListener('click',function(e){if(e.target===this)closeApiModal();});
-
-// ─────────────────────────────────────────
-//  ROOM TABS
-// ─────────────────────────────────────────
-function selectRoomTab(el,room){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  if(room!=='All') showToast('Viewing: '+room);
-}
-// ─────────────────────────────────────────
-//  ENERGY CHART
-// ─────────────────────────────────────────
-function buildEnergyBars(){
+function buildEnergyBars() {
   const days=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],vals=[14,22,18,26,20,31,24],mx=Math.max(...vals);
-  const el=document.getElementById('energyBars');
-  days.forEach((d,i)=>{
-    const h=Math.round(vals[i]/mx*52);
-    el.innerHTML+=`<div class="bar-wrap"><div class="bar ${i===6?'secondary':'primary'}" style="height:${h}px"></div><div class="bar-day">${d}</div></div>`;
-  });
+  const el=document.getElementById('energyBars'); if(!el) return;
+  days.forEach((d,i)=>{ const h=Math.round(vals[i]/mx*52); el.innerHTML+=`<div class="bar-wrap"><div class="bar ${i===6?'secondary':'primary'}" style="height:${h}px"></div><div class="bar-day">${d}</div></div>`; });
 }
-// ─────────────────────────────────────────
+
+// ═══════════════════════════════════════
 //  DEVICES TAB
-// ─────────────────────────────────────────
+// ═══════════════════════════════════════
 const buildingData = {
   4: {
     rooms: [
-      {
-        id:'4A', name:'STEM Room', floor:4, icon:'🔬',
-        color:'rgba(79,142,247,.1)',
-        devices:[
-          {id:'4A-ac', name:'Air Conditioner', type:'ac', icon:'❄️', on:true, temp:24, watts:980},
-          {id:'4A-light', name:'Main Lights', type:'light', icon:'💡', on:true, watts:60},
-        ]
-      },
-      {
-        id:'4B', name:'Software Room', floor:4, icon:'💻',
-        color:'rgba(196,113,237,.1)',
-        devices:[
-          {id:'4B-ac', name:'Air Conditioner', type:'ac', icon:'❄️', on:true, temp:25, watts:980},
-          {id:'4B-light', name:'Main Lights', type:'light', icon:'💡', on:false, watts:60},
-        ]
-      }
+      {id:'4A',name:'STEM Room',floor:4,icon:'🔬',color:'rgba(79,142,247,.1)',devices:[{id:'4A-ac',name:'Air Conditioner',type:'ac',icon:'❄️',on:true,temp:24,watts:980},{id:'4A-light',name:'Main Lights',type:'light',icon:'💡',on:true,watts:60}]},
+      {id:'4B',name:'Software Room',floor:4,icon:'💻',color:'rgba(196,113,237,.1)',devices:[{id:'4B-ac',name:'Air Conditioner',type:'ac',icon:'❄️',on:true,temp:25,watts:980},{id:'4B-light',name:'Main Lights',type:'light',icon:'💡',on:false,watts:60}]}
     ]
   }
 };
+let currentFloor=4, currentRoomData=null, devTabBuilt=false;
 
-let currentFloor = 4;
-let currentRoomData = null;
-let devTabBuilt = false;
+function buildDevicesTab() { if(devTabBuilt) return; devTabBuilt=true; renderRoomList(4); }
 
-function buildDevicesTab(){
-  if(devTabBuilt) return;
-  devTabBuilt = true;
-  renderRoomList(4);
-}
-
-function selectFloor(floor, btn){
-  currentFloor = floor;
-  document.querySelectorAll('.floor-chip').forEach(c=>c.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('devRoomLabel').textContent = 'Rooms · Floor '+floor;
-  document.querySelector('.dev-hero-sub').textContent = 'AEU Building · Floor '+floor;
-  document.querySelector('.dev-hero-top div:last-child').textContent = '🏢 Floor '+floor;
+function selectFloor(floor, btn) {
+  currentFloor=floor;
+  document.querySelectorAll('.floor-chip').forEach(c=>c.classList.remove('active')); btn.classList.add('active');
+  document.getElementById('devRoomLabel').textContent='Rooms · Floor '+floor;
   renderRoomList(floor);
 }
 
-function renderRoomList(floor){
-  const el = document.getElementById('roomList');
-  const data = buildingData[floor];
-  if(!data){
-    el.innerHTML = `<div style="text-align:center;padding:40px 20px;color:var(--text-soft)">
-      <div style="font-size:32px;margin-bottom:8px">🏢</div>
-      <div style="font-size:14px;font-weight:600">Floor ${floor} — Demo only</div>
-      <div style="font-size:12px;margin-top:4px">Only Floor 4 has data in this demo</div>
-    </div>`;
-    document.getElementById('dTotalDevices').textContent='—';
-    document.getElementById('dOnlineDevices').textContent='—';
-    document.getElementById('dRooms').textContent='—';
-    return;
-  }
-  const totalDev = data.rooms.reduce((s,r)=>s+r.devices.length,0);
-  const onlineDev = data.rooms.reduce((s,r)=>s+r.devices.filter(d=>d.on).length,0);
-  document.getElementById('dTotalDevices').textContent = totalDev;
-  document.getElementById('dOnlineDevices').textContent = onlineDev;
-  document.getElementById('dRooms').textContent = data.rooms.length;
-
-  el.innerHTML = '';
-  data.rooms.forEach(room => {
-    const onCount = room.devices.filter(d=>d.on).length;
-    const card = document.createElement('div');
-    card.className = 'room-card';
-    card.innerHTML = `
-      <div class="room-header" onclick="openRoomView('${room.id}')">
-        <div class="room-header-ico" style="background:${room.color}">${room.icon}</div>
-        <div class="room-header-info">
-          <div class="room-header-name">${room.name}</div>
-          <div class="room-header-sub">${room.devices.length} devices · Floor ${floor}</div>
-        </div>
-        <div class="room-header-right">
-          <div class="room-on-count">${onCount} ON</div>
-          <div class="room-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-        </div>
-      </div>`;
+function renderRoomList(floor) {
+  const el=document.getElementById('roomList'); const data=buildingData[floor];
+  if(!data){ el.innerHTML=`<div style="text-align:center;padding:40px 20px;color:var(--text-soft)"><div style="font-size:32px;margin-bottom:8px">🏢</div><div style="font-size:14px;font-weight:600">Floor ${floor} — No data</div></div>`; return; }
+  const total=data.rooms.reduce((s,r)=>s+r.devices.length,0);
+  const online=data.rooms.reduce((s,r)=>s+r.devices.filter(d=>d.on).length,0);
+  document.getElementById('dTotalDevices').textContent=total;
+  document.getElementById('dOnlineDevices').textContent=online;
+  document.getElementById('dRooms').textContent=data.rooms.length;
+  el.innerHTML='';
+  data.rooms.forEach(room=>{
+    const onCount=room.devices.filter(d=>d.on).length;
+    const card=document.createElement('div'); card.className='room-card';
+    card.innerHTML=`<div class="room-header" onclick="openRoomView('${room.id}')"><div class="room-header-ico" style="background:${room.color}">${room.icon}</div><div class="room-header-info"><div class="room-header-name">${room.name}</div><div class="room-header-sub">${room.devices.length} devices · Floor ${floor}</div></div><div class="room-header-right"><div class="room-on-count">${onCount} ON</div><div class="room-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div></div></div>`;
     el.appendChild(card);
   });
 }
 
-function openRoomView(roomId){
-  const floor = currentFloor;
-  const data = buildingData[floor];
-  if(!data) return;
-  const room = data.rooms.find(r=>r.id===roomId);
-  if(!room) return;
-  currentRoomData = room;
-
-  document.getElementById('rvTitle').textContent = room.name;
-  document.getElementById('rvSub').textContent = 'Floor '+floor+' · '+room.devices.length+' devices';
+function openRoomView(roomId) {
+  const data=buildingData[currentFloor]; if(!data) return;
+  const room=data.rooms.find(r=>r.id===roomId); if(!room) return;
+  currentRoomData=room;
+  document.getElementById('rvTitle').textContent=room.name;
+  document.getElementById('rvSub').textContent='Floor '+currentFloor+' · '+room.devices.length+' devices';
   renderRoomView(room);
   document.getElementById('roomView').classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow='hidden';
 }
 
-function closeRoomView(){
-  document.getElementById('roomView').classList.remove('open');
-  document.body.style.overflow = '';
-  // refresh room list counts
-  renderRoomList(currentFloor);
-}
+function closeRoomView() { document.getElementById('roomView').classList.remove('open'); document.body.style.overflow=''; renderRoomList(currentFloor); }
 
-function renderRoomView(room){
-  const body = document.getElementById('rvBody');
-  body.innerHTML = '';
-  const allOn = room.devices.every(d=>d.on);
-  document.getElementById('rvAllBtn').textContent = allOn ? 'All OFF' : 'All ON';
-
-  room.devices.forEach(dev => {
-    const card = document.createElement('div');
-    card.className = 'rv-device-card';
-    card.id = 'rvcard-'+dev.id;
-
-    const iconClass = dev.on ? (dev.type==='ac'?'on-blue':'on-blue') : 'off';
-    const toggleClass = dev.on ? 'on' : '';
-
-    let extraHTML = '';
-    if(dev.type==='ac'){
-      extraHTML = `
-        <div class="rv-device-stats">
-          <div class="rv-stat"><div class="rv-stat-val" id="rv-temp-${dev.id}">${dev.temp}°C</div><div class="rv-stat-lbl">Set Temp</div></div>
-          <div class="rv-stat"><div class="rv-stat-val">${dev.watts}W</div><div class="rv-stat-lbl">Power</div></div>
-          <div class="rv-stat"><div class="rv-stat-val" id="rv-state-${dev.id}">${dev.on?'ON':'OFF'}</div><div class="rv-stat-lbl">State</div></div>
-        </div>
-        <div class="ac-mini-controls">
-          <span class="ac-mini-label">Temperature</span>
-          <div class="ac-mini-stepper">
-            <button class="ac-mini-btn" onclick="changeRoomTemp('${dev.id}',-1)">−</button>
-            <div class="ac-mini-val" id="rv-tempval-${dev.id}">${dev.temp}</div>
-            <button class="ac-mini-btn" onclick="changeRoomTemp('${dev.id}',1)">+</button>
-          </div>
-        </div>`;
-    } else {
-      extraHTML = `
-        <div class="rv-device-stats">
-          <div class="rv-stat"><div class="rv-stat-val">${dev.watts}W</div><div class="rv-stat-lbl">Power</div></div>
-          <div class="rv-stat"><div class="rv-stat-val" id="rv-state-${dev.id}">${dev.on?'ON':'OFF'}</div><div class="rv-stat-lbl">State</div></div>
-          <div class="rv-stat"><div class="rv-stat-val">—</div><div class="rv-stat-lbl">Timer</div></div>
-        </div>`;
-    }
-
-    card.innerHTML = `
-      <div class="rv-device-top">
-        <div class="rv-dev-ico ${iconClass}" id="rv-ico-${dev.id}">${dev.icon}</div>
-        <div class="rv-dev-info">
-          <div class="rv-dev-name">${dev.name}</div>
-          <div class="rv-dev-sub" id="rv-sub-${dev.id}">${dev.on?'On · '+dev.watts+'W':'Off'}</div>
-        </div>
-        <div class="rv-toggle ${toggleClass}" id="rv-tog-${dev.id}" onclick="toggleRoomDevice('${dev.id}')"></div>
-      </div>
-      ${extraHTML}`;
+function renderRoomView(room) {
+  const body=document.getElementById('rvBody'); body.innerHTML='';
+  const allOn=room.devices.every(d=>d.on);
+  document.getElementById('rvAllBtn').textContent=allOn?'All OFF':'All ON';
+  room.devices.forEach(dev=>{
+    const card=document.createElement('div'); card.className='rv-device-card'; card.id='rvcard-'+dev.id;
+    const iconCls=dev.on?'on-blue':'off'; const togCls=dev.on?'on':'';
+    let extra='';
+    if(dev.type==='ac'){extra=`<div class="rv-device-stats"><div class="rv-stat"><div class="rv-stat-val" id="rv-temp-${dev.id}">${dev.temp}°C</div><div class="rv-stat-lbl">Set Temp</div></div><div class="rv-stat"><div class="rv-stat-val">${dev.watts}W</div><div class="rv-stat-lbl">Power</div></div><div class="rv-stat"><div class="rv-stat-val" id="rv-state-${dev.id}">${dev.on?'ON':'OFF'}</div><div class="rv-stat-lbl">State</div></div></div><div class="ac-mini-controls"><span class="ac-mini-label">Temperature</span><div class="ac-mini-stepper"><button class="ac-mini-btn" onclick="changeRoomTemp('${dev.id}',-1)">−</button><div class="ac-mini-val" id="rv-tempval-${dev.id}">${dev.temp}</div><button class="ac-mini-btn" onclick="changeRoomTemp('${dev.id}',1)">+</button></div></div>`;}
+    else{extra=`<div class="rv-device-stats"><div class="rv-stat"><div class="rv-stat-val">${dev.watts}W</div><div class="rv-stat-lbl">Power</div></div><div class="rv-stat"><div class="rv-stat-val" id="rv-state-${dev.id}">${dev.on?'ON':'OFF'}</div><div class="rv-stat-lbl">State</div></div><div class="rv-stat"><div class="rv-stat-val">—</div><div class="rv-stat-lbl">Timer</div></div></div>`;}
+    card.innerHTML=`<div class="rv-device-top"><div class="rv-dev-ico ${iconCls}" id="rv-ico-${dev.id}">${dev.icon}</div><div class="rv-dev-info"><div class="rv-dev-name">${dev.name}</div><div class="rv-dev-sub" id="rv-sub-${dev.id}">${dev.on?'On · '+dev.watts+'W':'Off'}</div></div><div class="rv-toggle ${togCls}" id="rv-tog-${dev.id}" onclick="toggleRoomDevice('${dev.id}')"></div></div>${extra}`;
     body.appendChild(card);
   });
 }
 
-function toggleRoomDevice(devId){
-  const dev = findDevice(devId);
-  if(!dev) return;
-  dev.on = !dev.on;
-  // update toggle
-  const tog = document.getElementById('rv-tog-'+devId);
-  const ico = document.getElementById('rv-ico-'+devId);
-  const sub = document.getElementById('rv-sub-'+devId);
-  const state = document.getElementById('rv-state-'+devId);
-  if(tog) tog.className = 'rv-toggle'+(dev.on?' on':'');
-  if(ico) ico.className = 'rv-dev-ico'+(dev.on?' on-blue':' off');
-  if(sub) sub.textContent = dev.on?'On · '+dev.watts+'W':'Off';
-  if(state) state.textContent = dev.on?'ON':'OFF';
+function toggleRoomDevice(devId) {
+  const dev=findDevice(devId); if(!dev) return;
+  dev.on=!dev.on;
+  const tog=document.getElementById('rv-tog-'+devId);const ico=document.getElementById('rv-ico-'+devId);const sub=document.getElementById('rv-sub-'+devId);const state=document.getElementById('rv-state-'+devId);
+  if(tog)tog.className='rv-toggle'+(dev.on?' on':'');if(ico)ico.className='rv-dev-ico'+(dev.on?' on-blue':' off');if(sub)sub.textContent=dev.on?'On · '+dev.watts+'W':'Off';if(state)state.textContent=dev.on?'ON':'OFF';
   showToast(dev.name+' '+(dev.on?'ON':'OFF'));
-  updateDeviceHeroStats();
 }
 
-function changeRoomTemp(devId, delta){
-  const dev = findDevice(devId);
-  if(!dev||dev.type!=='ac') return;
-  dev.temp = Math.max(16, Math.min(30, dev.temp+delta));
-  const tv = document.getElementById('rv-tempval-'+devId);
-  const td = document.getElementById('rv-temp-'+devId);
-  if(tv) tv.textContent = dev.temp;
-  if(td) td.textContent = dev.temp+'°C';
+function changeRoomTemp(devId,delta) {
+  const dev=findDevice(devId); if(!dev||dev.type!=='ac') return;
+  dev.temp=Math.max(16,Math.min(30,dev.temp+delta));
+  const tv=document.getElementById('rv-tempval-'+devId);const td=document.getElementById('rv-temp-'+devId);
+  if(tv)tv.textContent=dev.temp;if(td)td.textContent=dev.temp+'°C';
   showToast(dev.name+' → '+dev.temp+'°C');
 }
 
-function toggleAllRoomDevices(){
+function toggleAllRoomDevices() {
   if(!currentRoomData) return;
-  const allOn = currentRoomData.devices.every(d=>d.on);
+  const allOn=currentRoomData.devices.every(d=>d.on);
   currentRoomData.devices.forEach(dev=>{
-    dev.on = !allOn;
-    const tog=document.getElementById('rv-tog-'+dev.id);
-    const ico=document.getElementById('rv-ico-'+dev.id);
-    const sub=document.getElementById('rv-sub-'+dev.id);
-    const state=document.getElementById('rv-state-'+dev.id);
-    if(tog) tog.className='rv-toggle'+(dev.on?' on':'');
-    if(ico) ico.className='rv-dev-ico'+(dev.on?' on-blue':' off');
-    if(sub) sub.textContent=dev.on?'On · '+dev.watts+'W':'Off';
-    if(state) state.textContent=dev.on?'ON':'OFF';
+    dev.on=!allOn;
+    const tog=document.getElementById('rv-tog-'+dev.id);const ico=document.getElementById('rv-ico-'+dev.id);const sub=document.getElementById('rv-sub-'+dev.id);const state=document.getElementById('rv-state-'+dev.id);
+    if(tog)tog.className='rv-toggle'+(dev.on?' on':'');if(ico)ico.className='rv-dev-ico'+(dev.on?' on-blue':' off');if(sub)sub.textContent=dev.on?'On · '+dev.watts+'W':'Off';if(state)state.textContent=dev.on?'ON':'OFF';
   });
-  const btn=document.getElementById('rvAllBtn');
-  if(btn) btn.textContent=allOn?'All ON':'All OFF';
+  document.getElementById('rvAllBtn').textContent=allOn?'All ON':'All OFF';
   showToast(allOn?'All devices OFF':'All devices ON');
-  updateDeviceHeroStats();
 }
 
-function findDevice(devId){
-  const data = buildingData[currentFloor];
-  if(!data) return null;
-  for(const room of data.rooms){
-    const dev = room.devices.find(d=>d.id===devId);
-    if(dev) return dev;
-  }
+function findDevice(devId) {
+  const data=buildingData[currentFloor]; if(!data) return null;
+  for(const room of data.rooms){ const dev=room.devices.find(d=>d.id===devId); if(dev) return dev; }
   return null;
 }
 
-function updateDeviceHeroStats(){
-  const data = buildingData[currentFloor];
-  if(!data) return;
-  const onlineDev = data.rooms.reduce((s,r)=>s+r.devices.filter(d=>d.on).length,0);
-  document.getElementById('dOnlineDevices').textContent = onlineDev;
+function selectRoomTab(el, room) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active')); el.classList.add('active');
+  if(room!=='All') showToast('Viewing: '+room);
 }
-// ─────────────────────────────────────────
+
+// ═══════════════════════════════════════
 //  UTILS
-// ─────────────────────────────────────────
-function togglePwd(id,btn){
-  const i=document.getElementById(id);i.type=i.type==='password'?'text':'password';
-  btn.querySelector('svg').style.opacity=i.type==='text'?'0.4':'1';
+// ═══════════════════════════════════════
+function showToast(msg) {
+  const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2400);
 }
-function showToast(msg){
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2400);
-}
-function attachRipples(){
-  document.querySelectorAll('.ripple').forEach(el=>{
-    el.addEventListener('click',function(e){
-      const r=document.createElement('span');const rect=this.getBoundingClientRect();
-      const size=Math.max(rect.width,rect.height);r.className='ripple-effect';
-      r.style.cssText=`width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
-      this.appendChild(r);setTimeout(()=>r.remove(),600);
-    });
-  });
-}
-if('serviceWorker'in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
