@@ -1820,18 +1820,16 @@ function saveProfile(){
 
   let changes = [];
 
-  // ✅ Check name change
   if(newName !== oldName){
     currentUser.name = newName;
     changes.push('name');
   }
 
-  // ✅ Check avatar change (already set when uploaded)
   if(currentUser.avatar && currentUser.avatar !== oldAvatar){
     changes.push('photo');
   }
 
-  // ✅ Save session
+  // ✅ Save to storage
   saveSession(currentUser);
 
   const users = getUsers();
@@ -1841,14 +1839,50 @@ function saveProfile(){
     saveUsers(users);
   }
 
-  // ✅ Update UI instantly (no refresh)
-  document.getElementById('headerGreeting').textContent =
-    'Hello, ' + currentUser.name.split(' ')[0];
+  // ✅ Update header greeting
+  const greeting = document.getElementById('headerGreeting');
+  if(greeting) greeting.textContent = 'Hello, ' + currentUser.name.split(' ')[0];
 
-  refreshProfile();
+  // ✅ Close modal FIRST (before anything can crash)
   closeEditProfile();
 
-  // ✅ Smart Toast Message 🔥
+  // ✅ Safe profile refresh with null checks
+  const avatarEl = document.getElementById('profileAvatar');
+  const avatarBtn = document.getElementById('avatarBtn');
+  const profileName = document.getElementById('profileName');
+  const profileEmailDisp = document.getElementById('profileEmailDisp');
+  const profileEmailRow = document.getElementById('profileEmailRow');
+  const apiDisp = document.getElementById('apiUrlDisplay');
+  const joinedTag = document.getElementById('joinedTag');
+
+  if(avatarEl){
+    if(currentUser.avatar){
+      avatarEl.innerHTML = `<img src="${currentUser.avatar}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">`;
+    } else {
+      avatarEl.textContent = initials(currentUser.name || 'U');
+    }
+  }
+
+  if(avatarBtn){
+    if(currentUser.avatar){
+      avatarBtn.innerHTML = `<img src="${currentUser.avatar}">`;
+    } else {
+      avatarBtn.innerHTML = `<span id="avatarInitial">${initials(currentUser.name || 'U')}</span>`;
+    }
+  }
+
+  if(profileName) profileName.textContent = currentUser.name || 'User';
+  if(profileEmailDisp) profileEmailDisp.textContent = currentUser.email || '—';
+  if(profileEmailRow) profileEmailRow.textContent = currentUser.email || '—';
+  if(apiDisp) apiDisp.textContent = API_URL;
+  if(joinedTag && currentUser.createdAt){
+    const d = new Date(currentUser.createdAt);
+    joinedTag.textContent = 'Member since ' + d.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  }
+
+  updateSummary();
+
+  // ✅ Toast last
   if(changes.length === 0){
     showToast('No changes made');
   } else if(changes.length === 2){
@@ -1859,15 +1893,6 @@ function saveProfile(){
     showToast('Profile photo updated ✓');
   }
 }
-// function saveProfile(){
-//   const n=document.getElementById('editName').value.trim();
-//   if(!n){showToast('Name cannot be empty');return;}
-//   currentUser.name=n;saveSession(currentUser);
-//   const users=getUsers();if(users[currentUser.email]){users[currentUser.email].name=n;saveUsers(users);}
-//   document.getElementById('avatarInitial').textContent=initials(n);
-//   document.getElementById('headerGreeting').textContent='Hello, '+n.split(' ')[0];
-//   refreshProfile();closeEditProfile();showToast('Profile updated ✓');
-// }
 document.getElementById('editModal').addEventListener('click',function(e){if(e.target===this)closeEditProfile();});
 /*
 function openApiSettings(){
