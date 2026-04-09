@@ -1506,7 +1506,7 @@ function doLogin(){
 }
 
 function doGoogleSignIn(){
-  const u={name:'Demo User',email:'demo@gmail.com',createdAt:new Date().toISOString(),avatar:null};
+  const u={name:'AeuIoT User',email:'aeuiot@gmail.com',createdAt:new Date().toISOString(),avatar:null};
   const users=getUsers();if(!users[u.email]){users[u.email]={...u,pwd:'google-oauth'};saveUsers(users);}
   currentUser=u;saveSession(u);showToast('Signed in with Google ✓');launchApp();
 }
