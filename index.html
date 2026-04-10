@@ -404,6 +404,136 @@
     .ripple{position:relative;overflow:hidden}
     .ripple-effect{position:absolute;border-radius:50%;background:rgba(79,142,247,.18);transform:scale(0);animation:rpl .5s linear;pointer-events:none}
     @keyframes rpl{to{transform:scale(4);opacity:0}}
+    .robot-assistant {
+  position: fixed;
+  bottom: 90px;        /* sits just above the bottom nav */
+  right: 16px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  pointer-events: none;
+}
+.robot-assistant * { pointer-events: all; }
+ 
+.robot-speech-bubble {
+  background: #ffffff;
+  border: 1.5px solid #e4e7f5;
+  border-radius: 16px 16px 4px 16px;
+  padding: 9px 13px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #0d0f1a;
+  max-width: 180px;
+  line-height: 1.4;
+  box-shadow: 0 4px 16px rgba(79,142,247,.12);
+  display: none;
+}
+.robot-speech-bubble.rb-show {
+  display: block;
+  animation: rbPop .22s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes rbPop {
+  from { opacity:0; transform:scale(.82) translateY(6px); }
+  to   { opacity:1; transform:scale(1)   translateY(0); }
+}
+ 
+.robot-fab {
+  width: 56px; height: 56px;
+  background: none; border: none;
+  padding: 0; cursor: pointer; position: relative;
+}
+.robot-fab svg.rb-body {
+  width: 56px; height: 56px;
+  animation: rbFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 6px 12px rgba(79,142,247,.25));
+}
+@keyframes rbFloat {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+.robot-fab:active svg.rb-body { animation: none; transform: scale(.92); }
+ 
+.rb-badge {
+  position: absolute; top: -3px; right: -3px;
+  width: 18px; height: 18px;
+  background: #ff6b8a;
+  border-radius: 50%;
+  border: 2px solid #f8f9fe;
+  font-family: 'Outfit', sans-serif;
+  font-size: 9px; font-weight: 800; color: white;
+  display: none;
+  align-items: center; justify-content: center;
+  animation: rbBadge 2s infinite;
+}
+.rb-badge.rb-badge-show { display: flex; }
+@keyframes rbBadge {
+  0%,100% { transform: scale(1); }
+  50%      { transform: scale(1.22); }
+}
+ 
+/* ── Toast Pills ── */
+.rb-toast-stack {
+  position: fixed;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  z-index: 499;
+  pointer-events: none;
+  width: calc(100% - 32px);
+  max-width: 398px;
+}
+.rb-toast {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px 11px 12px;
+  border-radius: 50px;
+  background: #0d0f1a;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  pointer-events: all;
+  cursor: pointer;
+  animation: rbToastIn .32s cubic-bezier(.34,1.56,.64,1) both;
+  width: fit-content;
+  max-width: 320px;
+}
+.rb-toast.rb-toast-out {
+  animation: rbToastOut .22s ease forwards;
+}
+.rb-toast-icon { width: 24px; height: 24px; flex-shrink: 0; }
+.rb-toast-body { flex: 1; }
+.rb-toast-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+.rb-toast-sub   { font-size: 11px; opacity: .65; margin-top: 1px; }
+.rb-toast-bar {
+  position: absolute; bottom: 0; left: 0;
+  height: 3px; border-radius: 0 0 50px 50px;
+  animation: rbShrink linear forwards;
+}
+@keyframes rbFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+.rb-show { display:block !important; animation:rbPop .22s cubic-bezier(.34,1.56,.64,1); }
+@keyframes rbPop { from{opacity:0;transform:scale(.82)} to{opacity:1;transform:scale(1)} }
+.rb-toast-stack { position:fixed;bottom:160px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;align-items:center;z-index:499;pointer-events:none;width:calc(100% - 32px);max-width:398px; }
+.rb-toast { display:flex;align-items:center;gap:10px;padding:11px 16px 11px 12px;border-radius:50px;background:#0d0f1a;color:white;font-family:'Outfit',sans-serif;font-size:13px;font-weight:500;position:relative;overflow:hidden;pointer-events:all;cursor:pointer;animation:rbToastIn .32s cubic-bezier(.34,1.56,.64,1) both;width:fit-content;max-width:320px; }
+.rb-toast.rb-toast-out { animation:rbToastOut .22s ease forwards; }
+.rb-toast-icon { width:24px;height:24px;flex-shrink:0; }
+.rb-toast-body { flex:1; }
+.rb-toast-title { font-size:12px;font-weight:700;line-height:1.3; }
+.rb-toast-sub { font-size:11px;opacity:.65;margin-top:1px; }
+.rb-toast-bar { position:absolute;bottom:0;left:0;height:3px;border-radius:0 0 50px 50px;animation:rbShrink linear forwards; }
+@keyframes rbToastIn { from{opacity:0;transform:translateY(20px) scale(.88)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes rbToastOut { to{opacity:0;transform:translateY(10px) scale(.9)} }
+@keyframes rbShrink { from{width:100%} to{width:0%} }
   </style>
 </head>
 <body>
@@ -830,6 +960,36 @@
     </div>
   </div>
 
+  <!-- Robot Toast Stack -->
+<div class="rb-toast-stack" id="rbToastStack"></div>
+ 
+<!-- Robot Assistant FAB -->
+<div class="robot-assistant" id="robotAssistant">
+  <div class="robot-speech-bubble" id="rbSpeech">Hi! I'm your AEU assistant 🤖
+    ម៉ាសុីនត្រជាក់❄️​ Open/Close Please wating 6s-12s! it will working....
+  </div>
+  <button class="robot-fab" onclick="rbToggleSpeech()" title="IoT Assistant">
+    <div class="rb-badge" id="rbBadge">!</div>
+    <svg class="rb-body" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="40" cy="74" rx="18" ry="4" fill="#c8d8ee" opacity="0.4"/>
+      <circle cx="40" cy="38" r="28" fill="#d0dff0"/>
+      <circle cx="40" cy="38" r="24" fill="#e8f0f8"/>
+      <rect x="16" y="28" width="48" height="22" rx="11" fill="#1a1a2e"/>
+      <circle cx="28" cy="39" r="6" fill="#4f8ef7" id="rbEyeL"/>
+      <circle cx="52" cy="39" r="6" fill="#4f8ef7" id="rbEyeR"/>
+      <circle cx="28" cy="39" r="3" fill="#7fb3ff"/>
+      <circle cx="52" cy="39" r="3" fill="#7fb3ff"/>
+      <path d="M33 46 Q40 51 47 46" stroke="white" stroke-width="2"
+            fill="none" stroke-linecap="round" id="rbMouth"/>
+      <rect x="38" y="8" width="4" height="10" rx="2" fill="#8899bb"/>
+      <circle cx="40" cy="7" r="4" fill="#1a1a2e"/>
+      <ellipse cx="14" cy="40" rx="6" ry="8" fill="#b8c8e0"/>
+      <ellipse cx="66" cy="40" rx="6" ry="8" fill="#b8c8e0"/>
+      <rect x="26" y="60" width="10" height="8" rx="4" fill="#8899bb"/>
+      <rect x="44" y="60" width="10" height="8" rx="4" fill="#8899bb"/>
+    </svg>
+  </button>
+</div>
   <div class="bottom-nav">
     <div class="nav-item active" id="nav-home" onclick="showTab('home')"><div class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span class="nav-lbl">Home</span></div>
     <div class="nav-item" id="nav-devices" onclick="showTab('devices')"><div class="nav-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div><span class="nav-lbl">Devices</span></div>
@@ -863,6 +1023,131 @@
 <div class="toast" id="toast"></div>
 
 <script>
+  /* ── Robot intro sequences ── */
+const RB_SEQUENCES = {
+  login: [
+    { title: 'Welcome back! 👋',          sub: 'Good to see you again',               color: '#4f8ef7', delay: 600  },
+    { title: 'IoT AEU is ready ✓',        sub: 'AC · Switches · Breaker standing by', color: '#43e97b', delay: 1600 },
+    { title: 'Control your devices',      sub: 'Tap any card to get started',         color: '#38d9c0', delay: 2600 },
+    { title: 'Security system armed 🔒',  sub: '6 cameras · motion alerts active',    color: '#ff9f57', delay: 3600 },
+    { title: 'Live energy monitoring',    sub: 'Tracking power usage in real time',   color: '#c471ed', delay: 4600 },
+  ],
+  signup: [
+    { title: 'Welcome to AEU! 🎉',        sub: 'Your smart home journey starts now',  color: '#c471ed', delay: 600  },
+    { title: 'Account created ✓',         sub: "You're now an AEU member",            color: '#43e97b', delay: 1600 },
+    { title: 'Control AC & switches',     sub: 'STEM Room · Software Room',           color: '#4f8ef7', delay: 2600 },
+    { title: 'Monitor energy live',       sub: 'Real-time kWh tracking',              color: '#38d9c0', delay: 3600 },
+    { title: 'Tap me anytime for help!',  sub: "I'm your AEU IoT assistant 🤖",       color: '#ff9f57', delay: 4600 },
+  ],
+};
+ 
+const RB_SPEECH = {
+  login:  null, /* filled dynamically with user's name */
+  signup: null,
+};
+ 
+let _rbTimers = [];
+ 
+function rbRunIntro(event, userName) {
+  _rbTimers.forEach(t => clearTimeout(t));
+  _rbTimers = [];
+  const stack = document.getElementById('rbToastStack');
+  if (stack) stack.innerHTML = '';
+ 
+  const seq = RB_SEQUENCES[event] || [];
+  const firstName = (userName || 'User').split(' ')[0];
+ 
+  const speechMsg = event === 'login'
+    ? `Hi ${firstName}! I am AEU assistant 🤖
+      ម៉ាសុីនត្រជាក់❄️​ Open/Close Please wating 6s-12s! it will working....`
+    : `Welcome ${firstName}! I'm your IoT assistant 🤖`;
+ 
+  rbShowSpeech(speechMsg);
+  rbEmotion('happy');
+ 
+  seq.forEach(item => {
+    const t = setTimeout(() => rbSpawnToast(item.title, item.sub, item.color, 5000), item.delay);
+    _rbTimers.push(t);
+  });
+}
+ 
+function rbSpawnToast(title, sub, color, duration) {
+  const stack = document.getElementById('rbToastStack');
+  if (!stack) return;
+  if (stack.children.length >= 3) rbDismiss(stack.children[0]);
+ 
+  const el = document.createElement('div');
+  el.className = 'rb-toast';
+  el.style.borderLeft = '3px solid ' + color;
+  el.onclick = () => rbDismiss(el);
+  el.innerHTML = `
+    ${rbMiniSVG(color)}
+    <div class="rb-toast-body">
+      <div class="rb-toast-title">${title}</div>
+      <div class="rb-toast-sub">${sub}</div>
+    </div>
+    <div class="rb-toast-bar" style="background:${color};animation-duration:${duration}ms"></div>`;
+  stack.appendChild(el);
+ 
+  const t = setTimeout(() => rbDismiss(el), duration);
+  _rbTimers.push(t);
+}
+ 
+function rbDismiss(el) {
+  if (!el || el.classList.contains('rb-toast-out')) return;
+  el.classList.add('rb-toast-out');
+  setTimeout(() => el && el.remove(), 240);
+}
+ 
+function rbMiniSVG(color) {
+  return `<svg class="rb-toast-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="18" fill="#d0dff0"/>
+    <rect x="8" y="14" width="24" height="14" rx="7" fill="#1a1a2e"/>
+    <circle cx="14" cy="21" r="4" fill="${color}"/>
+    <circle cx="26" cy="21" r="4" fill="${color}"/>
+    <circle cx="14" cy="21" r="2" fill="#fff" opacity=".55"/>
+    <circle cx="26" cy="21" r="2" fill="#fff" opacity=".55"/>
+    <path d="M16 27 Q20 30 24 27" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <rect x="19" y="3" width="2" height="7" rx="1" fill="#8899bb"/>
+    <circle cx="20" cy="3" r="2" fill="#1a1a2e"/>
+  </svg>`;
+}
+ 
+function rbShowSpeech(msg) {
+  const el = document.getElementById('rbSpeech');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.add('rb-show');
+  setTimeout(() => el.classList.remove('rb-show'), 5000);
+}
+ 
+function rbToggleSpeech() {
+  const el = document.getElementById('rbSpeech');
+  if (!el) return;
+  el.classList.toggle('rb-show');
+  if (el.classList.contains('rb-show'))
+    setTimeout(() => el.classList.remove('rb-show'), 4000);
+}
+ 
+function rbEmotion(type) {
+  const eyeL  = document.getElementById('rbEyeL');
+  const eyeR  = document.getElementById('rbEyeR');
+  const mouth = document.getElementById('rbMouth');
+  if (!eyeL) return;
+  const map = {
+    happy:  { c: '#43e97b', m: 'M33 46 Q40 51 47 46' },
+    sad:    { c: '#ff6b8a', m: 'M33 49 Q40 44 47 49' },
+    normal: { c: '#4f8ef7', m: 'M33 46 Q40 51 47 46' },
+  };
+  const e = map[type] || map.normal;
+  eyeL.setAttribute('fill', e.c); eyeR.setAttribute('fill', e.c);
+  mouth.setAttribute('d', e.m);
+  setTimeout(() => {
+    eyeL.setAttribute('fill', '#4f8ef7'); eyeR.setAttribute('fill', '#4f8ef7');
+    mouth.setAttribute('d', 'M33 46 Q40 51 47 46');
+  }, 2200);
+}
+ 
 // ═══════════════════════════════════════
 //  CONFIG
 // ═══════════════════════════════════════
@@ -1213,17 +1498,31 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
-async function launchApp() {
+// async function launchApp() {
+//   showScreen('screenApp');
+//   showTab('home');
+//   document.getElementById('avatarInitial').textContent = initials(currentUser.name);
+//   document.getElementById('headerGreeting').textContent = 'Hello, ' + (currentUser.name||'User').split(' ')[0];
+//   document.getElementById('apiUrlDisplay').textContent = API_URL;
+//   await checkConnection();
+//   await refreshDevices();
+//   startPolling();
+// }
+async function launchApp(event) {           // ← CHANGED: added `event` param
   showScreen('screenApp');
   showTab('home');
   document.getElementById('avatarInitial').textContent = initials(currentUser.name);
-  document.getElementById('headerGreeting').textContent = 'Hello, ' + (currentUser.name||'User').split(' ')[0];
+  document.getElementById('headerGreeting').textContent = 'Hello, ' + (currentUser.name || 'User').split(' ')[0];
   document.getElementById('apiUrlDisplay').textContent = API_URL;
   await checkConnection();
   await refreshDevices();
   startPolling();
+ 
+  /* ── Robot intro fires automatically after app loads ── */
+  if (event === 'login' || event === 'signup') {             // ← NEW
+    setTimeout(() => rbRunIntro(event, currentUser.name), 800); // ← NEW  (800ms delay lets the screen settle)
+  }                                                           // ← NEW
 }
-
 function showTab(tab) {
   ['home','devices','energy','security','profile'].forEach(t => {
     const el = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
@@ -1237,42 +1536,93 @@ function showTab(tab) {
   if (tab === 'devices') buildDevicesTab();
 }
 
+// function doLogin() {
+//   let ok = true;
+//   const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+//   const pwd   = document.getElementById('loginPassword').value;
+//   const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
+//   setF('loginEmail','loginEmailErr', !isGmail(email));
+//   setF('loginPassword','loginPwdErr', !isPwd(pwd));
+//   if (!ok) return;
+//   const users = getUsers(); const user = users[email];
+//   if (!user || user.pwd !== pwd) { showToast('Invalid email or password'); return; }
+//   currentUser = { name: user.name, email: user.email, createdAt: user.createdAt, avatar: user.avatar || null };
+//   saveSession(currentUser);
+//   showToast('Welcome back, ' + user.name.split(' ')[0] + ' 👋');
+//   launchApp();
+// }
 function doLogin() {
   let ok = true;
   const email = document.getElementById('loginEmail').value.trim().toLowerCase();
   const pwd   = document.getElementById('loginPassword').value;
-  const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
-  setF('loginEmail','loginEmailErr', !isGmail(email));
-  setF('loginPassword','loginPwdErr', !isPwd(pwd));
+  const setF  = (id, errId, bad) => {
+    document.getElementById(id).classList.toggle('error', bad);
+    document.getElementById(errId).classList.toggle('show', bad);
+    if (bad) ok = false;
+  };
+  setF('loginEmail',    'loginEmailErr', !isGmail(email));
+  setF('loginPassword', 'loginPwdErr',   !isPwd(pwd));
   if (!ok) return;
-  const users = getUsers(); const user = users[email];
+ 
+  const users = getUsers();
+  const user  = users[email];
   if (!user || user.pwd !== pwd) { showToast('Invalid email or password'); return; }
+ 
   currentUser = { name: user.name, email: user.email, createdAt: user.createdAt, avatar: user.avatar || null };
   saveSession(currentUser);
+ 
   showToast('Welcome back, ' + user.name.split(' ')[0] + ' 👋');
-  launchApp();
+  launchApp('login');   // ← CHANGED: pass 'login' so launchApp knows to trigger robot
 }
-
+ 
+// function doRegister() {
+//   let ok = true;
+//   const name  = document.getElementById('regName').value.trim();
+//   const email = document.getElementById('regEmail').value.trim().toLowerCase();
+//   const pwd   = document.getElementById('regPwd').value;
+//   const pwd2  = document.getElementById('regPwd2').value;
+//   const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
+//   setF('regName','regNameErr', !name);
+//   setF('regEmail','regEmailErr', !isGmail(email));
+//   setF('regPwd','regPwdErr', !isPwd(pwd));
+//   setF('regPwd2','regPwd2Err', pwd !== pwd2);
+//   if (!ok) return;
+//   const users = getUsers();
+//   if (users[email]) { showToast('Account exists — sign in'); return; }
+//   users[email] = { name, email, pwd, createdAt: new Date().toISOString(), avatar: null };
+//   saveUsers(users);
+//   currentUser = { name, email, createdAt: users[email].createdAt, avatar: null };
+//   saveSession(currentUser);
+//   showToast('Welcome! 🎉');
+//   launchApp();
+// }
 function doRegister() {
   let ok = true;
   const name  = document.getElementById('regName').value.trim();
   const email = document.getElementById('regEmail').value.trim().toLowerCase();
   const pwd   = document.getElementById('regPwd').value;
   const pwd2  = document.getElementById('regPwd2').value;
-  const setF  = (id, errId, bad) => { document.getElementById(id).classList.toggle('error', bad); document.getElementById(errId).classList.toggle('show', bad); if (bad) ok = false; };
-  setF('regName','regNameErr', !name);
-  setF('regEmail','regEmailErr', !isGmail(email));
-  setF('regPwd','regPwdErr', !isPwd(pwd));
-  setF('regPwd2','regPwd2Err', pwd !== pwd2);
+  const setF  = (id, errId, bad) => {
+    document.getElementById(id).classList.toggle('error', bad);
+    document.getElementById(errId).classList.toggle('show', bad);
+    if (bad) ok = false;
+  };
+  setF('regName',  'regNameErr',  !name);
+  setF('regEmail', 'regEmailErr', !isGmail(email));
+  setF('regPwd',   'regPwdErr',   !isPwd(pwd));
+  setF('regPwd2',  'regPwd2Err',  pwd !== pwd2);
   if (!ok) return;
+ 
   const users = getUsers();
   if (users[email]) { showToast('Account exists — sign in'); return; }
+ 
   users[email] = { name, email, pwd, createdAt: new Date().toISOString(), avatar: null };
   saveUsers(users);
   currentUser = { name, email, createdAt: users[email].createdAt, avatar: null };
   saveSession(currentUser);
+ 
   showToast('Welcome! 🎉');
-  launchApp();
+  launchApp('signup');  // ← CHANGED: pass 'signup'
 }
 
 function validateRegEmail() {
